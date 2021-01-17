@@ -10,11 +10,11 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
+  css: ['~/assets/css/main'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [],
@@ -26,13 +26,23 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+    '@nuxtjs/style-resources',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    'nuxt-webfontloader',
   ],
+  webfontloader: {
+    typekit: {
+      id: 'akf4akv',
+    },
+  },
+  styleResources: {
+    scss: ['~/assets/css/vars/*.scss', '~/assets/css/mixins/*.scss'],
+  },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
