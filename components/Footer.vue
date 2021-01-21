@@ -1,5 +1,17 @@
 <template>
   <footer class="fond-gris">
+    <!-- <svg viewBox="0 0 433 333">
+      <path
+        d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z"
+        style="stroke: none; fill: #f2f2f2"
+      ></path>
+    </svg> -->
+    <svg viewBox="0 0 1366 144.3">
+      <path
+        d="M0 0h1366v81c-84.4 17.6-217.1 39.2-380.5 38.5-228.3-1-329.2-44.6-547-48C336.3 69.9 185.6 76.8 0 121V0z"
+        fill="#f2f2f2"
+      />
+    </svg>
     <div class="container-or">
       <div class="item a title title--footer h1">CONTACT :</div>
       <div class="item b h3 text-bold"><a href="">hello@beabot.fr</a></div>
@@ -26,11 +38,20 @@ export default {
 <style lang="scss" scoped>
 $width: 90vw;
 $height: $width / 1.618;
-$border: 0.5px solid #4a4949;
+// $border: 0.5px solid #4a4949;
 footer {
   display: flex;
   position: relative;
   z-index: 11;
+  // box-shadow: inset 0 2.5vw 10vw 0 white;
+
+  svg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
 
   a {
     text-decoration: none;
@@ -40,7 +61,6 @@ footer {
 .container-or {
   width: $width;
   height: $height;
-  border: $border;
   display: grid;
   margin: 0 auto;
 

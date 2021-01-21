@@ -1,25 +1,18 @@
 <template>
-  <div class="clip-svg">
-    <!-- <img src="~/assets/img/profilFreakOut.jpg" alt="ggg" /> -->
-    <svg
-      :width="width"
-      :height="width"
-      viewBox="0 0 243.9 241.2"
-      xml:space="preserve"
-      :transform="transform"
-    >
-      <defs>
-        <clipPath id="myClip">
-          <path
-            id="Tracé_7"
-            class="st0"
-            d="M231.3,122.4c-15.4,60.2-50.4,112.5-112.5,112.5S6.3,184.6,6.3,122.4S57.5,20.3,118.8,9.9
-	C237.3-10.1,248.3,55.9,231.3,122.4z"
-            :fill="fill"
-          />
-        </clipPath>
-      </defs>
-    </svg>
+  <div class="clip-svg" :style="{ backgroundImage: fond, width: width }">
+    <div class="oeuf">
+      <!-- <img src="~/assets/img/profilFreakOut.jpg" alt="ggg" /> -->
+      <svg width="100%" viewBox="0 0 231.3 228.6" :transform="transform">
+        <defs>
+          <clipPath id="myClip">
+            <path
+              d="M225 116.1c-15.4 60.2-50.4 112.5-112.5 112.5S0 178.2 0 116.1 51.2 13.9 112.5 3.6C231-16.4 242 49.6 225 116.1z"
+              fill=":fill"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
   </div>
 </template>
 <script>
@@ -34,7 +27,7 @@ export default {
 
     width: {
       type: String,
-      default: '50%',
+      default: '80%',
       required: false,
     },
     transform: {
@@ -42,12 +35,23 @@ export default {
       default: 'rotate(0)',
       required: false,
     },
+    fond: {
+      type: String,
+      default:
+        "url('https://www.cdc.gov/healthypets/images/pets/cute-dog-headshot.jpg')",
+      required: false,
+    },
   },
 }
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .clip-svg {
   clip-path: url(#myClip);
-  background-image: url('~assets/img/profilFreakOut.jpg');
+  background-size: cover;
+  overflow: visible;
+  /* background-image: url('~assets/img/profilFreakOut.jpg'); */
 }
+// .clip-svg:hover .oeuf {
+//   transform: scale(1.2);
+// }
 </style>

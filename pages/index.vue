@@ -12,10 +12,12 @@
     </section>
     <section class="container container-2 fond-gris">
       <!-- <OeufImage /> -->
-      <p class="text-gris4 h3">
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+      <p class="text-gris4 h4">
+        Lorem ipsum dolor sit amet,
+        <span class="text-black">consetetur</span> sadipscing elitr, sed diam
+        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+        sed diam voluptua. At vero eos et accusam et
+        <span class="text-black">justo duo</span> dolores et ea rebum. Stet
         clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
       </p>
     </section>
@@ -55,7 +57,7 @@
       </div>
       <div class="boite-para">
         <div class="boite-para--para">
-          <Petittitre gris />
+          <Petittitre gris numero="1" />
           <p class="text-gris2">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -63,7 +65,7 @@
           </p>
         </div>
         <div class="boite-para--para">
-          <Petittitre gris />
+          <Petittitre gris numero="2" />
           <p class="text-gris2">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -99,7 +101,7 @@
       />
       <div class="container-4__boite-para">
         <div class="container-4__boite-para--para">
-          <Petittitre couleur="white" />
+          <Petittitre couleur="white" numero="3" />
           <p class="text-gris4">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -107,7 +109,7 @@
           </p>
         </div>
         <div class="container-4__boite-para--para">
-          <Petittitre couleur="white" />
+          <Petittitre couleur="white" numero="4" />
           <p class="text-gris4">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -120,9 +122,9 @@
       <div class="container-5__boite-titre">
         <div class="container-5__boite-titre__titre">
           <div>
-            <h2 class="text-black titre3">
+            <h3 class="text-black h2">
               Lorem ipsum dolor sit amet, consetetur
-            </h2>
+            </h3>
           </div>
           <div>
             <Oeuf
@@ -161,7 +163,18 @@
           </p>
         </div>
         <div class="boite-para--para">
-          <Petittitre gris />
+          <div class="boite-para--titre">
+            <div>
+              <Oeuf
+                class="oeuf"
+                width="30%"
+                transform="rotate(-95)"
+                fill="#2561d9"
+              />
+            </div>
+            <div><Petittitre gris /></div>
+          </div>
+
           <p class="text-gris2">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint,
             <span class="chiffre-onum">12345678</span>
@@ -217,11 +230,79 @@
         </div>
       </div> -->
     </section>
+    <section class="container container-blog container-blog--bleu">
+      <h3 class="h2 text-gris2 text-black">
+        portfolio <span>:</span>
+        <br />
+        <span class="text-fin">dernières créations</span>
+      </h3>
+      <div class="container-blog__box">
+        <div class="boite-para--para">
+          <Petittitre gris couleur="#2561d9" />
+          <p class="text-gris2">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+            diam nonumy eirmod tempor invidunt ut labore et dolore magna
+            aliquyam erat, Lorem ipsum dolor sit amet, consetetur sadipscing
+            elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+            magna aliquyam erat,
+          </p>
+        </div>
+        <div class="oeuf">
+          <Oeuf width="50%" transform="rotate(-95)" fill="#2561d9" />
+        </div>
+        <div class="boite-para--para">
+          <Petittitre gris couleur="#2561d9" />
+          <p class="text-gris2">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat,
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="container container-blog">
+      <h3 class="h2 text-gris2 text-black">
+        éco-conception <span>:</span>
+        <br />
+        <span class="text-fin">derniers articles</span>
+      </h3>
+      <div class="container-blog__box">
+        <div class="boite-para--para">
+          <Petittitre gris />
+          <p class="text-gris2">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+            diam nonumy eirmod tempor invidunt ut labore et dolore magna
+            aliquyam erat, Lorem ipsum dolor sit amet, consetetur sadipscing
+            elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+            magna aliquyam erat,
+          </p>
+        </div>
+        <div class="oeuf">
+          <Oeuf width="50%" transform="rotate(-95)" fill="#04d94f" />
+        </div>
+        <div class="boite-para--para">
+          <Petittitre gris />
+          <p class="text-gris2">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat,
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
 <script>
-export default {}
+export default {
+  created() {
+    // this.$store.commit('page/sethome', true)
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -238,6 +319,7 @@ section {
 .container-2 {
   p {
     width: 50vw;
+    line-height: 1.618;
   }
 }
 .container-3 {
@@ -334,6 +416,7 @@ section {
   }
 }
 .container-5 {
+  margin-bottom: 4rem;
   &__boite-titre {
     display: flex;
     width: 100%;
@@ -344,8 +427,9 @@ section {
       align-items: center;
       width: 60%;
       height: 90vh;
-      h2 {
+      h3 {
         color: white;
+        margin: 0 3rem;
       }
       div {
         position: absolute;
@@ -363,6 +447,51 @@ section {
         position: sticky;
         top: 0;
       }
+    }
+  }
+}
+.container-blog {
+  h3 {
+    span {
+      color: $vert;
+    }
+  }
+  &--bleu {
+    h3 {
+      span {
+        color: $bleu1;
+      }
+    }
+  }
+
+  &__box {
+    display: flex;
+    align-items: stretch;
+    .oeuf {
+      align-self: center;
+      position: relative;
+      &::before {
+        content: '+';
+        font-size: 8rem;
+        height: 82px;
+        line-height: 0.58;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        color: $fondClair;
+        font-weight: $bold;
+        opacity: 0.9;
+        transition: ease-in 0.1s;
+      }
+      &:hover::before {
+        font-size: 8.4rem;
+        opacity: 1;
+      }
+    }
+    div {
+      width: 33%;
     }
   }
 }
@@ -419,10 +548,19 @@ section {
     background: url('~assets/img/forme.svg') no-repeat center;
     background-size: 100%;
   }
+  @keyframes hideshow {
+    0% {
+      scale: 0;
+    }
+    100% {
+      scale: 1;
+    }
+  }
   .oeuf-intro {
     padding: 5%;
     filter: blur(1px);
     z-index: 2;
+    animation: hideshow 1.5s ease;
   }
 }
 

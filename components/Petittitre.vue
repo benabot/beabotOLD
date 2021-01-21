@@ -12,8 +12,8 @@ export default {
   name: 'Petittitre',
   props: {
     numero: {
-      type: Number,
-      default: 1, // green, green--outline, white
+      type: String,
+      default: '1', // green, green--outline, white
       required: false,
     },
 
@@ -43,10 +43,13 @@ export default {
 <style lang="scss" scoped>
 .h3 {
   text-align: left;
+  margin: 0;
+  word-break: normal;
 }
 .ligne {
   width: 4em;
-  height: 0.1em;
+  height: 0.1rem;
+  margin-top: 0.1rem;
   border-top: 2px solid;
 }
 </style>
