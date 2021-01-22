@@ -34,7 +34,11 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     'nuxt-webfontloader',
+    '@nuxt/content',
   ],
+  content: {
+    // Options
+  },
   webfontloader: {
     typekit: {
       id: 'akf4akv',

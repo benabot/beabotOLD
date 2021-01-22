@@ -250,7 +250,9 @@
           </p>
         </div>
         <div class="oeuf">
-          <Oeuf width="50%" transform="rotate(-95)" fill="#2561d9" />
+          <NuxtLink to="/portfolio"
+            ><Oeuf width="50%" transform="rotate(-95)" fill="#2561d9"
+          /></NuxtLink>
         </div>
         <div class="boite-para--para">
           <Petittitre gris couleur="#2561d9" />
@@ -282,7 +284,9 @@
           </p>
         </div>
         <div class="oeuf">
-          <Oeuf width="50%" transform="rotate(-95)" fill="#04d94f" />
+          <NuxtLink to="/eco-conception"
+            ><Oeuf width="50%" transform="rotate(-95)" fill="#04d94f"
+          /></NuxtLink>
         </div>
         <div class="boite-para--para">
           <Petittitre gris />
