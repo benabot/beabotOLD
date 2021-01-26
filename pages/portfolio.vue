@@ -1,53 +1,67 @@
 <template>
   <main>
     <h1 class="text-bold h3">Portfolio</h1>
-    <ul class="selector text-bleu2">
+    <ul class="selector text-gris2">
       <li :class="{ 'text-bleu1': select === 'vjs' }" @click="change('vjs')">
         VueJs
       </li>
+      /
       <li :class="{ 'text-bleu1': select === 'wp' }" @click="change('wp')">
-        / WordPress
+        WordPress
       </li>
+      /
       <li :class="{ 'text-bleu1': select === 'eco' }" @click="change('eco')">
-        / Éco-conçu
+        Éco-conçu
       </li>
+      /
       <li
         :class="{ 'text-bleu1': select === 'print' }"
         @click="change('print')"
       >
-        / Print
+        Print
       </li>
       <br />
-      <li v-show="!tout" class="text-gris3" @click="tout = true">Tout voir</li>
+      <li
+        v-show="!tout"
+        class="text-gris3"
+        @click=";(tout = true), (select = '')"
+      >
+        Tout voir
+      </li>
     </ul>
     <section class="container--page">
-      <BoiteArticle
-        v-if="tout || select === ('vjs' || 'print')"
-        titre="Guide RSE Banque Populaire"
-        sous-titre="Carte interactive"
-        background-url="guideBleu1.png"
-        lien="https://www.guide-rse.banquepopulaire.fr/actions-rse"
-      />
-      <BoiteArticle
-        v-if="tout || select === ('vjs' || 'wp')"
-        titre="Guide RSE Banque Populaire"
-        sous-titre="Interface de visualisation de données"
-        background-url="guideBleu2.png"
-        lien="https://www.guide-rse.banquepopulaire.fr/resultats-2019"
-      />
-      <BoiteArticle
-        v-if="tout || select === ('eco' || 'wp')"
-        titre="App noël"
-        sous-titre="Application d'apprentissage à l'interface d'un ordinateur"
-        background-url="appNoel.png"
-      />
-      <BoiteArticle />
+      <transition name="fade">
+        <BoiteArticle
+          v-if="tout || select === ('vjs' || 'print')"
+          titre="Guide RSE Banque Populaire"
+          sous-titre="Carte interactive"
+          background-url="guideBleu1.png"
+          lien="https://www.guide-rse.banquepopulaire.fr/actions-rse"
+      /></transition>
+      <transition name="fade">
+        <BoiteArticle
+          v-if="tout || select === ('vjs' || 'wp')"
+          titre="Guide RSE Banque Populaire"
+          sous-titre="Interface de visualisation de données"
+          background-url="guideBleu2.png"
+          lien="https://www.guide-rse.banquepopulaire.fr/resultats-2019"
+      /></transition>
+      <transition name="fade">
+        <BoiteArticle
+          v-if="tout || select === ('eco' || 'wp')"
+          titre="App noël"
+          sous-titre="Application d'apprentissage à l'interface d'un ordinateur"
+          background-url="appNoel.png"
+      /></transition>
+      <transition name="fade"> <BoiteArticle /></transition>
     </section>
   </main>
 </template>
 
 <script>
 export default {
+  scrollToTop: true,
+
   data() {
     return {
       select: '',
@@ -68,12 +82,19 @@ export default {
 
 <style lang="scss" scoped>
 h1 {
-  color: $bleu1;
+  color: $bleu2;
   text-align: center;
   margin-top: 2rem;
 }
+.boite-article {
+  @media (max-width: $breakpoint-tablet) {
+    margin-bottom: 3.6rem;
+  }
+}
 .boite-article:not(:first-of-type) {
-  margin-top: -100px;
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: -60px;
+  }
 }
 .selector {
   text-align: center;
@@ -87,6 +108,18 @@ h1 {
     // color: $bleu1;
     text-align: center;
     cursor: pointer;
+    &:hover {
+      color: $bleu1;
+    }
   }
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.25s ease-out;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

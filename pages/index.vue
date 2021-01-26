@@ -237,8 +237,8 @@
         <span class="text-fin">dernières créations</span>
       </h3>
       <div class="container-blog__box">
-        <div class="boite-para--para">
-          <Petittitre gris couleur="#2561d9" />
+        <div class="boite-para--para a">
+          <Petittitre gris couleur="#2561d9" stitre="dev" />
           <p class="text-gris2">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -249,13 +249,24 @@
             magna aliquyam erat,
           </p>
         </div>
-        <div class="oeuf">
+        <div class="oeuf b">
           <NuxtLink to="/portfolio"
-            ><Oeuf width="50%" transform="rotate(-95)" fill="#2561d9"
-          /></NuxtLink>
+            ><svg class="lien" viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M18.4,13h-4.9c-0.3,0-0.6,0.2-0.6,0.6v4.9c0,0.3-0.2,0.6-0.6,0.6h-0.9c-0.3,0-0.6-0.2-0.6-0.6v-4.9c0-0.3-0.2-0.6-0.6-0.6
+	H5.6C5.2,13,5,12.8,5,12.4v-0.9C5,11.2,5.2,11,5.6,11h4.9c0.3,0,0.6-0.2,0.6-0.6V5.6C11,5.2,11.2,5,11.6,5h0.9C12.8,5,13,5.2,13,5.6
+	v4.9c0,0.3,0.2,0.6,0.6,0.6h4.9c0.3,0,0.6,0.2,0.6,0.6v0.9C19,12.8,18.8,13,18.4,13z"
+              /></svg></NuxtLink
+          ><Oeuf
+            class="fond"
+            width="80%"
+            transform="rotate(-95)"
+            fill="#2561d9"
+          />
         </div>
-        <div class="boite-para--para">
-          <Petittitre gris couleur="#2561d9" />
+        <div class="boite-para--para c">
+          <Petittitre gris couleur="#2561d9" stitre="webdesign" />
           <p class="text-gris2">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -271,8 +282,8 @@
         <span class="text-fin">derniers articles</span>
       </h3>
       <div class="container-blog__box">
-        <div class="boite-para--para">
-          <Petittitre gris />
+        <div class="boite-para--para a">
+          <Petittitre gris stitre="VueJS" />
           <p class="text-gris2">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -283,13 +294,24 @@
             magna aliquyam erat,
           </p>
         </div>
-        <div class="oeuf">
+        <div class="oeuf b">
           <NuxtLink to="/eco-conception"
-            ><Oeuf width="50%" transform="rotate(-95)" fill="#04d94f"
-          /></NuxtLink>
+            ><svg class="lien" viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M18.4,13h-4.9c-0.3,0-0.6,0.2-0.6,0.6v4.9c0,0.3-0.2,0.6-0.6,0.6h-0.9c-0.3,0-0.6-0.2-0.6-0.6v-4.9c0-0.3-0.2-0.6-0.6-0.6
+	H5.6C5.2,13,5,12.8,5,12.4v-0.9C5,11.2,5.2,11,5.6,11h4.9c0.3,0,0.6-0.2,0.6-0.6V5.6C11,5.2,11.2,5,11.6,5h0.9C12.8,5,13,5.2,13,5.6
+	v4.9c0,0.3,0.2,0.6,0.6,0.6h4.9c0.3,0,0.6,0.2,0.6,0.6v0.9C19,12.8,18.8,13,18.4,13z"
+              /></svg></NuxtLink
+          ><Oeuf
+            class="fond"
+            width="80%"
+            transform="rotate(-95)"
+            fill="#04d94f"
+          />
         </div>
-        <div class="boite-para--para">
-          <Petittitre gris />
+        <div class="boite-para--para c">
+          <Petittitre gris stitre="WordPress" />
           <p class="text-gris2">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -331,10 +353,14 @@ section {
   padding-top: 10rem;
   padding-bottom: 5rem;
   &__titre {
-    width: 60%;
-    margin-left: 40%;
+    width: 90%;
+    margin-left: 10%;
     min-height: 45vh;
     position: relative;
+    @media (min-width: $breakpoint-tablet) {
+      width: 60%;
+      margin-left: 40%;
+    }
 
     h2 {
       position: relative;
@@ -366,8 +392,14 @@ section {
     }
     &__sub {
       color: $vert;
-      text-align: left;
-      width: 20%;
+      text-align: center;
+      width: 60%;
+      position: relative;
+      z-index: 2;
+      @media (min-width: $breakpoint-tablet) {
+        width: 20%;
+        text-align: left;
+      }
       div {
         &:first-child {
           width: 50%;
@@ -381,11 +413,14 @@ section {
 .container-4 {
   position: relative;
   &__boite-para {
-    width: 60%;
+    width: 100%;
     min-height: 50vh;
     position: relative;
     z-index: 3;
     display: flex;
+    @media (min-width: $breakpoint-tablet) {
+      width: 60%;
+    }
     &--para {
       width: 50%;
       align-self: flex-end;
@@ -429,14 +464,19 @@ section {
       position: relative;
       display: flex;
       align-items: center;
-      width: 60%;
-      height: 90vh;
+      width: 100%;
+      height: 40vh;
+      @media (min-width: $breakpoint-tablet) {
+        width: 60%;
+        height: 90vh;
+      }
       h3 {
         color: white;
         margin: 0 3rem;
       }
       div {
         position: absolute;
+        width: 100%;
         &:first-child {
           z-index: +1;
         }
@@ -444,9 +484,12 @@ section {
     }
     &__oeuf {
       width: 35%;
-      height: 80vh;
+      height: 40vh;
       display: flex;
       align-items: flex-start;
+      @media (min-width: $breakpoint-tablet) {
+        height: 80vh;
+      }
       .oeuf {
         position: sticky;
         top: 0;
@@ -460,6 +503,23 @@ section {
       color: $vert;
     }
   }
+  .a {
+    order: 1;
+  }
+  .b {
+    order: 3;
+    @media (min-width: $breakpoint-tablet) {
+      order: 2;
+    }
+  }
+  .c {
+    order: 2;
+    margin-top: 1rem;
+    @media (min-width: $breakpoint-tablet) {
+      order: 3;
+      margin-top: 0;
+    }
+  }
   &--bleu {
     h3 {
       span {
@@ -471,42 +531,89 @@ section {
   &__box {
     display: flex;
     align-items: stretch;
+    flex-direction: column;
+    @media (min-width: $breakpoint-tablet) {
+      flex-direction: row;
+    }
     .oeuf {
-      align-self: center;
       position: relative;
-      &::before {
-        content: '+';
-        font-size: 8rem;
-        height: 82px;
-        line-height: 0.58;
+      z-index: 12;
+      height: 25vh;
+      width: 33%;
+      margin-left: 33%;
+      @media (min-width: $breakpoint-tablet) {
+        align-self: center;
+        position: sticky;
+        top: 200px;
+        margin-left: 0;
+      }
+      a,
+      .fond {
         position: absolute;
+        height: 90px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        z-index: 1;
+      }
+      a {
+        z-index: +1;
         color: $fondClair;
-        font-weight: $bold;
-        opacity: 0.9;
-        transition: ease-in 0.1s;
+        height: auto;
+        opacity: 0.8;
+        width: 60%;
+        transition: all 500ms ease;
+        &:hover {
+          opacity: 1;
+          width: 70%;
+        }
       }
-      &:hover::before {
-        font-size: 8.4rem;
-        opacity: 1;
+      .fond {
+        height: auto;
       }
+      // &::before {
+      //   content: '+';
+      //   font-size: 8rem;
+      //   height: 82px;
+      //   line-height: 0.58;
+      //   position: absolute;
+      //   top: 50%;
+      //   left: 50%;
+      //   transform: translate(-50%, -50%);
+      //   z-index: 1;
+      //   color: $fondClair;
+      //   font-weight: $bold;
+      //   opacity: 0.9;
+      //   transition: ease-in 0.1s;
+      // }
+      // &:hover::before {
+      //   font-size: 8.4rem;
+      //   opacity: 1;
+      // }
     }
-    div {
-      width: 33%;
+    & > div {
+      width: 100%;
+      @media (min-width: $breakpoint-tablet) {
+        width: 33%;
+      }
     }
   }
 }
 .boite-para {
-  width: 60%;
+  width: 100%;
   display: flex;
+  @media (min-width: $breakpoint-tablet) {
+    width: 60%;
+  }
   &--para {
     width: 50%;
-    p {
+    & p {
       text-align: justify;
-      margin-right: 2rem;
+    }
+    &:first-of-type {
+      margin-right: 1.4rem;
+      @media (min-width: $breakpoint-tablet) {
+        margin-right: 2rem;
+      }
     }
   }
   &--titre {
@@ -529,11 +636,11 @@ section {
 }
 #boite-logo {
   position: relative;
-  width: 33%;
+  width: 66%;
   height: auto;
   min-height: 52vh;
   background: url('~assets/img/forme-flou.svg') no-repeat center;
-  background-size: 90%;
+  background-size: 100%;
   // background: url('~assets/img/forme-flou.svg') no-repeat center,
   //   url('~assets/img/forme.svg') no-repeat center;
   // background-size: 90%, 100%;
@@ -542,6 +649,11 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (min-width: $breakpoint-tablet) {
+    background-size: 90%;
+    width: 33%;
+  }
 
   &::before {
     position: absolute;

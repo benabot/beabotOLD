@@ -1,6 +1,39 @@
 <template>
   <div id="wrapper">
-    <nav class="nav-1">
+    <nav role="navigation" class="nav-mobile">
+      <!-- <button @click="showMobileMenu = !showMobileMenu">bla</button> -->
+      <img
+        src="beabot.svg"
+        alt="beabot"
+        :class="{ 'logo-gris': showMobileMenu }"
+        @click="showMobileMenu = !showMobileMenu"
+      />
+      <transition name="slide-right">
+        <div v-if="showMobileMenu" class="menu-mobile">
+          <ul>
+            <li @click="showMobileMenu = !showMobileMenu">
+              <NuxtLink to="/" exact class="title title--menu h2"
+                >Accueil</NuxtLink
+              >
+            </li>
+            <li @click="showMobileMenu = !showMobileMenu">
+              <NuxtLink to="/eco-conception" class="title title--menu h2"
+                >Éco-conception</NuxtLink
+              >
+            </li>
+            <li @click="showMobileMenu = !showMobileMenu">
+              <NuxtLink to="/portfolio" class="title title--menu h2"
+                >Portfolio</NuxtLink
+              >
+            </li>
+            <li @click="showMobileMenu = !showMobileMenu">
+              <a href="#footer" class="title title--menu h2">Contact</a>
+            </li>
+          </ul>
+        </div></transition
+      >
+    </nav>
+    <nav role="navigation" class="nav-desktop nav-1">
       <NuxtLink :class="couleurHaut" to="/">
         <svg
           x="0"
@@ -82,16 +115,18 @@
         <!-- <img src="/beabot.svg" alt="beabot" /> -->
       </NuxtLink>
     </nav>
-    <nav class="nav-2 h4">
+    <nav role="navigation" class="nav-desktop nav-2 h4">
       <NuxtLink to="/eco-conception" :class="couleurHaut" href=""
         >Éco-conception</NuxtLink
       >
     </nav>
-    <nav class="nav-3 h4">
+    <nav role="navigation" class="nav-desktop nav-3 h4">
       <NuxtLink to="/portfolio" :class="couleurBas">Portfolio</NuxtLink>
     </nav>
-    <nav class="nav-4 h4"><a href="" :class="couleurBas">Contact</a></nav>
-    <Nuxt />
+    <nav role="navigation" class="nav-desktop nav-4 h4">
+      <a href="#footer" :class="couleurBas">Contact</a>
+    </nav>
+    <Nuxt :class="{ 'main-flou': showMobileMenu }" />
     <Footer />
   </div>
 </template>
@@ -110,6 +145,7 @@ export default {
       scrollPos: null,
       scrollPosition: null,
       degrad: 'url(#SVGID2)',
+      showMobileMenu: false,
     }
   },
   computed: {
@@ -213,43 +249,115 @@ export default {
 a.nuxt-link-active {
   font-weight: bold;
 }
+// .fade-enter {
+//   color: red;
+//   transform: translateX(-200px);
+// }
+
+// .fade-enter-active {
+//   transition: transform 0.3s cubic-bezier(1, 0.5, 0.8, 1),
+//     color 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+// }
+
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition-duration: 0.5s;
+  transition-property: height, opacity, transform;
+  transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+  overflow: hidden;
+}
+
+.slide-right-leave-active {
+  opacity: 0;
+  transform: translate(-2em, 0);
+}
+
+.slide-right-enter {
+  opacity: 0;
+  transform: translate(-2em, 0);
+}
+
 #wrapper {
   position: relative;
-
-  nav {
+  overflow: hidden;
+  .main-flou {
+    position: relative;
+    z-index: 3;
+    opacity: 0.2;
+  }
+  .nav-desktop {
+    display: none;
+  }
+  .nav-mobile {
+    display: block;
     position: fixed;
-    font-weight: $light;
-    margin: 0;
-    z-index: 1000;
-    min-width: 80px;
-    width: 15%;
-    overflow: visible;
-    word-break: keep-all;
-    hyphens: none;
-    // background: linear-gradient(red, red) bottom / 0 0.1em no-repeat;
-    // background-size: 0 0.1em;
-    transition: 0.3s ease-in-out background-size;
-
-    &:hover {
-      background-size: 100% 0.5em;
+    z-index: 9999;
+    @media (min-width: $breakpoint-tablet) {
+      display: none;
     }
 
-    a {
-      text-decoration: none;
-      // -webkit-text-stroke-width: 1px;
-      // -webkit-text-stroke-color: $fondClair;
-      // text-shadow: 0.2px 0.2px 0.9px $fondClair, -0.2px -0.2px 0.9px $fondClair,
-      //   0.2px 0.2px 0.9px $fondClair, -0.2px -0.2px 0.9px $fondClair;
-      // text-shadow: 0px 0px 1.9px $fondClair;
-      // text-shadow: 0.4px 0 0 $fondClair, -0.4px 0 0 $fondClair,
-      //   0 0.4px 0 $fondClair, 0 -0.4px 0 $fondClair, 0.3px 0.3px $fondClair,
-      //   -0.3px -0.3px 0 $fondClair, 0.3px -0.3px 0 $fondClair,
-      //   -0.3px 0.3px 0 $fondClair;
-    }
     img {
+      position: absolute;
+      height: auto;
+      width: 21vw;
+      max-height: 50px;
+      z-index: +1;
+    }
+    .logo-gris {
       filter: grayscale(1);
+    }
+    .menu-mobile {
+      position: absolute;
+      padding-top: 3rem;
+      width: 86vw;
+      height: 60vh;
+      background: $vert;
+      clip-path: ellipse(87% 91% at 0% 8%);
+      ul {
+        list-style-type: none;
+      }
+    }
+  }
+  @media (min-width: $breakpoint-tablet) {
+    overflow: visible;
+    .nav-desktop {
+      display: block;
+    }
+    nav {
+      position: fixed;
+      font-weight: $light;
+      margin: 0;
+      z-index: 1000;
+      min-width: 80px;
+      width: 15%;
+      overflow: visible;
+      word-break: keep-all;
+      hyphens: none;
+      // background: linear-gradient(red, red) bottom / 0 0.1em no-repeat;
+      // background-size: 0 0.1em;
+      transition: 0.3s ease-in-out background-size;
+
       &:hover {
-        filter: grayscale(0);
+        background-size: 100% 0.5em;
+      }
+
+      a {
+        text-decoration: none;
+        // -webkit-text-stroke-width: 1px;
+        // -webkit-text-stroke-color: $fondClair;
+        // text-shadow: 0.2px 0.2px 0.9px $fondClair, -0.2px -0.2px 0.9px $fondClair,
+        //   0.2px 0.2px 0.9px $fondClair, -0.2px -0.2px 0.9px $fondClair;
+        // text-shadow: 0px 0px 1.9px $fondClair;
+        // text-shadow: 0.4px 0 0 $fondClair, -0.4px 0 0 $fondClair,
+        //   0 0.4px 0 $fondClair, 0 -0.4px 0 $fondClair, 0.3px 0.3px $fondClair,
+        //   -0.3px -0.3px 0 $fondClair, 0.3px -0.3px 0 $fondClair,
+        //   -0.3px 0.3px 0 $fondClair;
+      }
+      img {
+        filter: grayscale(1);
+        &:hover {
+          filter: grayscale(0);
+        }
       }
     }
   }

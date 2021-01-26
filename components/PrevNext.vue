@@ -1,19 +1,19 @@
 <template>
-  <div class="flex justify-between">
+  <div class="boite-prev text-fin text-gris3">
     <NuxtLink
       v-if="prev"
-      :to="{ name: 'blog-slug', params: { slug: prev.slug } }"
-      class="text-primary font-bold hover:underline"
+      :to="{ name: 'eco-conception-slug', params: { slug: prev.slug } }"
+      class="bloc"
     >
-      {{ prev.title }}
+      &larr;{{ prev.title }}
     </NuxtLink>
     <span v-else>&nbsp;</span>
     <NuxtLink
       v-if="next"
-      :to="{ name: 'blog-slug', params: { slug: next.slug } }"
-      class="font-bold hover:underline"
+      :to="{ name: 'eco-conception-slug', params: { slug: next.slug } }"
+      class="bloc"
     >
-      {{ next.title }}
+      {{ next.title }}&rarr;
     </NuxtLink>
     <span v-else>&nbsp;</span>
   </div>
@@ -32,3 +32,17 @@ export default {
   },
 }
 </script>
+<style lang="scss" scoped>
+.boite-prev {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bloc {
+  display: block;
+  margin-left: 5px;
+  &:hover {
+    color: $vert;
+  }
+}
+</style>

@@ -20,10 +20,10 @@
         ></div>
       </div>
       <h2 class="h4 text-gris1">{{ titre }}</h2>
-      <h3 class="h4 text-fin text-gris1">{{ sousTitre }}</h3>
-      <a class="text-fin text-gris2" :href="lien" target="_blank"
-        >voir le site</a
-      >
+      <h3 class="h4 text-fin text-gris2">{{ sousTitre }}</h3>
+      <a :href="lien" target="_blank">
+        <button class="seepost">voir le site ⟶</button>
+      </a>
     </article>
   </div>
 </template>
@@ -53,19 +53,27 @@ export default {
 
 <style lang="scss" scoped>
 .boite-article {
-  width: 80%;
-  display: flex;
-  justify-content: flex-start;
+  width: 90%;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+  }
   &:nth-child(odd) {
-    justify-content: flex-end;
+    @media (min-width: $breakpoint-tablet) {
+      justify-content: flex-end;
+    }
   }
 }
 .article-resum {
-  width: 40%;
   text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  @media (min-width: $breakpoint-tablet) {
+    width: 40%;
+  }
 
   a {
     display: block;
@@ -82,8 +90,7 @@ export default {
 .boite-image {
   position: relative;
   width: 100%;
-  height: 43vh;
-  min-height: 100px;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
   overflow: hidden;
   &:hover .boite-image__image {
     transform: scale(1);
@@ -113,8 +120,8 @@ export default {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 101%;
+    height: 101%;
     background: $fondClair;
     z-index: 30;
     clip-path: url(#myClip);

@@ -1,5 +1,5 @@
 <template>
-  <footer class="fond-gris">
+  <footer id="footer" class="fond-gris">
     <!-- <svg viewBox="0 0 433 333">
       <path
         d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z"
@@ -36,13 +36,19 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-$width: 90vw;
-$height: $width / 1.618;
+$width: 100vw;
+@media (min-width: $breakpoint-tablet) {
+  $width: 90vw;
+}
+$height: 90vh;
+@media (min-width: $breakpoint-tablet) {
+  $height: $width / 1.618;
+}
 // $border: 0.5px solid #4a4949;
 footer {
   display: flex;
   position: relative;
-  z-index: 11;
+  z-index: 1;
   // box-shadow: inset 0 2.5vw 10vw 0 white;
 
   svg {
@@ -63,15 +69,25 @@ footer {
   height: $height;
   display: grid;
   margin: 0 auto;
-
-  grid-template-columns: 61.8% 9.02% 5.58% 23.6%;
-  grid-template-rows: 61.8% 9.02% 5.58% 11.8% 11.8%;
+  // grid-template-columns: 75% 25%;
+  // grid-template-rows: 61.8% 9.02% 5.58% 11.8% 11.8%;
   grid-template-areas:
-    'A B B B'
-    'A E E C'
-    'A E E C'
-    'A E E C'
-    'A D D D';
+    'A A A'
+    'A A A'
+    'F B B'
+    'F C C'
+    'F D D';
+
+  @media (min-width: $breakpoint-tablet) {
+    grid-template-columns: 61.8% 9.02% 5.58% 23.6%;
+    grid-template-rows: 61.8% 9.02% 5.58% 11.8% 11.8%;
+    grid-template-areas:
+      'A B B B'
+      'A E E C'
+      'A E E C'
+      'A E E C'
+      'A D D D';
+  }
 }
 //   grid-template-rows: 61.8% 9.02% 5.58% 23.6%;
 //   grid-template-areas:
@@ -149,11 +165,14 @@ footer {
     font-size: 0.75em;
   }
   &.e {
-    grid-area: E;
+    grid-area: B;
     font-size: 1.2em;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    @media (min-width: $breakpoint-tablet) {
+      grid-area: E;
+    }
     &::before {
       content: url("data:image/svg+xml; utf8, <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><path d='M17.25 18H6.75V4h10.5M14 21h-4v-1h4m2-19H8a3 3 0 00-3 3v16a3 3 0 003 3h8a3 3 0 003-3V4a3 3 0 00-3-3z' fill='rgba(217, 217, 217, 1'/></svg>");
       display: block;

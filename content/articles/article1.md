@@ -1,8 +1,9 @@
 ---
 title: My first Blog Post
-description: Learning how to use @nuxt/content to create a blog
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id fringilla nunc, vitae pellentesque diam. Quisque euismod, velit vel posuere porttitor, ex libero tristique augue, sit amet efficitur libero ligula sit amet nunc. Sed sit amet pretium turpis.
 img: profilFreakOut.jpg
 alt: my first blog post
+tag: ['WebDesign', 'WordPress']
 ---
 
 <!-- # My first blog post -->
