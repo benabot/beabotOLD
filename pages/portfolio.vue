@@ -35,7 +35,7 @@
           v-if="tout || select === ('vjs' || 'print')"
           titre="Guide RSE Banque Populaire"
           sous-titre="Carte interactive"
-          background-url="guideBleu1.png"
+          background-url="/guideBleu1.png"
           lien="https://www.guide-rse.banquepopulaire.fr/actions-rse"
       /></transition>
       <transition name="fade">
@@ -43,7 +43,7 @@
           v-if="tout || select === ('vjs' || 'wp')"
           titre="Guide RSE Banque Populaire"
           sous-titre="Interface de visualisation de données"
-          background-url="guideBleu2.png"
+          background-url="/guideBleu2.png"
           lien="https://www.guide-rse.banquepopulaire.fr/resultats-2019"
       /></transition>
       <transition name="fade">
@@ -51,7 +51,7 @@
           v-if="tout || select === ('eco' || 'wp')"
           titre="App noël"
           sous-titre="Application d'apprentissage à l'interface d'un ordinateur"
-          background-url="appNoel.png"
+          background-url="/appNoel.png"
       /></transition>
       <transition name="fade"> <BoiteArticle /></transition>
     </section>
