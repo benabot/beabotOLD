@@ -3,7 +3,7 @@
     <nav role="navigation" class="nav-mobile">
       <!-- <button @click="showMobileMenu = !showMobileMenu">bla</button> -->
       <img
-        src="beabot.svg"
+        src="/beabot.svg"
         alt="beabot"
         :class="{ 'logo-gris': showMobileMenu }"
         @click="showMobileMenu = !showMobileMenu"
