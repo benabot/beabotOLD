@@ -187,6 +187,7 @@ article {
     .boite-bouton {
       width: inherit;
       height: 55px;
+      align-self: center;
       @media (min-width: $breakpoint-tablet) {
         width: 25%;
       }

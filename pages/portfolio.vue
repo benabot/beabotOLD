@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h1 class="text-bold h3">Portfolio</h1>
+    <h1 class="text-bold h3 text-black">Portfolio</h1>
     <ul class="selector text-gris2">
       <li :class="{ 'text-bleu1': select === 'vjs' }" @click="change('vjs')">
         VueJs
@@ -92,6 +92,7 @@ h1 {
   }
 }
 .boite-article:not(:first-of-type) {
+  margin-top: 2.6rem;
   @media (min-width: $breakpoint-tablet) {
     margin-top: -60px;
   }

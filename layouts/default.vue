@@ -328,8 +328,8 @@ a.nuxt-link-active {
       font-weight: $light;
       margin: 0;
       z-index: 1000;
-      min-width: 80px;
-      width: 15%;
+      // min-width: 80px;
+      // width: 15%;
       overflow: visible;
       word-break: keep-all;
       hyphens: none;
@@ -338,7 +338,7 @@ a.nuxt-link-active {
       transition: 0.3s ease-in-out background-size;
 
       &:hover {
-        background-size: 100% 0.5em;
+        background-size: 88% 0.46em;
       }
 
       a {
@@ -375,22 +375,24 @@ a.nuxt-link-active {
       }
     }
     &-2 {
-      top: 2px;
-      right: 4px;
+      top: 6px;
+      right: 10px;
       padding-left: 11px;
       text-align: right;
-      background: linear-gradient($vert, $vert) left bottom / 0 0.1em no-repeat;
+      background: linear-gradient($vert, $vert) right bottom / 0 0.1em no-repeat;
     }
     &-3 {
-      bottom: 2px;
-      left: 4px;
-      background: linear-gradient($bleu2, $bleu2) bottom / 0 0.1em no-repeat;
+      bottom: 6px;
+      left: 10px;
+      background: linear-gradient($bleu2, $bleu2) left bottom / 0 0.1em
+        no-repeat;
     }
     &-4 {
-      bottom: 2px;
-      right: 4px;
+      bottom: 6px;
+      right: 10px;
       text-align: right;
-      background: linear-gradient($jaune, $jaune) bottom / 0 0.1em no-repeat;
+      background: linear-gradient($jaune, $jaune) right bottom / 0 0.1em
+        no-repeat;
     }
   }
 }

@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h3 class="text-bold h3">Éco-conception</h3>
+    <h3 class="text-bold h3 text-black">Éco-conception</h3>
     <nuxt-child />
   </main>
 </template>

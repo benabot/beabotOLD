@@ -13,12 +13,18 @@
     <section class="container container-2 fond-gris">
       <!-- <OeufImage /> -->
       <p class="text-gris4 h4">
-        Lorem ipsum dolor sit amet,
-        <span class="text-black">consetetur</span> sadipscing elitr, sed diam
-        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-        sed diam voluptua. At vero eos et accusam et
-        <span class="text-black">justo duo</span> dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+        Vous avez sans doute entendu dire que le
+        <span class="text-black"
+          >numérique émettrait plus de CO2 que le transport aérien</span
+        ><span class="insec">&thinsp;</span>? C’est vrai. Peut-être pensez-vous
+        que les <span class="text-black">data centers</span> sont la source
+        principale de cette <span class="text-black">pollution</span
+        ><span class="insec">&thinsp;</span>? Pas tout à fait. Peut-être vous
+        a-t-on dit qu’un site éco-conçu c’était le modèle amish en noir et
+        blanc<span class="insec">&thinsp;</span>?
+        <span class="text-black"
+          >Pas du tout<span class="insec">&thinsp;</span>!</span
+        >
       </p>
     </section>
     <section class="container container-3">
@@ -48,28 +54,27 @@
           fill="#f2a81d"
         />
         <h2 class="titre2 text-gris2 text-black">
-          Lorem ipsum dolor sit amet, consetetur
+          Qu'est-ce que l'éco-conception web<span class="insec">&thinsp;</span>?
         </h2>
         <div class="container-3__titre__sub">
           <div></div>
-          <div class="lettre-smcp">Lorem ipsum</div>
+          <div class="lettre-smcp">En quelques mots</div>
         </div>
       </div>
       <div class="boite-para">
-        <div class="boite-para--para">
-          <Petittitre gris numero="1" />
+        <div class="boite-para__para">
+          <Petittitre gris numero="1" titre="Durabilité" />
           <p class="text-gris2">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat,
+            2/3 des impacts environnementaux du numérique proviennent de la
+            fabrication des équipements. Un site éco-conçu les sollicitera
+            moins, évitant leur renouvellement prématuré.
           </p>
         </div>
-        <div class="boite-para--para">
-          <Petittitre gris numero="2" />
+        <div class="boite-para__para mt-2">
+          <Petittitre gris numero="2" titre="Efficience" />
           <p class="text-gris2">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat,
+            Utiliser le minimum de ressources pour obtenir un résultat similaire
+            à un produit conçu de manière conventionnelle
           </p>
         </div>
       </div>
@@ -101,19 +106,21 @@
       />
       <div class="container-4__boite-para">
         <div class="container-4__boite-para--para">
-          <Petittitre couleur="white" numero="3" />
+          <Petittitre couleur="white" numero="3" titre="Sobriété" />
           <p class="text-gris4">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat,
+            Proposer un service correspondant à un besoin avéré et aux
+            fonctionnalités simples.
+            <br />
+            Faire des choix technologiques afin de réduire l’empreinte carbone
+            du site tout en fournissant un service optimal.
           </p>
         </div>
         <div class="container-4__boite-para--para">
-          <Petittitre couleur="white" numero="4" />
+          <Petittitre couleur="white" numero="4" titre="Transversalité" />
           <p class="text-gris4">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat,
+            À chacune des étapes de la conception du site web et jusqu’à
+            l’accompagnement des utilisateurs le souci de l’environnement est au
+            cœur du projet.
           </p>
         </div>
       </div>
@@ -123,7 +130,7 @@
         <div class="container-5__boite-titre__titre">
           <div>
             <h3 class="text-black h2">
-              Lorem ipsum dolor sit amet, consetetur
+              Un site bon pour la planete et bon pour&nbsp;:
             </h3>
           </div>
           <div>
@@ -140,7 +147,7 @@
         </div>
       </div>
       <div class="boite-para">
-        <div class="boite-para--para">
+        <div class="boite-para__para">
           <div class="boite-para--titre">
             <div>
               <Oeuf
@@ -150,19 +157,20 @@
                 fill="#f2a81d"
               />
             </div>
-            <div><Petittitre gris /></div>
+            <div><Petittitre gris titre="Ses utilisateurs" /></div>
           </div>
 
           <p class="text-gris2">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint,
-            deserunt expedita. Quibusdam perferendis in minus repellat fugiat
-            maxime, deserunt consequatur ipsa excepturi sunt, esse et itaque
-            impedit dicta sit? Praesentium.
+            L’économie de moyens mis en œuvre ne se fait pas au détriment de la
+            qualité graphique du site. Au contraire, toutes les fonctionnalités
+            du site sont pensées pour garantir la meilleure expérience
+            utilisateur (UX design). Élaborer des interfaces pertinentes pour
+            l’utilisateur et sobres énergétiquement c’est une démarche
+            rigoureuse de webdesign avec un soin particulièrement prononcé pour
+            le détails typographique et la mise en page léchée.
           </p>
         </div>
-        <div class="boite-para--para">
+        <div class="boite-para__para">
           <div class="boite-para--titre">
             <div>
               <Oeuf
@@ -172,63 +180,18 @@
                 fill="#2561d9"
               />
             </div>
-            <div><Petittitre gris /></div>
+            <div><Petittitre gris titre="Le référencement" /></div>
           </div>
 
           <p class="text-gris2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint,
-            <span class="chiffre-onum">12345678</span>
-            <span class="chiffre-lnum">12345678</span>
-            deserunt expedita. Quibusdam perferendis in minus repellat fugiat
-            maxime, deserunt consequatur ipsa excepturi sunt, esse et itaque
-            impedit dicta sit? Praesentium.
+            L’expérience utilisateur finement étudiée et la sobriété des moyens
+            employés permettent à un site éco-conçu de répondre naturellement
+            aux principaux critères d’un bon référencement. Votre site possédera
+            les atouts les plus pertinents pour figurer en bonne position dans
+            les moteurs de recherche.
           </p>
         </div>
       </div>
-      <!-- <div class="container-5__content">
-        <div class="container-5__content__in">
-          <div class="container-5__content__titre">
-            <div>
-              <Oeuf
-                class="oeuf"
-                width="100%"
-                transform="rotate(-125)"
-                fill="#0439d9"
-              />
-            </div>
-            <div><Petittitre gris /></div>
-          </div>
-          <div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint,
-              deserunt expedita. Quibusdam perferendis in minus repellat fugiat
-              maxime, deserunt consequatur ipsa excepturi sunt, esse et itaque
-              impedit dicta sit? Praesentium.
-            </p>
-          </div>
-        </div>
-        <div class="container-5__content__in">
-          <div class="container-5__content__titre">
-            <div>
-              <Oeuf
-                class="oeuf"
-                width="100%"
-                transform="rotate(-125)"
-                fill="#0439d9"
-              />
-            </div>
-            <div><Petittitre /></div>
-          </div>
-          <div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint,
-              deserunt expedita. Quibusdam perferendis in minus repellat fugiat
-              maxime, deserunt consequatur ipsa excepturi sunt, esse et itaque
-              impedit dicta sit? Praesentium.
-            </p>
-          </div>
-        </div>
-      </div> -->
     </section>
     <section class="container container-blog container-blog--bleu">
       <h3 class="h2 text-gris2 text-black">
@@ -237,7 +200,7 @@
         <span class="text-fin">dernières créations</span>
       </h3>
       <div class="container-blog__box">
-        <div class="boite-para--para a">
+        <div class="boite-para__para a">
           <Petittitre gris couleur="#2561d9" stitre="dev" />
           <p class="text-gris2">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
@@ -265,7 +228,7 @@
             fill="#2561d9"
           />
         </div>
-        <div class="boite-para--para c">
+        <div class="boite-para__para c">
           <Petittitre gris couleur="#2561d9" stitre="webdesign" />
           <p class="text-gris2">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
@@ -282,7 +245,7 @@
         <span class="text-fin">derniers articles</span>
       </h3>
       <div class="container-blog__box">
-        <div class="boite-para--para a">
+        <div class="boite-para__para a">
           <Petittitre gris stitre="VueJS" />
           <p class="text-gris2">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
@@ -310,7 +273,7 @@
             fill="#04d94f"
           />
         </div>
-        <div class="boite-para--para c">
+        <div class="boite-para__para c">
           <Petittitre gris stitre="WordPress" />
           <p class="text-gris2">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
@@ -397,12 +360,13 @@ section {
       position: relative;
       z-index: 2;
       @media (min-width: $breakpoint-tablet) {
-        width: 20%;
+        // width: 20%;
         text-align: left;
       }
       div {
         &:first-child {
-          width: 50%;
+          width: 9.8ex;
+          // width: 61.8%;
           height: 0.5em;
           border-top: 2px solid $vert;
         }
@@ -419,7 +383,7 @@ section {
     z-index: 3;
     display: flex;
     @media (min-width: $breakpoint-tablet) {
-      width: 60%;
+      width: 66%;
     }
     &--para {
       width: 50%;
@@ -602,9 +566,9 @@ section {
   width: 100%;
   display: flex;
   @media (min-width: $breakpoint-tablet) {
-    width: 60%;
+    width: 66%;
   }
-  &--para {
+  &__para {
     width: 50%;
     & p {
       text-align: justify;

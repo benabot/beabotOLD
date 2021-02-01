@@ -53,6 +53,9 @@
   -webkit-font-feature-settings: "smcp";
   font-feature-settings: "smcp";
 }
+.insec {
+  white-space: nowrap
+}
 
 .fixe { position: fixed;}
 p,
@@ -61,13 +64,10 @@ h1,
 h2,
 h3,
 h4 {
-  // Help prevent overflow of long words/names/URLs
   word-break: break-word;
 
-  // Optional, not supported for all languages:
   hyphens: auto;
 
-  // Clear top margin
   margin-top: 0;
 }
 
@@ -76,9 +76,7 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-}
+
 
 body {
   // Ensure base applied as default for all other elements
@@ -101,6 +99,17 @@ body {
     background-color: $fondClair;
   }
   
+  // -------ESPACES--------
+  .mt {
+    &-1 {
+      margin-top: 1.5rem;
+    }
+    &-2 {
+      margin-top: 3rem;
+    }
+  }
+
+  // -------GENERAL--------
   *,
   *::before,
   *::after {
@@ -184,7 +193,8 @@ body {
     background: $bleu2;
     position: absolute;
     right: 0;
-    box-shadow: 2px 5px 10px 2px $gris1;
+    box-shadow: 1px 1.5px 5px $gris1;
+    // box-shadow: 2px 5px 10px 2px $gris1;
     // bottom: -46px;
     width: auto;
     border-radius: 1000px 1000px;
