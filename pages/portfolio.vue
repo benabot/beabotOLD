@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h1 class="text-bold h3 text-black">Portfolio</h1>
+    <h1 class="text-bold h2 text-black">Portfolio</h1>
     <ul class="selector text-gris2">
       <li :class="{ 'text-bleu1': select === 'vjs' }" @click="change('vjs')">
         VueJs
@@ -15,10 +15,10 @@
       </li>
       /
       <li
-        :class="{ 'text-bleu1': select === 'print' }"
-        @click="change('print')"
+        :class="{ 'text-bleu1': select === 'webDesign' }"
+        @click="change('webDesign')"
       >
-        Print
+        Webdesign
       </li>
       <br />
       <li
@@ -31,29 +31,54 @@
     </ul>
     <section class="container--page">
       <transition name="fade">
-        <BoiteArticle
-          v-if="tout || select === ('vjs' || 'print')"
+        <LazyBoiteArticle
+          v-if="tout || select === 'vjs' || select === 'webDesign'"
           titre="Guide RSE Banque Populaire"
           sous-titre="Carte interactive"
-          background-url="/guideBleu1.png"
+          background-url="guideBleu1.png"
           lien="https://www.guide-rse.banquepopulaire.fr/actions-rse"
       /></transition>
       <transition name="fade">
-        <BoiteArticle
-          v-if="tout || select === ('vjs' || 'wp')"
+        <LazyBoiteArticle
+          v-if="tout || select === 'vjs' || select === 'webDesign'"
           titre="Guide RSE Banque Populaire"
           sous-titre="Interface de visualisation de données"
-          background-url="/guideBleu2.png"
+          background-url="guideBleu2.png"
           lien="https://www.guide-rse.banquepopulaire.fr/resultats-2019"
       /></transition>
       <transition name="fade">
-        <BoiteArticle
-          v-if="tout || select === ('eco' || 'wp')"
+        <LazyBoiteArticle
+          v-if="tout || select === 'vjs' || select === 'webDesign'"
           titre="App noël"
           sous-titre="Application d'apprentissage à l'interface d'un ordinateur"
-          background-url="/appNoel.png"
+          background-url="appNoel.png"
       /></transition>
-      <transition name="fade"> <BoiteArticle /></transition>
+      <transition name="fade">
+        <lazy-BoiteArticle
+          v-if="
+            tout ||
+            select === 'eco' ||
+            select === 'webDesign' ||
+            select === 'wp'
+          "
+          titre="AAVE"
+          sous-titre="Association pour l'aménagement de la vallée de l'Esches"
+          background-url="aave.png"
+          lien="https://vallee-esches.fr/"
+      /></transition>
+      <transition name="fade">
+        <LazyBoiteArticle
+          v-if="
+            tout ||
+            select === 'eco' ||
+            select === 'webDesign' ||
+            select === 'wp'
+          "
+          titre="La petite boucle"
+          sous-titre="Collecte de cartouches d’encre en triporteur électrique"
+          background-url="petite-boucle.png"
+          lien="https://lapetiteboucle.fr/"
+      /></transition>
     </section>
   </main>
 </template>
@@ -84,7 +109,7 @@ export default {
 h1 {
   color: $bleu2;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 .boite-article {
   @media (max-width: $breakpoint-tablet) {
@@ -100,8 +125,8 @@ h1 {
 .selector {
   text-align: center;
   padding-left: 0;
-  margin-top: -1rem;
-  margin-bottom: 1rem;
+  margin-top: -3rem;
+  margin-bottom: 3rem;
 
   li {
     display: inline;

@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h3 class="text-bold h3 text-black">Éco-conception</h3>
+    <h3 class="text-bold h2 text-black">Éco-conception</h3>
     <nuxt-child />
   </main>
 </template>
@@ -17,6 +17,7 @@ export default {
 h3 {
   color: $vert;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 0 !important;
 }
 </style>

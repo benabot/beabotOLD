@@ -3,35 +3,29 @@
     <section>
       <h1 class="h3 text-fin">divers aspects de l'éco-conception web</h1>
       <ul class="selector text-gris3">
-        <li
-          :class="{ 'text-vert': selectedTag === 'Vue' }"
-          @click="updateTag('Vue')"
-        >
+        <li :class="{ 'text-vert': name === 'Vue' }" @click="updateTag('Vue')">
           JS
         </li>
         /
         <li
-          :class="{ 'text-vert': selectedTag === 'WordPress' }"
+          :class="{ 'text-vert': name === 'WordPress' }"
           @click="updateTag('WordPress')"
         >
           WordPress
         </li>
         /
-        <li
-          :class="{ 'text-vert': selectedTag === 'wds' }"
-          @click="updateTag('wds')"
-        >
+        <li :class="{ 'text-vert': name === 'wds' }" @click="updateTag('wds')">
           WebDesign
         </li>
         /
         <li
-          :class="{ 'text-vert': selectedTag === 'typo' }"
+          :class="{ 'text-vert': name === 'typo' }"
           @click="updateTag('typo')"
         >
           Typographie
         </li>
         <br />
-        <li v-show="selectedTag" class="text-gris3" @click="selectedTag = ''">
+        <li v-show="name" class="text-gris3" @click="updateTag('')">
           Tout voir
         </li>
       </ul>
@@ -54,13 +48,16 @@
     </section>
     <div class="border"></div>
     <section>
-      <article v-for="article of articlesFilters" :key="article.slug">
-        <!-- <img :src="article.img" /> -->
-        <Petittitre gris :titre="article.title" :tags="article.tag" />
-        <div class="resum">
-          <p class="text-gris2">{{ article.description }}</p>
-          <div class="boite-bouton">
-            <NuxtLink
+      <transition-group name="list" tag="div">
+        <article v-for="article of articlesFilters" :key="article.slug">
+          <!-- <img :src="article.img" /> -->
+          <nuxt-link :to="`/eco-conception/${article.slug}`">
+            <Petittitre gris :titre="article.title" :tags="article.tag"
+          /></nuxt-link>
+          <div class="resum">
+            <p class="text-gris2">{{ article.description }}</p>
+            <div class="boite-bouton">
+              <!-- <NuxtLink
               :to="{
                 name: 'eco-conception-slug',
                 params: { slug: article.slug },
@@ -68,10 +65,15 @@
               ><button class="seepost seepost--vert">
                 poursuivre la lecture
               </button>
-            </NuxtLink>
+            </NuxtLink> -->
+              <Boutoncta
+                text="lire la suite"
+                :to="`/eco-conception/${article.slug}`"
+              />
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
+      </transition-group>
     </section>
   </div>
 </template>
@@ -90,22 +92,27 @@ export default {
     }
   },
   computed: {
+    name() {
+      return this.$store.state.tags.tag
+    },
     articlesFilters() {
-      if (!this.selectedTag) {
+      if (!this.name) {
         return this.articles
       } else {
-        return this.articles.filter((el) => el.tag.includes(this.selectedTag))
+        return this.articles.filter((el) => el.tag.includes(this.name))
       }
     },
   },
+  created() {
+    // this.$store.dispatch('tags/getTag')
+  },
   methods: {
     updateTag(tag) {
-      //   if (!this.selectedTag) {
-      this.selectedTag = tag
-      //   } else {
-      //     this.selectedTag = null
-      //   }
+      this.$store.commit('tags/setTag', tag)
     },
+    // updateTag(tag) {
+    //   this.selectedTag = tag
+    // },
   },
 }
 </script>
@@ -138,24 +145,18 @@ a {
 }
 .intro {
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
-  margin-top: 2rem;
+  margin-top: 2.6rem;
   // letter-spacing: 0.07rem;
+  @media (min-width: $breakpoint-tablet) {
+    flex-direction: row;
+  }
   p {
     text-align: justify;
     margin-left: 1em;
     @media (max-width: $breakpoint-tablet) {
-      margin-left: 1em;
-    }
-  }
-  &__img {
-    @media (min-width: $breakpoint-tablet) {
-      background: url('/logoOrdi3.svg') no-repeat;
-      background-size: contain;
-      width: 33%;
-      margin-right: 1rem;
-      margin-top: -1rem;
-      margin-left: -1rem;
+      margin-left: 0;
     }
   }
 }
@@ -166,10 +167,13 @@ a {
   width: 33%;
 }
 article {
-  margin-top: 3rem;
   display: flex;
+  margin-top: 1rem;
   flex-direction: column;
   justify-content: space-between;
+  &:first-child {
+    margin-top: 3rem;
+  }
   .resum {
     display: flex;
     flex-direction: column;
@@ -187,11 +191,26 @@ article {
     .boite-bouton {
       width: inherit;
       height: 55px;
-      align-self: center;
+      align-self: flex-end;
       @media (min-width: $breakpoint-tablet) {
         width: 25%;
+        div {
+          margin-right: 53%;
+          margin-top: 1.68rem;
+        }
       }
     }
   }
+}
+
+.list-enter-active {
+  transition: opacity 0.3s, transform 0.2s;
+}
+.list-leave-active {
+  transition: opacity 0.15s, transform 0.1s;
+}
+.list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: scale(0.99);
 }
 </style>

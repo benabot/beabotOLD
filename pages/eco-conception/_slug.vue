@@ -18,8 +18,14 @@
           <li class="text-gris3">{{ article.title }}</li>
         </ul>
         <hr />
-        <span v-for="tag in article.tag" :key="tag" class="petit-text"
-          ><span class="text-vert"> #</span>{{ tag }}</span
+        <span
+          v-for="tag in article.tag"
+          :key="tag"
+          class="petit-text"
+          @click="updateTag(tag)"
+          ><NuxtLink to="/eco-conception"
+            ><span class="text-vert"> #</span>{{ tag }}</NuxtLink
+          ></span
         >
       </div>
       <div class="chapitres text-gris1">
@@ -98,6 +104,9 @@ export default {
       const options = { day: 'numeric', month: 'long', year: 'numeric' }
       return new Date(date).toLocaleDateString('fr', options)
     },
+    updateTag(tag) {
+      this.$store.commit('tags/setTag', tag)
+    },
   },
 }
 </script>
@@ -127,7 +136,7 @@ section {
     border-top: 1px solid $gris3;
     padding-top: 2rem;
     @media (min-width: $breakpoint-tablet) {
-      width: 25%;
+      width: 32.2%;
       position: sticky;
       top: 5rem;
       align-self: flex-start;
@@ -150,17 +159,19 @@ section {
     }
     hr {
       border: 0.8px solid $gris4;
-      width: 66%;
+      width: 61.8%;
     }
     .breadcrumb {
       hr {
-        margin-bottom: -0.5rem;
+        margin-bottom: -0.3rem;
+        margin-top: 0.2rem;
       }
       .selector {
         text-align: left;
         padding-left: 0;
         margin-top: -1rem;
-        opacity: 0.9;
+        margin-left: -19px;
+        // opacity: 0.9;
 
         li {
           display: inline;
@@ -216,17 +227,23 @@ section {
     width: 100%;
     order: 1;
     @media (min-width: $breakpoint-tablet) {
-      width: 55%;
+      width: 51.8%;
       order: 2;
     }
     hr {
       border: 0.5px solid $gris4;
-      width: 66%;
+      width: 61.8%;
       margin-top: -0.5rem;
     }
     img {
-      max-width: 90%;
+      max-width: 100%;
       height: auto;
+    }
+    p {
+      max-width: 60ch;
+      &:first-of-type {
+        margin-bottom: 1.05rem;
+      }
     }
   }
 }

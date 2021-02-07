@@ -16,7 +16,9 @@
         <div class="circle"></div>
         <div
           class="boite-image__image"
-          :style="{ backgroundImage: `url(${backgroundUrl})` }"
+          :style="{
+            backgroundImage: `url(${require('@/assets/img/' + backgroundUrl)})`,
+          }"
         ></div>
       </div>
       <h2 class="h4 text-gris1">{{ titre }}</h2>
@@ -40,8 +42,8 @@ export default {
     },
     backgroundUrl: {
       type: String,
-      default:
-        'https://www.cdc.gov/healthypets/images/pets/cute-dog-headshot.jpg',
+      default: 'profilFreakOut.jpg',
+      // 'https://www.cdc.gov/healthypets/images/pets/cute-dog-headshot.jpg',
     },
     lien: {
       type: String,

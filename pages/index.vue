@@ -119,8 +119,8 @@
           <Petittitre couleur="white" numero="4" titre="Transversalité" />
           <p class="text-gris4">
             À chacune des étapes de la conception du site web et jusqu’à
-            l’accompagnement des utilisateurs le souci de l’environnement est au
-            cœur du projet.
+            l’accompagnement des usagers la préoccupation environnementale est
+            au cœur du projet.
           </p>
         </div>
       </div>
@@ -194,6 +194,7 @@
       </div>
     </section>
     <section class="container container-blog container-blog--bleu">
+      <hr />
       <h3 class="h2 text-gris2 text-black">
         portfolio <span>:</span>
         <br />
@@ -239,6 +240,7 @@
       </div>
     </section>
     <section class="container container-blog">
+      <hr />
       <h3 class="h2 text-gris2 text-black">
         éco-conception <span>:</span>
         <br />
@@ -256,6 +258,7 @@
             elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
             magna aliquyam erat,
           </p>
+          <Boutoncta text="lire la suite" />
         </div>
         <div class="oeuf b">
           <NuxtLink to="/eco-conception"
@@ -278,7 +281,7 @@
           <p class="text-gris2">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat,
+            erat <Boutoncta text="lire la suite" />
           </p>
         </div>
       </div>
@@ -307,22 +310,29 @@ section {
 }
 .container-2 {
   p {
-    width: 50vw;
+    width: 90vw;
     line-height: 1.618;
+    @media (min-width: $breakpoint-tablet) {
+      width: 50vw;
+    }
   }
 }
 .container-3 {
   display: flex;
-  padding-top: 10rem;
-  padding-bottom: 5rem;
+  @media (min-width: $breakpoint-tablet) {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+  }
   &__titre {
     width: 90%;
     margin-left: 10%;
-    min-height: 45vh;
+    margin-bottom: 1.6rem;
     position: relative;
     @media (min-width: $breakpoint-tablet) {
       width: 60%;
+      margin-bottom: 0;
       margin-left: 40%;
+      min-height: 45vh;
     }
 
     h2 {
@@ -378,19 +388,27 @@ section {
   position: relative;
   &__boite-para {
     width: 100%;
-    min-height: 50vh;
+    min-height: 80vh;
     position: relative;
     z-index: 3;
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     @media (min-width: $breakpoint-tablet) {
       width: 66%;
+      flex-direction: row;
+      min-height: 50vh;
     }
     &--para {
-      width: 50%;
-      align-self: flex-end;
-      &:first-child {
-        align-self: flex-start;
+      width: 100%;
+      @media (min-width: $breakpoint-tablet) {
+        width: 50%;
+        align-self: flex-end;
+        &:first-child {
+          align-self: flex-start;
+        }
       }
+
       p {
         text-align: justify;
         margin-right: 2rem;
@@ -411,11 +429,17 @@ section {
   }
   &__oeuf-3 {
     left: 10%;
-    top: 56%;
+    top: 78%;
+    @media (min-width: $breakpoint-tablet) {
+      top: 56%;
+    }
   }
   &__oeuf-4 {
     right: 10%;
-    top: 60%;
+    top: 80%;
+    @media (min-width: $breakpoint-tablet) {
+      top: 60%;
+    }
   }
 }
 .container-5 {
@@ -436,7 +460,10 @@ section {
       }
       h3 {
         color: white;
-        margin: 0 3rem;
+        margin: 1px 4px;
+        @media (min-width: $breakpoint-tablet) {
+          margin: 0 3rem;
+        }
       }
       div {
         position: absolute;
@@ -462,6 +489,18 @@ section {
   }
 }
 .container-blog {
+  hr {
+    // color: $vert;
+    width: 66%;
+    border: 0.6px solid $vert;
+    border-radius: 500px;
+    opacity: 0.7;
+    margin-bottom: 1.6rem;
+    @media (min-width: $breakpoint-tablet) {
+      display: none;
+    }
+  }
+
   h3 {
     span {
       color: $vert;
@@ -478,7 +517,7 @@ section {
   }
   .c {
     order: 2;
-    margin-top: 1rem;
+    margin-top: 1.6rem;
     @media (min-width: $breakpoint-tablet) {
       order: 3;
       margin-top: 0;
@@ -489,6 +528,9 @@ section {
       span {
         color: $bleu1;
       }
+    }
+    hr {
+      border: 0.6px solid $bleu1;
     }
   }
 
@@ -565,11 +607,16 @@ section {
 .boite-para {
   width: 100%;
   display: flex;
+  flex-direction: column;
   @media (min-width: $breakpoint-tablet) {
     width: 66%;
+    flex-direction: row;
   }
   &__para {
-    width: 50%;
+    width: 100%;
+    @media (min-width: $breakpoint-tablet) {
+      width: 50%;
+    }
     & p {
       text-align: justify;
     }
@@ -585,15 +632,22 @@ section {
     display: flex;
     align-items: center;
     width: 100%;
-    min-height: 6rem;
+    min-height: 5rem;
+    margin-top: 2.5rem;
+    @media (min-width: $breakpoint-tablet) {
+      margin-top: 0;
+    }
     div {
       position: absolute;
       top: 0;
       left: 0;
       &:first-child {
         z-index: -1;
-        left: -40%;
+        left: 10%;
         top: -40%;
+        @media (min-width: $breakpoint-tablet) {
+          left: -40%;
+        }
       }
     }
   }

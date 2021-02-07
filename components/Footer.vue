@@ -62,6 +62,9 @@ footer {
   a {
     text-decoration: none;
     color: $gris4;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 .container-or {
