@@ -16,6 +16,7 @@
 .text-gris2 { color: $gris2; }
 .text-gris3 { color: $gris3; }
 .text-gris4 { color: $gris4; }
+.text-gris5 { color: $gris5; }
 .text-bleu1 { color: $bleu1;}
 .text-bleu2 { color: $bleu2;}
 .text-vert { color: $vert;}
@@ -24,6 +25,13 @@
 .text-normal { font-weight: $normal;}
 .text-bold { font-weight: $bold;}
 .text-black { font-weight: $black;}
+.text-encours {
+border-left: 2px solid $vert;
+  // &:before {
+  //   display: inline-block;
+  //   content: '\00a2';
+  // }
+}
 
 .petit-text { font-size: $level-size*0.1068;}
 .petit-text2 { font-size: $level-size*0.125;}
@@ -104,6 +112,14 @@ body {
     }
     &-2 {
       margin-top: 3rem;
+    }
+  }
+  .ml {
+    &-1 {
+      margin-left: 0.25rem;
+    }
+    &-2 {
+      margin-left: 0.5rem;
     }
   }
 
@@ -210,8 +226,12 @@ body {
       background: $vert;
     }
     &:hover {
-      transform: translate3d(5px, 0, 0);
-    }
+      transform: translate3d(8px, 0, 0);
+      -webkit-transform: translate3d(8px, 0, 0);
+      -moz-transform: translate3d(8px, 0, 0);
+      -ms-transform: translate3d(8px, 0, 0);
+      -o-transform: translate3d(8px, 0, 0);
+}
   }
 
   .page-enter-active,

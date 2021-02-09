@@ -14,13 +14,16 @@
           WordPress
         </li>
         /
-        <li :class="{ 'text-vert': name === 'wds' }" @click="updateTag('wds')">
+        <li
+          :class="{ 'text-vert': name === 'WebDesign' }"
+          @click="updateTag('WebDesign')"
+        >
           WebDesign
         </li>
         /
         <li
-          :class="{ 'text-vert': name === 'typo' }"
-          @click="updateTag('typo')"
+          :class="{ 'text-vert': name === 'Typographie' }"
+          @click="updateTag('Typographie')"
         >
           Typographie
         </li>
@@ -83,7 +86,7 @@ export default {
   async asyncData({ $content, params }) {
     const articles = await $content('articles', params.slug)
       .only(['title', 'description', 'img', 'slug', 'tag'])
-      .sortBy('createdAt', 'asc')
+      .sortBy('createdAt', 'desc')
       .fetch()
 
     return {
@@ -102,9 +105,6 @@ export default {
         return this.articles.filter((el) => el.tag.includes(this.name))
       }
     },
-  },
-  created() {
-    // this.$store.dispatch('tags/getTag')
   },
   methods: {
     updateTag(tag) {
@@ -154,21 +154,26 @@ a {
   }
   p {
     text-align: justify;
-    margin-left: 1em;
-    @media (max-width: $breakpoint-tablet) {
-      margin-left: 0;
+    // margin-left: 0;
+    @media (min-width: $breakpoint-tablet) {
+      &:first-of-type {
+        margin-right: 1em;
+      }
     }
   }
 }
 .border {
-  border-bottom: 1px solid $vert;
-  height: 1rem;
+  border: 2px solid $vert;
+  // height: 1rem;
   margin-left: 33%;
   width: 33%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+  border-radius: 0.25rem;
 }
 article {
   display: flex;
-  margin-top: 1rem;
+  margin-top: 1.3rem;
   flex-direction: column;
   justify-content: space-between;
   &:first-child {
@@ -195,7 +200,7 @@ article {
       @media (min-width: $breakpoint-tablet) {
         width: 25%;
         div {
-          margin-right: 53%;
+          margin-right: 33%;
           margin-top: 1.68rem;
         }
       }

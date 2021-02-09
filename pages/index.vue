@@ -12,7 +12,7 @@
     </section>
     <section class="container container-2 fond-gris">
       <!-- <OeufImage /> -->
-      <p class="text-gris4 h4">
+      <p class="text-gris5 h4">
         Vous avez sans doute entendu dire que le
         <span class="text-black"
           >numérique émettrait plus de CO2 que le transport aérien</span
@@ -26,6 +26,29 @@
           >Pas du tout<span class="insec">&thinsp;</span>!</span
         >
       </p>
+    </section>
+    <section class="container impact fond-gris">
+      <div class="impact--col">
+        <div class="impact--chiffre">
+          texte texte 34 TEXT TEXT ukfou ufgougfofpuy gg iuoug
+        </div>
+        <div class="impact--chiffre">
+          texte texte 34 TEXT TEXT ukfou ufgougfofpuy gg iuoug
+        </div>
+      </div>
+      <div class="impact--col impact--col__centre">
+        <div class="impact--titre">
+          <h2>Les impacts du numérique sur l'envirronnement&nbsp;:</h2>
+        </div>
+      </div>
+      <div class="impact--col">
+        <div class="impact--chiffre">
+          texte texte 34 TEXT TEXT ukfou ufgougfofpuy gg iuoug
+        </div>
+        <div class="impact--chiffre">
+          texte texte 34 TEXT TEXT ukfou ufgougfofpuy gg iuoug
+        </div>
+      </div>
     </section>
     <section class="container container-3">
       <div class="container-3__titre">
@@ -107,7 +130,7 @@
       <div class="container-4__boite-para">
         <div class="container-4__boite-para--para">
           <Petittitre couleur="white" numero="3" titre="Sobriété" />
-          <p class="text-gris4">
+          <p class="text-gris5">
             Proposer un service correspondant à un besoin avéré et aux
             fonctionnalités simples.
             <br />
@@ -117,7 +140,7 @@
         </div>
         <div class="container-4__boite-para--para">
           <Petittitre couleur="white" numero="4" titre="Transversalité" />
-          <p class="text-gris4">
+          <p class="text-gris5">
             À chacune des étapes de la conception du site web et jusqu’à
             l’accompagnement des usagers la préoccupation environnementale est
             au cœur du projet.
@@ -193,72 +216,31 @@
         </div>
       </div>
     </section>
-    <section class="container container-blog container-blog--bleu">
-      <hr />
-      <h3 class="h2 text-gris2 text-black">
-        portfolio <span>:</span>
-        <br />
-        <span class="text-fin">dernières créations</span>
-      </h3>
-      <div class="container-blog__box">
-        <div class="boite-para__para a">
-          <Petittitre gris couleur="#2561d9" stitre="dev" />
-          <p class="text-gris2">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-            diam nonumy eirmod tempor invidunt ut labore et dolore magna
-            aliquyam erat, Lorem ipsum dolor sit amet, consetetur sadipscing
-            elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-            magna aliquyam erat,
-          </p>
-        </div>
-        <div class="oeuf b">
-          <NuxtLink to="/portfolio"
-            ><svg class="lien" viewBox="0 0 24 24">
-              <path
-                fill="currentColor"
-                d="M18.4,13h-4.9c-0.3,0-0.6,0.2-0.6,0.6v4.9c0,0.3-0.2,0.6-0.6,0.6h-0.9c-0.3,0-0.6-0.2-0.6-0.6v-4.9c0-0.3-0.2-0.6-0.6-0.6
-	H5.6C5.2,13,5,12.8,5,12.4v-0.9C5,11.2,5.2,11,5.6,11h4.9c0.3,0,0.6-0.2,0.6-0.6V5.6C11,5.2,11.2,5,11.6,5h0.9C12.8,5,13,5.2,13,5.6
-	v4.9c0,0.3,0.2,0.6,0.6,0.6h4.9c0.3,0,0.6,0.2,0.6,0.6v0.9C19,12.8,18.8,13,18.4,13z"
-              /></svg></NuxtLink
-          ><Oeuf
-            class="fond"
-            width="80%"
-            transform="rotate(-95)"
-            fill="#2561d9"
-          />
-        </div>
-        <div class="boite-para__para c">
-          <Petittitre gris couleur="#2561d9" stitre="webdesign" />
-          <p class="text-gris2">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat,
-          </p>
-        </div>
-      </div>
-    </section>
     <section class="container container-blog">
       <hr />
       <h3 class="h2 text-gris2 text-black">
-        éco-conception <span>:</span>
+        éco-conception&nbsp;<span>:</span>
         <br />
         <span class="text-fin">derniers articles</span>
       </h3>
       <div class="container-blog__box">
         <div class="boite-para__para a">
-          <Petittitre gris stitre="VueJS" />
+          <Petittitre
+            gris
+            titre="La typo pour un webdesign sobre"
+            stitre="Typographie"
+          />
           <p class="text-gris2">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-            diam nonumy eirmod tempor invidunt ut labore et dolore magna
-            aliquyam erat, Lorem ipsum dolor sit amet, consetetur sadipscing
-            elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-            magna aliquyam erat,
+            Dans ce billet j’aborde la question de la typographie dans le cadre
+            d’une pratique d’éco-conception web. Étant le composant de base du
+            graphisme, mais également un élément consommant beaucoup de
+            ressources, la typographie est au doublement cœur d’un design web
+            éco-responsable.
           </p>
-          <Boutoncta text="lire la suite" />
+          <Boutoncta
+            text="lire la suite"
+            to="eco-conception/typographie-ecoconception"
+          />
         </div>
         <div class="oeuf b">
           <NuxtLink to="/eco-conception"
@@ -277,12 +259,73 @@
           />
         </div>
         <div class="boite-para__para c">
-          <Petittitre gris stitre="WordPress" />
+          <Petittitre
+            gris
+            titre="Rendre WordPress plus vert !"
+            stitre="WordPress"
+          />
           <p class="text-gris2">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat <Boutoncta text="lire la suite" />
+            Après avoir présenté les principes notables de l’éco-conception web,
+            place à plus de détails. Voici les grandes lignes de mon approche
+            pour éco-concevoir un site web avec WordPress à chaque étape d’un
+            projet.
+            <Boutoncta
+              text="lire la suite"
+              to="eco-conception/ecoconception-wordpress"
+            />
           </p>
+        </div>
+      </div>
+    </section>
+    <section class="container container-blog container-blog--bleu">
+      <hr />
+      <h3 class="h2 text-gris2 text-black">
+        portfolio&nbsp;<span>:</span>
+        <br />
+        <span class="text-fin">dernières créations</span>
+      </h3>
+      <div class="container-blog__box">
+        <div class="boite-para__para a">
+          <Petittitre
+            gris
+            couleur="#2561d9"
+            titre="Guide RSE Banque Populaire"
+            stitre="dev"
+          />
+          <p class="text-gris2">
+            Carte interactive pour le guide RSE de la Banque populaire. Réalisée
+            avec VueJs.
+          </p>
+          <Boutoncta text="présentation" to="/portfolio" />
+        </div>
+        <div class="oeuf b">
+          <NuxtLink to="/portfolio"
+            ><svg class="lien" viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M18.4,13h-4.9c-0.3,0-0.6,0.2-0.6,0.6v4.9c0,0.3-0.2,0.6-0.6,0.6h-0.9c-0.3,0-0.6-0.2-0.6-0.6v-4.9c0-0.3-0.2-0.6-0.6-0.6
+	H5.6C5.2,13,5,12.8,5,12.4v-0.9C5,11.2,5.2,11,5.6,11h4.9c0.3,0,0.6-0.2,0.6-0.6V5.6C11,5.2,11.2,5,11.6,5h0.9C12.8,5,13,5.2,13,5.6
+	v4.9c0,0.3,0.2,0.6,0.6,0.6h4.9c0.3,0,0.6,0.2,0.6,0.6v0.9C19,12.8,18.8,13,18.4,13z"
+              /></svg></NuxtLink
+          ><Oeuf
+            class="fond"
+            width="80%"
+            transform="rotate(-95)"
+            fill="#2561d9"
+          />
+        </div>
+        <div class="boite-para__para c">
+          <Petittitre
+            gris
+            couleur="#2561d9"
+            titre="Guide RSE Banque Populaire"
+            stitre="webdesign"
+          />
+          <p class="text-gris2">
+            Interface de visualisation de données pour les résultats de la RSE
+            de la Banque Populaire. Faite avec VueJs.
+          </p>
+          <Boutoncta text="présentation" to="/portfolio" />
         </div>
       </div>
     </section>
@@ -314,6 +357,19 @@ section {
     line-height: 1.618;
     @media (min-width: $breakpoint-tablet) {
       width: 50vw;
+    }
+  }
+}
+.impact {
+  height: 97vh;
+  flex-direction: row;
+  align-items: stretch;
+  &--col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    &__centre {
+      justify-content: center;
     }
   }
 }

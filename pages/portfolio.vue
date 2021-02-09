@@ -36,6 +36,7 @@
           titre="Guide RSE Banque Populaire"
           sous-titre="Carte interactive"
           background-url="guideBleu1.png"
+          :chips="['WebDesign', 'VueJs', 'Bootstrap']"
           lien="https://www.guide-rse.banquepopulaire.fr/actions-rse"
       /></transition>
       <transition name="fade">
@@ -44,6 +45,7 @@
           titre="Guide RSE Banque Populaire"
           sous-titre="Interface de visualisation de données"
           background-url="guideBleu2.png"
+          :chips="['WebDesign', 'VueJs', 'Bootstrap']"
           lien="https://www.guide-rse.banquepopulaire.fr/resultats-2019"
       /></transition>
       <transition name="fade">
@@ -52,6 +54,7 @@
           titre="App noël"
           sous-titre="Application d'apprentissage à l'interface d'un ordinateur"
           background-url="appNoel.png"
+          :chips="['WebDesign', 'VueJs']"
       /></transition>
       <transition name="fade">
         <lazy-BoiteArticle
@@ -64,6 +67,7 @@
           titre="AAVE"
           sous-titre="Association pour l'aménagement de la vallée de l'Esches"
           background-url="aave.png"
+          :chips="['WebDesign', 'WordPress']"
           lien="https://vallee-esches.fr/"
       /></transition>
       <transition name="fade">
@@ -77,6 +81,7 @@
           titre="La petite boucle"
           sous-titre="Collecte de cartouches d’encre en triporteur électrique"
           background-url="petite-boucle.png"
+          :chips="['WebDesign', 'WordPress']"
           lien="https://lapetiteboucle.fr/"
       /></transition>
     </section>

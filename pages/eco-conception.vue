@@ -18,6 +18,6 @@ h3 {
   color: $vert;
   text-align: center;
   margin-top: 3rem;
-  margin-bottom: 0 !important;
+  margin-bottom: 0.33rem !important;
 }
 </style>

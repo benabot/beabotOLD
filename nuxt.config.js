@@ -35,9 +35,15 @@ export default {
     '@nuxtjs/axios',
     'nuxt-webfontloader',
     '@nuxt/content',
+    '@ax2/lozad-module',
   ],
   content: {
     // Options
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-coldark-dark.css',
+      },
+    },
   },
   webfontloader: {
     typekit: {

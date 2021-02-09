@@ -1,5 +1,5 @@
 <template>
-  <div class="petit-titre" :class="gris ? 'text-gris2' : 'text-gris4'">
+  <div class="petit-titre" :class="gris ? 'text-gris2' : 'text-gris5'">
     <div v-if="numero" class="h3 text-black chiffre-onum">
       {{ numero }}<span :style="{ color: couleur }">.</span>
     </div>
@@ -75,5 +75,6 @@ export default {
   height: 0.1rem;
   margin-top: 0.1rem;
   border-top: 2px solid;
+  border-radius: 0.25rem;
 }
 </style>

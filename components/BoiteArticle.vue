@@ -15,14 +15,18 @@
         <div class="boite-image__calque"></div>
         <div class="circle"></div>
         <div
-          class="boite-image__image"
-          :style="{
-            backgroundImage: `url(${require('@/assets/img/' + backgroundUrl)})`,
-          }"
+          class="boite-image__image lozad"
+          :data-background-image="`${require('~/assets/img/' + backgroundUrl)}`"
         ></div>
       </div>
       <h2 class="h4 text-gris1">{{ titre }}</h2>
-      <h3 class="h4 text-fin text-gris2">{{ sousTitre }}</h3>
+      <h3 class="text-fin text-gris2">{{ sousTitre }}</h3>
+      <div class="boite-chips">
+        <span v-for="chip in chips" :key="chip" class="chips"
+          ><span>{{ chip }}</span></span
+        >
+      </div>
+
       <a :href="lien" target="_blank">
         <button class="seepost">voir le site ⟶</button>
       </a>
@@ -49,6 +53,13 @@ export default {
       type: String,
       default: '',
     },
+    chips: {
+      type: Array,
+      default: () => [],
+    },
+  },
+  mounted() {
+    this.$lozad.observe()
   },
 }
 </script>
@@ -84,6 +95,11 @@ export default {
   }
   h2 {
     margin-right: -4rem;
+    margin-bottom: 0;
+  }
+  h3 {
+    font-size: 1.18rem;
+    margin-bottom: 0.25rem;
   }
   &:hover .clip-svg {
     transform: scale(1.2);
@@ -143,5 +159,38 @@ svg {
   position: absolute;
   width: 0;
   height: 0;
+}
+
+.boite-chips {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1.2rem;
+
+  .chips {
+    display: inline;
+    background: $gris6;
+    color: $gris2;
+    // border: 0.5px solid $gris3;
+    border-radius: 1000px;
+    padding: 0.158rem 0.61rem;
+    font-size: 0.68rem;
+    margin-right: 0.33rem;
+
+    span {
+      bottom: 0.06em;
+      position: relative;
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 1.68ex;
+        height: 1.68ex;
+        margin-right: 0.68ex;
+        border-radius: 100%;
+        background-color: $bleu1;
+        top: 0.07rem;
+        position: relative;
+      }
+    }
+  }
 }
 </style>

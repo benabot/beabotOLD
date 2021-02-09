@@ -160,9 +160,9 @@ export default {
         }
         if (
           (this.scrollPosition > this.windowHeight &&
-            this.scrollPosition < this.windowHeight * 2) ||
-          (this.scrollPosition > this.windowHeight * 3 &&
-            this.scrollPosition < this.windowHeight * 4)
+            this.scrollPosition < this.windowHeight * 3) ||
+          (this.scrollPosition > this.windowHeight * 4 &&
+            this.scrollPosition < this.windowHeight * 5)
         ) {
           return (clr = 'couleur-blanc')
         }
@@ -177,9 +177,9 @@ export default {
         }
         if (
           (this.scrollPosition > 66 &&
-            this.scrollPosition < this.windowHeight) ||
-          (this.scrollPosition > this.windowHeight * 2 &&
-            this.scrollPosition < this.windowHeight * 3)
+            this.scrollPosition < this.windowHeight * 2) ||
+          (this.scrollPosition > this.windowHeight * 3 &&
+            this.scrollPosition < this.windowHeight * 4)
         ) {
           return (clr = 'couleur-blanc')
         }
