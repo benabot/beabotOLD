@@ -51,6 +51,9 @@ export default {
       id: 'akf4akv',
     },
   },
+  purgeCSS: {
+    whitelist: ['class', 'token'],
+  },
   styleResources: {
     scss: ['~/assets/css/vars/*.scss', '~/assets/css/mixins/*.scss'],
   },
