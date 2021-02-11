@@ -28,13 +28,14 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/style-resources',
     'nuxt-purgecss',
+    'nuxt-font-loader',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    'nuxt-webfontloader',
+    // 'nuxt-webfontloader',
     '@nuxt/content',
     '@ax2/lozad-module',
   ],
@@ -46,10 +47,17 @@ export default {
       },
     },
   },
-  webfontloader: {
-    typekit: {
-      id: 'akf4akv',
-    },
+  // webfontloader: {
+  //   typekit: {
+  //     id: 'akf4akv',
+  //   },
+  // },
+  fontLoader: {
+    // Paste a new custom link here (for example Typekit)
+    url: 'https://use.typekit.net/akf4akv.css',
+
+    prefetch: true,
+    preconnect: true,
   },
   purgeCSS: {
     whitelist: [
