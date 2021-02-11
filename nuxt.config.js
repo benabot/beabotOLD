@@ -65,8 +65,10 @@ export default {
       'proprety',
       'number',
       'unit',
+      'pre[class*="language-"]',
     ],
-    whitelistPatternsChildren: [/^token/, /^nuxt-content-highlight/],
+    // whitelistPatternsChildren: [/^token/, /^nuxt-content-highlight/],
+    whitelistPatternsChildren: [/token$/, /pre$/],
     // whitelistPatternsChildren: [/token$/, /nuxt-content-highlight$/],
   },
   styleResources: {
