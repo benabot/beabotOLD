@@ -27,6 +27,7 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     '@nuxtjs/style-resources',
+    'nuxt-purgecss',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -58,6 +59,8 @@ export default {
   axios: {},
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {},
+  build: {
+    extractCSS: true,
+  },
   pageTransition: 'page',
 }
