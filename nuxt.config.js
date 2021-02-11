@@ -53,6 +53,7 @@ export default {
   },
   purgeCSS: {
     whitelist: ['class', 'token'],
+    whitelistPatternsChildren: [/token$/, /nuxt-content-highlight$/],
   },
   styleResources: {
     scss: ['~/assets/css/vars/*.scss', '~/assets/css/mixins/*.scss'],
