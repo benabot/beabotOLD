@@ -27,26 +27,60 @@
         >
       </p>
     </section>
-    <section class="container impact fond-gris">
-      <div class="impact--col">
-        <div class="impact--chiffre">
-          texte texte 34 TEXT TEXT ukfou ufgougfofpuy gg iuoug
+    <section class="container--space-between fond-gris">
+      <div class="impact">
+        <div class="impact--col impact--col__centre">
+          <div class="impact--titre">
+            <h2 class="h3 text-black text-gris5">
+              Les impacts du numérique sur l'environnement&nbsp;:
+            </h2>
+            <div class="lettre-smcp titre-sub">En quelques mots</div>
+          </div>
         </div>
-        <div class="impact--chiffre">
-          texte texte 34 TEXT TEXT ukfou ufgougfofpuy gg iuoug
+        <div class="impact--col impact--col__1">
+          <div class="impact--chiffre">
+            <div class="bg-gris bg-gris__bleu">
+              texte texte 34 TEXT TEXT ukfou ufgougfofpuy gg iuoug
+            </div>
+          </div>
+          <div class="impact--chiffre">
+            <div class="bg-gris bg-gris__vert">
+              texte texte 34 TEXT TEXT ukfou ufgougfofpuy gg iuoug
+            </div>
+          </div>
+        </div>
+
+        <div class="impact--col impact--col__2">
+          <div class="impact--chiffre">
+            <div class="bg-gris bg-gris__jaune">
+              texte texte 34 TEXT TEXT ukfou ufgougfofpuy gg iuoug
+            </div>
+          </div>
+          <div class="impact--chiffre">
+            <div class="bg-gris bg-gris__gris">
+              texte texte 34 TEXT TEXT ukfou ufgougfofpuy gg iuoug
+            </div>
+          </div>
         </div>
       </div>
-      <div class="impact--col impact--col__centre">
-        <div class="impact--titre">
-          <h2>Les impacts du numérique sur l'envirronnement&nbsp;:</h2>
-        </div>
-      </div>
-      <div class="impact--col">
-        <div class="impact--chiffre">
-          texte texte 34 TEXT TEXT ukfou ufgougfofpuy gg iuoug
-        </div>
-        <div class="impact--chiffre">
-          texte texte 34 TEXT TEXT ukfou ufgougfofpuy gg iuoug
+
+      <div class="sct-footer mt-n10">
+        <NuxtLink
+          class="sct-footer--btn"
+          to="/eco-conception/La-consommation-energetique-du-numerique"
+          >en savoir plus</NuxtLink
+        >
+        <div class="fleche">
+          <svg x="0" y="0" viewBox="0 0 32.8 27.3" xml:space="preserve">
+            <path
+              fill="#04d94f"
+              d="M.4 12.7c3.5 1.7 6.5 3.8 9.5 6 1.5 1.1 2.9 2.3 4.4 3.5.4.3.7.6 1 .9l1 .9c.2.2.4.3.6.2.3 0 .5-.1.6-.2l.9-1c.3-.4.6-.7 1-1 1.4-1.3 2.7-2.6 4.1-3.9 2.8-2.5 5.7-4.8 9-6.8l.2.2c-2.4 2.8-4.9 5.5-7.4 8.2L21.6 24l-1.9 2c-.7.8-1.7 1.2-2.7 1.3-1 0-2-.3-2.7-1l-2.1-1.9-4.1-3.8c-2.7-2.5-5.4-5-8.1-7.6l.4-.3z"
+            />
+            <path
+              fill="#04d94f"
+              d="M.4 1.3c3.5 1.7 6.5 3.8 9.5 6 1.5 1.1 2.9 2.3 4.4 3.5.4.3.7.6 1 .9l1 .9c.2.2.4.3.6.2.3 0 .5-.1.6-.2l.9-1c.3-.4.6-.7 1-1 1.4-1.3 2.7-2.6 4.1-3.9 2.8-2.5 5.7-4.8 9-6.8l.2.2c-2.4 2.8-4.9 5.5-7.4 8.2l-3.8 4.1-1.9 2.1c-.6.9-1.6 1.3-2.6 1.4-1 0-2-.3-2.7-1L12.2 13 8.1 9.2C5.4 6.7 2.7 4.2 0 1.6l.4-.3z"
+            />
+          </svg>
         </div>
       </div>
     </section>
@@ -147,6 +181,26 @@
           </p>
         </div>
       </div>
+      <div class="sct-footer">
+        <!-- <button class="sct-footer--btn">en savoir plus</button> -->
+        <NuxtLink
+          class="sct-footer--btn"
+          to="/eco-conception/L-eco-conception-web"
+          >en savoir plus</NuxtLink
+        >
+        <div class="fleche">
+          <svg x="0" y="0" viewBox="0 0 32.8 27.3" xml:space="preserve">
+            <path
+              fill="#04d94f"
+              d="M.4 12.7c3.5 1.7 6.5 3.8 9.5 6 1.5 1.1 2.9 2.3 4.4 3.5.4.3.7.6 1 .9l1 .9c.2.2.4.3.6.2.3 0 .5-.1.6-.2l.9-1c.3-.4.6-.7 1-1 1.4-1.3 2.7-2.6 4.1-3.9 2.8-2.5 5.7-4.8 9-6.8l.2.2c-2.4 2.8-4.9 5.5-7.4 8.2L21.6 24l-1.9 2c-.7.8-1.7 1.2-2.7 1.3-1 0-2-.3-2.7-1l-2.1-1.9-4.1-3.8c-2.7-2.5-5.4-5-8.1-7.6l.4-.3z"
+            />
+            <path
+              fill="#04d94f"
+              d="M.4 1.3c3.5 1.7 6.5 3.8 9.5 6 1.5 1.1 2.9 2.3 4.4 3.5.4.3.7.6 1 .9l1 .9c.2.2.4.3.6.2.3 0 .5-.1.6-.2l.9-1c.3-.4.6-.7 1-1 1.4-1.3 2.7-2.6 4.1-3.9 2.8-2.5 5.7-4.8 9-6.8l.2.2c-2.4 2.8-4.9 5.5-7.4 8.2l-3.8 4.1-1.9 2.1c-.6.9-1.6 1.3-2.6 1.4-1 0-2-.3-2.7-1L12.2 13 8.1 9.2C5.4 6.7 2.7 4.2 0 1.6l.4-.3z"
+            />
+          </svg>
+        </div>
+      </div>
     </section>
     <section class="container container-5">
       <div class="container-5__boite-titre">
@@ -237,10 +291,7 @@
             ressources, la typographie est au doublement cœur d’un design web
             éco-responsable.
           </p>
-          <Boutoncta
-            text="lire la suite"
-            to="eco-conception/typographie-ecoconception"
-          />
+          <Boutoncta to="/eco-conception/typographie-ecoconception" />
         </div>
         <div class="oeuf b">
           <NuxtLink to="/eco-conception"
@@ -269,11 +320,8 @@
             place à plus de détails. Voici les grandes lignes de mon approche
             pour éco-concevoir un site web avec WordPress à chaque étape d’un
             projet.
-            <Boutoncta
-              text="lire la suite"
-              to="eco-conception/ecoconception-wordpress"
-            />
           </p>
+          <Boutoncta to="/eco-conception/ecoconception-wordpress" />
         </div>
       </div>
     </section>
@@ -296,7 +344,7 @@
             Carte interactive pour le guide RSE de la Banque populaire. Réalisée
             avec VueJs.
           </p>
-          <Boutoncta text="présentation" to="/portfolio" />
+          <Boutoncta to="/portfolio" bleu>trala</Boutoncta>
         </div>
         <div class="oeuf b">
           <NuxtLink to="/portfolio"
@@ -325,7 +373,7 @@
             Interface de visualisation de données pour les résultats de la RSE
             de la Banque Populaire. Faite avec VueJs.
           </p>
-          <Boutoncta text="présentation" to="/portfolio" />
+          <Boutoncta to="/portfolio" bleu>présentation</Boutoncta>
         </div>
       </div>
     </section>
@@ -352,6 +400,10 @@ section {
 .container-1 {
 }
 .container-2 {
+  min-height: 60vh;
+  @media (min-width: $breakpoint-tablet) {
+    min-height: 100vh;
+  }
   p {
     width: 90vw;
     line-height: 1.618;
@@ -361,20 +413,75 @@ section {
   }
 }
 .impact {
-  height: 97vh;
-  flex-direction: row;
+  height: 87vh;
+  display: flex;
   align-items: stretch;
+  flex-direction: column;
+  justify-content: space-evenly;
+  @media (min-width: $breakpoint-tablet) {
+    flex-direction: row;
+  }
+  // margin-top: -3rem;
   &--col {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    height: 33vh;
+    @media (min-width: $breakpoint-tablet) {
+      height: auto;
+      &__1 {
+        order: 1;
+      }
+      &__2 {
+        order: 3;
+      }
+    }
+
     &__centre {
       justify-content: center;
+      align-items: flex-start;
+      @media (min-width: $breakpoint-tablet) {
+        order: 2;
+      }
     }
+  }
+  &--titre {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+  }
+  &--chiffre {
+    border: 5px solid $gris1;
+    .bg-gris {
+      background: $gris4;
+      padding: 0.5rem 1rem;
+
+      &__bleu {
+        border-left: 9px solid $bleu2;
+      }
+      &__vert {
+        border-left: 9px solid $vert;
+      }
+      &__jaune {
+        border-right: 9px solid $jaune;
+      }
+      &__gris {
+        border-right: 9px solid $gris2;
+        border-left: 9px solid $gris2;
+      }
+    }
+  }
+  .titre-sub {
+    display: inline-block;
+    color: $gris4;
+    text-align: left;
+    margin-left: 1rem;
+    border-top: 2px solid $gris4;
   }
 }
 .container-3 {
   display: flex;
+  overflow: hidden;
   @media (min-width: $breakpoint-tablet) {
     padding-top: 10rem;
     padding-bottom: 5rem;
@@ -383,9 +490,11 @@ section {
     width: 90%;
     margin-left: 10%;
     margin-bottom: 1.6rem;
+    margin-top: 2rem;
     position: relative;
     @media (min-width: $breakpoint-tablet) {
       width: 60%;
+      margin-top: 0;
       margin-bottom: 0;
       margin-left: 40%;
       min-height: 45vh;
@@ -442,6 +551,7 @@ section {
 }
 .container-4 {
   position: relative;
+  justify-content: space-between;
   &__boite-para {
     width: 100%;
     min-height: 80vh;
@@ -453,7 +563,8 @@ section {
     @media (min-width: $breakpoint-tablet) {
       width: 66%;
       flex-direction: row;
-      min-height: 50vh;
+      min-height: 65vh;
+      margin-top: 5%;
     }
     &--para {
       width: 100%;
@@ -503,6 +614,7 @@ section {
   &__boite-titre {
     display: flex;
     width: 100%;
+    padding-top: 10%;
 
     &__titre {
       position: relative;
@@ -766,5 +878,35 @@ section {
   padding-top: 15px;
   position: relative;
   z-index: 3;
+}
+
+.mt-n10 {
+  margin-top: -10%;
+}
+.sct-footer {
+  &--btn {
+    color: $gris5;
+    background: linear-gradient($gris1, $gris1) right bottom / 80% 0.55em
+      no-repeat;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.86rem;
+    border: none;
+    // padding-left: 20px;
+    // width: 200px;
+    transition: background-size 0.4s;
+    cursor: pointer;
+    // margin-left: 5px;
+    // margin-bottom: 2.5rem;
+
+    &:hover {
+      background-size: 100% 0.6em;
+    }
+  }
+  .fleche {
+    width: 33px;
+    margin: 0 auto;
+    padding: 1rem 0;
+  }
 }
 </style>

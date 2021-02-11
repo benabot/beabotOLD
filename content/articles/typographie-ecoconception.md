@@ -33,8 +33,8 @@ Une autre possibilité, plus élégante, consiste à employer la police du syst�
 Il y a plusieurs avantages à procéder de la sorte, d’une part en termes d’UX on crée une continuité graphique entre l’interface de l’OS et le site. D’autre part, la police de l’OS est forcément disponible et l’OS est optimisé pour utiliser cette police. Sans faire télécharger quoi que ce soit à l’utilisateur, vous aurez accès à une police de qualité, bien crénée ainsi qu’à ses différentes graisses. 
 
 Il suffit, presque, de choisir system-ui en valeur pour la propriété font-family. Je dis presque, car system-ui n’est pas reconnu par tous les navigateurs (IE et Edge, forcément, et Firefox) et qu’on ne peut pas appeler la police système avec Windows de cette manière. Il faut rajouter d’autres valeurs après system-ui pour être certain d’afficher la police de l’OS.
- 
- ```html
+
+ ```css
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, Ubuntu, 'Helvetica Neue', Oxygen, Cantarell, sans-serif;
@@ -52,7 +52,7 @@ Comme toujours, on peut presque tout réaliser à l’aide du CSS. En chargeant 
 Pour garantir un bon ajustement de nos polices au sein de la mise en page et comme on doit toujours penser responsive, il est important de travailler avec des valeurs relatives. Plus de **px** pour la taille des polices. À la place on peut utiliser le em ou le rem. Cela améliorera par ailleurs l’accessibilité de votre site, car la taille des caractères sera relative à la taille de caractère réglé par l’utilisateur sur son navigateur (par défaut 18px).  
 On peut aussi donner une taille aux caractères en fonction de la largeur de l’écran avec l’unité **vw** (solution plus adapté aux titres ou aux « gros » éléments typographiques. Prendre garde à indiquer des valeurs différentes dans les **@media-queries**)
 
-```html
+```css
 /*Le titre fera toujours 11% de la largeur de l'écran*/
     h1 {
       font-size: 11vw;
@@ -64,7 +64,7 @@ On peut aussi donner une taille aux caractères en fonction de la largeur de l�
 
 Toujours dans ce sens, mais également pour améliorer la lisibilité de nos textes, on peut limiter la largeur de nos paragraphes d’un certain nombre de caractères (en général on recommande 75 signes max) avec l’unité **ch** qui correspond à la largeur du zéro de la police utilisée.
 
-```html
+```css
  /*Les paragraphes ne feront jamais plus que 75 signes en largeur*/
     p {
       max-width: 75 ch;

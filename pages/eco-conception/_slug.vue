@@ -214,7 +214,7 @@ section {
       position: absolute;
       height: auto;
       &--1 {
-        top: -3%;
+        top: -39px;
         left: -32px;
       }
       &--2 {
@@ -245,8 +245,9 @@ section {
       width: 61.8%;
     }
     .breadcrumb {
+      line-height: 1;
       hr {
-        margin-bottom: -0.3rem;
+        margin-bottom: 0.3rem;
         margin-top: 0.2rem;
       }
       .selector {
@@ -348,12 +349,12 @@ section {
         font-size: 1.7798rem;
         line-height: calc(2px + 2ex + 2px);
         margin-bottom: 0.25rem;
-        margin-top: 0.49em;
+        margin-top: 0.89em;
         font-size: min(max(1.192466rem, 4.587334vw), 1.7798rem);
       }
       blockquote {
-        background: $gris4;
-        border-left: 10px solid $gris3;
+        background: $gris6;
+        border-left: 10px solid $gris4;
         color: $gris1;
         margin: 1.5em 10px;
         padding: 1em 10px 0.1em 10px;

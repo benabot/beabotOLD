@@ -23,7 +23,7 @@
       <br />
       <li
         v-show="!tout"
-        class="text-gris3"
+        class="text-gris4"
         @click=";(tout = true), (select = '')"
       >
         Tout voir
@@ -130,8 +130,11 @@ h1 {
 .selector {
   text-align: center;
   padding-left: 0;
-  margin-top: -3rem;
+  margin-top: -1rem;
   margin-bottom: 3rem;
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: -3rem;
+  }
 
   li {
     display: inline;

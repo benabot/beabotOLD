@@ -28,7 +28,7 @@
           Typographie
         </li>
         <br />
-        <li v-show="name" class="text-gris3" @click="updateTag('')">
+        <li v-show="name" class="text-gris4" @click="updateTag('')">
           Tout voir
         </li>
       </ul>
@@ -58,7 +58,7 @@
             <Petittitre gris :titre="article.title" :tags="article.tag"
           /></nuxt-link>
           <div class="resum">
-            <p class="text-gris2">{{ article.description }}</p>
+            <p class="text-gris3 text-fin">{{ article.description }}</p>
             <div class="boite-bouton">
               <!-- <NuxtLink
               :to="{
@@ -167,17 +167,18 @@ a {
   // height: 1rem;
   margin-left: 33%;
   width: 33%;
-  margin-top: 0.5rem;
-  margin-bottom: 0.25rem;
+  margin-top: 2.6rem;
+  margin-bottom: 2.8rem;
+  // margin-bottom: 0.25rem;
   border-radius: 0.25rem;
 }
 article {
   display: flex;
-  margin-top: 1.3rem;
+  margin-top: 3.9rem;
   flex-direction: column;
   justify-content: space-between;
   &:first-child {
-    margin-top: 3rem;
+    margin-top: 0;
   }
   .resum {
     display: flex;
@@ -185,6 +186,7 @@ article {
     justify-content: flex-end;
     @media (min-width: $breakpoint-tablet) {
       flex-direction: row;
+      margin-top: 0.68rem;
     }
     p {
       text-align: justify;

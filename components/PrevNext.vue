@@ -1,11 +1,11 @@
 <template>
-  <div class="boite-prev text-fin text-gris3">
+  <div class="boite-prev text-fin text-gris2">
     <NuxtLink
       v-if="prev"
       :to="{ name: 'eco-conception-slug', params: { slug: prev.slug } }"
       class="bloc"
     >
-      &larr;{{ prev.title }}
+      &larr; {{ prev.title }}
     </NuxtLink>
     <span v-else>&nbsp;</span>
     <NuxtLink
@@ -13,7 +13,7 @@
       :to="{ name: 'eco-conception-slug', params: { slug: next.slug } }"
       class="bloc"
     >
-      {{ next.title }}&rarr;
+      {{ next.title }} &rarr;
     </NuxtLink>
     <span v-else>&nbsp;</span>
   </div>
@@ -41,8 +41,10 @@ export default {
 .bloc {
   display: block;
   margin-left: 5px;
+  transition: 0.2s ease-in-out;
   &:hover {
-    color: $vert;
+    margin-left: 0;
+    color: $gris1;
   }
 }
 </style>
