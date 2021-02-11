@@ -52,8 +52,21 @@ export default {
     },
   },
   purgeCSS: {
-    whitelist: ['class', 'token', 'nuxt-content-highlight'],
-    whitelistPatternsChildren: [[/^class/, /^token/, /^nuxt-content-highlight/],
+    whitelist: [
+      'class',
+      'token',
+      'nuxt-content-highlight',
+      'language-css',
+      'language-js',
+      'line-numbers',
+      'comment',
+      'selector',
+      'punctuation',
+      'proprety',
+      'number',
+      'unit',
+    ],
+    whitelistPatternsChildren: [/^token/, /^nuxt-content-highlight/],
     // whitelistPatternsChildren: [/token$/, /nuxt-content-highlight$/],
   },
   styleResources: {
