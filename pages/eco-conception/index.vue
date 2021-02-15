@@ -174,11 +174,11 @@ a {
 }
 article {
   display: flex;
-  margin-top: 3.9rem;
+  margin-top: 4.68rem;
   flex-direction: column;
   justify-content: space-between;
   &:first-child {
-    margin-top: 0;
+    margin-top: 1.7rem;
   }
   .resum {
     display: flex;

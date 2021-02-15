@@ -6,9 +6,7 @@
       <div id="boite-logo">
         <Oeuf width="40%" class="fixe oeuf-intro" />
       </div>
-      <div class="links">
-        <h2 class="text-gris2 text-normal titre3">Éco-conception web</h2>
-      </div>
+      <h2 class="links text-gris2 text-normal titre3">Éco-conception web</h2>
     </section>
     <section class="container container-2 fond-gris">
       <!-- <OeufImage /> -->
@@ -31,7 +29,7 @@
       <div class="impact">
         <div class="impact--col impact--col__centre">
           <div class="impact--titre">
-            <h2 class="h3 text-black text-gris5">
+            <h2 class="h3 text-black text-gris6">
               Les impacts du numérique sur l'environnement&nbsp;:
             </h2>
             <div class="lettre-smcp titre-sub">En quelques mots</div>
@@ -113,10 +111,7 @@
         <h2 class="titre2 text-gris2 text-black">
           Qu'est-ce que l'éco-conception web<span class="insec">&thinsp;</span>?
         </h2>
-        <div class="container-3__titre__sub">
-          <div></div>
-          <div class="lettre-smcp">En quelques mots</div>
-        </div>
+        <div class="container-3__titre__sub lettre-smcp">En quelques mots</div>
       </div>
       <div class="boite-para">
         <div class="boite-para__para">
@@ -203,39 +198,28 @@
       </div>
     </section>
     <section class="container container-5">
-      <div class="container-5__boite-titre">
-        <div class="container-5__boite-titre__titre">
-          <div>
-            <h3 class="text-black h2">
-              Un site bon pour la planete et bon pour&nbsp;:
-            </h3>
-          </div>
-          <div>
-            <Oeuf
-              class="oeuf"
-              width="100%"
-              transform="rotate(-125)"
-              fill="url(#Gradient4)"
-            />
-          </div>
-        </div>
+      <div class="container-5__boite-titre container-5__boite-titre__titre">
+        <h3 class="text-black text-gris2 h2">
+          Un site bon pour la planete et bon pour&nbsp;:
+        </h3>
+
         <div class="container-5__boite-titre__oeuf">
           <Oeuf class="oeuf" width="60%" transform="rotate(5)" fill="#f2a81d" />
         </div>
       </div>
       <div class="boite-para">
-        <div class="boite-para__para">
-          <div class="boite-para--titre">
-            <div>
-              <Oeuf
-                class="oeuf"
-                width="60%"
-                transform="rotate(5)"
-                fill="#f2a81d"
-              />
-            </div>
-            <div><Petittitre gris titre="Ses utilisateurs" /></div>
-          </div>
+        <div class="boite-para__para fond-oeuf fond-oeuf__vert">
+          <!--  <div class="boite-para--titre">
+            <Oeuf
+              class="oeuf superpo"
+              width="60%"
+              transform="rotate(5)"
+              fill="#f2a81d"
+            /> -->
+          <h3 class="boite-para__titre text-black text-gris2">
+            Ses utilisateurs
+          </h3>
+          <!-- </div> -->
 
           <p class="text-gris2">
             L’économie de moyens mis en œuvre ne se fait pas au détriment de la
@@ -247,18 +231,18 @@
             le détails typographique et la mise en page léchée.
           </p>
         </div>
-        <div class="boite-para__para">
-          <div class="boite-para--titre">
-            <div>
-              <Oeuf
-                class="oeuf"
-                width="30%"
-                transform="rotate(-95)"
-                fill="#2561d9"
-              />
-            </div>
-            <div><Petittitre gris titre="Le référencement" /></div>
-          </div>
+        <div class="boite-para__para fond-oeuf fond-oeuf__bleu">
+          <!-- <div class="boite-para--titre">
+            <Oeuf
+              class="oeuf superpo"
+              width="30%"
+              transform="rotate(-95)"
+              fill="#2561d9"
+            /> -->
+          <h3 class="boite-para__titre text-black text-gris2">
+            Le référencement
+          </h3>
+          <!-- </div> -->
 
           <p class="text-gris2">
             L’expérience utilisateur finement étudiée et la sobriété des moyens
@@ -453,7 +437,7 @@ section {
   &--chiffre {
     border: 5px solid $gris1;
     .bg-gris {
-      background: $gris4;
+      background: $gris6;
       padding: 0.5rem 1rem;
 
       &__bleu {
@@ -534,18 +518,22 @@ section {
       width: 60%;
       position: relative;
       z-index: 2;
+      border-top: 2px solid $vert;
       @media (min-width: $breakpoint-tablet) {
         // width: 20%;
+        // width: 100%;
+        width: auto;
+        display: inline-block;
         text-align: left;
       }
-      div {
-        &:first-child {
-          width: 9.8ex;
-          // width: 61.8%;
-          height: 0.5em;
-          border-top: 2px solid $vert;
-        }
-      }
+      // div {
+      //   &:first-child {
+      //     width: 9.8ex;
+      //     // width: 61.8%;
+      //     height: 0.5em;
+      //     border-top: 2px solid $vert;
+      //   }
+      // }
     }
   }
 }
@@ -627,10 +615,11 @@ section {
         height: 90vh;
       }
       h3 {
-        color: white;
-        margin: 1px 4px;
+        // color: white;
+        // margin: 1px 4px;
+        z-index: +1;
         @media (min-width: $breakpoint-tablet) {
-          margin: 0 3rem;
+          // margin: 0 3rem;
         }
       }
       div {
@@ -652,6 +641,43 @@ section {
       .oeuf {
         position: sticky;
         top: 0;
+      }
+    }
+  }
+  .fond-oeuf {
+    background-repeat: no-repeat;
+    background-size: 80%;
+    overflow: visible;
+    position: relative;
+    &__vert {
+      // background: url('~assets/img/oeuf-vert.svg');
+      // background-position: -25% 75%;
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 65%;
+        min-height: 66%;
+        background-image: url('~assets/img/oeuf-vert.svg');
+        background-repeat: no-repeat;
+        position: absolute;
+        left: -15%;
+        z-index: -1;
+        opacity: 0.8;
+      }
+    }
+    &__bleu {
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 65%;
+        min-height: 66%;
+        background-image: url('~assets/img/oeuf-bleu.svg');
+        background-repeat: no-repeat;
+        position: absolute;
+        right: -15%;
+        bottom: 0;
+        z-index: -1;
+        opacity: 0.7;
       }
     }
   }
@@ -795,30 +821,35 @@ section {
       }
     }
   }
-  &--titre {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    min-height: 5rem;
-    margin-top: 2.5rem;
-    @media (min-width: $breakpoint-tablet) {
-      margin-top: 0;
-    }
-    div {
-      position: absolute;
-      top: 0;
-      left: 0;
-      &:first-child {
-        z-index: -1;
-        left: 10%;
-        top: -40%;
-        @media (min-width: $breakpoint-tablet) {
-          left: -40%;
-        }
-      }
-    }
+  &__titre {
+    text-align: left;
+    word-break: keep-all;
+    margin-bottom: 0;
   }
+  // &--titre {
+  //   position: relative;
+  //   display: flex;
+  //   align-items: center;
+  //   width: 100%;
+  //   min-height: 5rem;
+  //   margin-top: 2.5rem;
+  //   @media (min-width: $breakpoint-tablet) {
+  //     margin-top: 0;
+  //   }
+  //   .superpo {
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     &:first-child {
+  //       z-index: -1;
+  //       left: 10%;
+  //       top: -40%;
+  //       @media (min-width: $breakpoint-tablet) {
+  //         // left: -40%;
+  //       }
+  //     }
+  //   }
+  // }
 }
 #boite-logo {
   position: relative;

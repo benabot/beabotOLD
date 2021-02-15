@@ -9,29 +9,27 @@
         @click="showMobileMenu = !showMobileMenu"
       />
       <transition name="slide-right">
-        <div v-if="showMobileMenu" class="menu-mobile">
-          <ul>
-            <li @click="showMobileMenu = !showMobileMenu">
-              <NuxtLink to="/" exact class="title title--menu h2"
-                >Accueil</NuxtLink
-              >
-            </li>
-            <li @click="showMobileMenu = !showMobileMenu">
-              <NuxtLink to="/eco-conception" class="title title--menu h2"
-                >Éco-conception</NuxtLink
-              >
-            </li>
-            <li @click="showMobileMenu = !showMobileMenu">
-              <NuxtLink to="/portfolio" class="title title--menu h2"
-                >Portfolio</NuxtLink
-              >
-            </li>
-            <li @click="showMobileMenu = !showMobileMenu">
-              <a href="#footer" class="title title--menu h2">Contact</a>
-            </li>
-          </ul>
-        </div></transition
-      >
+        <ul v-if="showMobileMenu" class="menu-mobile">
+          <li @click="showMobileMenu = !showMobileMenu">
+            <NuxtLink to="/" exact class="title title--menu h2"
+              >Accueil</NuxtLink
+            >
+          </li>
+          <li @click="showMobileMenu = !showMobileMenu">
+            <NuxtLink to="/eco-conception" class="title title--menu h2"
+              >Éco-conception</NuxtLink
+            >
+          </li>
+          <li @click="showMobileMenu = !showMobileMenu">
+            <NuxtLink to="/portfolio" class="title title--menu h2"
+              >Portfolio</NuxtLink
+            >
+          </li>
+          <li @click="showMobileMenu = !showMobileMenu">
+            <a href="#footer" class="title title--menu h2">Contact</a>
+          </li>
+        </ul>
+      </transition>
     </nav>
     <nav role="navigation" class="nav-desktop nav-1">
       <NuxtLink :class="couleurHaut" to="/">
