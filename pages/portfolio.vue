@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h1 class="text-bold h2 text-black">Portfolio</h1>
+    <h1 class="text-black h2 text-black">Portfolio</h1>
     <ul class="selector text-gris2">
       <li :class="{ 'text-bleu1': select === 'vjs' }" @click="change('vjs')">
         VueJs
