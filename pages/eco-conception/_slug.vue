@@ -105,7 +105,11 @@
 
       <p class="text-gris1 text-normal">{{ article.description }}</p>
       <p class="petit-text text-gris3">
-        Publié le : {{ formatDate(article.updatedAt) }} - Benoît Abot
+        Publié le : {{ formatDate(article.createdAt) }}
+        <span v-if="article.createdAt != article.updatedAt">
+          - Modifié le : {{ formatDate(article.updatedAt) }}
+        </span>
+        - Par : Benoît Abot
       </p>
       <hr />
       <!-- <img :src="require(`~/assets/img/${article.img}`)" :alt="article.alt" /> -->
@@ -127,6 +131,8 @@
   </section>
 </template>
 <script>
+import getSiteMeta from '@/utils/getSiteMeta'
+
 export default {
   async asyncData({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
@@ -152,6 +158,18 @@ export default {
         threshold: 0,
       },
     }
+  },
+  computed: {
+    meta() {
+      const metaData = {
+        type: 'article',
+        title: this.article.title,
+        description: this.article.description,
+        url: `${this.$config.baseUrl}/eco-conception/${this.$route.params.slug}`,
+        mainImage: this.article.image,
+      }
+      return getSiteMeta(metaData)
+    },
   },
   mounted() {
     this.observer = new IntersectionObserver((entries) => {
@@ -181,6 +199,40 @@ export default {
     updateTag(tag) {
       this.$store.commit('tags/setTag', tag)
     },
+  },
+  head() {
+    return {
+      title: this.article.title,
+      meta: [
+        ...this.meta,
+        {
+          property: 'article:published_time',
+          content: this.article.createdAt,
+        },
+        {
+          property: 'article:modified_time',
+          content: this.article.updatedAt,
+        },
+        {
+          property: 'article:tag',
+          content: this.article.tags ? this.article.tags.toString() : '',
+        },
+        { name: 'twitter:label1', content: 'Written by' },
+        { name: 'twitter:data1', content: 'Benoît Abot' },
+        { name: 'twitter:label2', content: 'Filed under' },
+        {
+          name: 'twitter:data2',
+          content: this.article.tags ? this.article.tags.toString() : '',
+        },
+      ],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: `https://beabot.fr/eco-conception/${this.$route.params.slug}`,
+        },
+      ],
+    }
   },
 }
 </script>

@@ -1,16 +1,50 @@
+import getRoutes from './utils/getRoutes'
+import getSiteMeta from './utils/getSiteMeta'
+const meta = getSiteMeta()
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
+  // head: {
+  //   title: 'beabot',
+  //   meta: [
+  //     { charset: 'utf-8' },
+  //     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+  //     { hid: 'description', name: 'description', content: '' },
+  //   ],
+  //   link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+  // },
   head: {
-    title: 'beabot',
+    htmlAttrs: {
+      lang: 'fr',
+    },
+    title: 'BeAbot - éco-conception web',
     meta: [
+      ...meta,
       { charset: 'utf-8' },
+      { name: 'HandheldFriendly', content: 'True' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { property: 'og:site_name', content: 'Beabot' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'L’éco-conception web, c’est concilier respect de l’environnement et technologies numériques de pointe pour un internet durable.',
+      },
+      { property: 'og:image:width', content: '1112' },
+      { property: 'og:image:height', content: '337' },
+      { name: 'twitter:site', content: '@AbotBenoit' },
+      { name: 'twitter:card', content: 'summary_large_image' },
     ],
-    link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+    link: [
+      { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+      {
+        hid: 'canonical',
+        rel: 'canonical',
+        href: process.env.BASE_URL,
+      },
+    ],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -38,6 +72,7 @@ export default {
     // 'nuxt-webfontloader',
     '@nuxt/content',
     '@ax2/lozad-module',
+    '@nuxtjs/sitemap',
   ],
   content: {
     // Options
@@ -83,6 +118,8 @@ export default {
     scss: ['~/assets/css/vars/*.scss', '~/assets/css/mixins/*.scss'],
   },
 
+  pageTransition: 'page',
+
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
 
@@ -90,5 +127,10 @@ export default {
   build: {
     extractCSS: true,
   },
-  pageTransition: 'page',
+  sitemap: {
+    hostname: process.env.BASE_URL, // https://beabot.fr
+    routes() {
+      return getRoutes()
+    },
+  },
 }
