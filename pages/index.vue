@@ -381,8 +381,8 @@ section {
   }
 }
 
-.container-1 {
-}
+// .container-1 {
+// }
 .container-2 {
   min-height: 60vh;
   @media (min-width: $breakpoint-tablet) {

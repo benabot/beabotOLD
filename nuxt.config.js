@@ -128,7 +128,9 @@ export default {
     extractCSS: true,
   },
   sitemap: {
-    hostname: process.env.BASE_URL, // https://beabot.fr
+    hostname: 'https://beabot.fr',
+    // process.env.BASE_URL,
+    gzip: true,
     routes() {
       return getRoutes()
     },
