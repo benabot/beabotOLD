@@ -45,7 +45,8 @@ export default {
 }
 .bleu {
   color: $bleu2;
-  background: linear-gradient($bleu1, $bleu1) right bottom / 0 0.1em no-repeat;
+  background: linear-gradient(lighten($bleu2, 25%), lighten($bleu2, 25%)) right
+    bottom / 0 0.1em no-repeat;
   transition: background-size 0.4s;
   &:hover {
     background-size: 80% 0.6em;

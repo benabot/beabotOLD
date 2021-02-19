@@ -98,7 +98,7 @@
       </div>
     </aside>
     <article>
-      <h1 class="text-bold h3 text-gris1">
+      <h1 class="text-black h3 text-gris1">
         {{ article.title }}
       </h1>
       <!-- <hr /> -->

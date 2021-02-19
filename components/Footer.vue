@@ -14,7 +14,7 @@
     </svg>
     <div class="container-or">
       <div class="item a title title--footer h1">CONTACT :</div>
-      <div class="item b h3 text-bold"><a href="">hello@beabot.fr</a></div>
+      <div class="item b h3 text-black"><a href="">hello@beabot.fr</a></div>
       <div class="item c">
         <!-- <div> -->
         <a href="" class="twit">@BenoitAbot</a>

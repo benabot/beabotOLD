@@ -382,8 +382,8 @@ a.nuxt-link-active {
     &-3 {
       bottom: 6px;
       left: 10px;
-      background: linear-gradient($bleu2, $bleu2) left bottom / 0 0.1em
-        no-repeat;
+      background: linear-gradient(lighten($bleu2, 10%), lighten($bleu2, 10%))
+        left bottom / 0 0.1em no-repeat;
     }
     &-4 {
       bottom: 6px;
