@@ -63,6 +63,7 @@ export default {
     '@nuxtjs/style-resources',
     'nuxt-purgecss',
     'nuxt-font-loader',
+    'nuxt-compress',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
