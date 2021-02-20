@@ -131,7 +131,7 @@
   </section>
 </template>
 <script>
-import getSiteMeta from '@/utils/getSiteMeta'
+// import getSiteMeta from '@/utils/getSiteMeta'
 
 export default {
   async asyncData({ $content, params }) {
@@ -157,34 +157,9 @@ export default {
         root: this.$refs.nuxtContent,
         threshold: 0,
       },
-      // breadcrumbs: [
-      //   {
-      //     url: 'https://beabot.fr',
-      //     text: 'BeAbot',
-      //   },
-      //   {
-      //     url: 'https://beabot.fr/eco-conception',
-      //     text: 'eco-conception',
-      //   },
-      //   {
-      //     url: `https://beabot.fr/eco-conception/${this.$route.params.slug}`,
-      //     text: this.article.title,
-      //   },
-      // ],
     }
   },
-  computed: {
-    meta() {
-      const metaData = {
-        type: 'article',
-        title: this.article.title,
-        description: this.article.description,
-        url: `${this.$config.baseUrl}/eco-conception/${this.$route.params.slug}`,
-        mainImage: this.article.image,
-      }
-      return getSiteMeta(metaData)
-    },
-  },
+
   mounted() {
     this.observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -218,25 +193,32 @@ export default {
     return {
       title: this.article.title,
       meta: [
-        ...this.meta,
         {
-          property: 'article:published_time',
-          content: this.article.createdAt,
+          hid: 'description',
+          name: 'description',
+          content: this.article.description,
+        },
+        // Open Graph
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.article.title,
         },
         {
-          property: 'article:modified_time',
-          content: this.article.updatedAt,
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.article.description,
+        },
+        // Twitter Card
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: this.article.title,
         },
         {
-          property: 'article:tag',
-          content: this.article.tags ? this.article.tags.toString() : '',
-        },
-        { name: 'twitter:label1', content: 'Written by' },
-        { name: 'twitter:data1', content: 'Benoît Abot' },
-        { name: 'twitter:label2', content: 'Filed under' },
-        {
-          name: 'twitter:data2',
-          content: this.article.tags ? this.article.tags.toString() : '',
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: this.article.description,
         },
       ],
       link: [
@@ -246,82 +228,144 @@ export default {
           href: `https://beabot.fr/eco-conception/${this.$route.params.slug}`,
         },
       ],
-      script: [
-        {
-          type: 'application/ld+json',
-          json: [
-            {
-              '@context': 'https://schema.org',
-              '@type': 'BlogPosting',
-              headline: this.article.title,
-              image: [this.article.image],
-              datePublished: this.article.createdAt,
-              dateModified: this.article.updatedAt,
-              author: {
-                '@type': 'Person',
-                name: 'Benoît Abot',
-              },
-              publisher: {
-                '@type': 'Organization',
-                name: 'BeAbot',
-                url: 'https://beabot.fr',
-                logo: {
-                  '@type': 'ImageObject',
-                  url: 'https://beabot.fr/beabot.png',
-                },
-              },
-            },
-            {
-              '@context': 'https://schema.org',
-              '@type': 'BreadcrumbList',
-              itemListElement: [
-                {
-                  '@type': 'ListItem',
-                  position: 1,
-                  name: 'BeAbot',
-                  item: 'https://beabot.fr',
-                },
-                {
-                  '@type': 'ListItem',
-                  position: 2,
-                  name: 'Eco-conception',
-                  item: `https://beabot.fr/eco-conception/${this.$route.params.slug}`,
-                },
-                {
-                  '@type': 'ListItem',
-                  position: 3,
-                  name: this.article.title,
-                },
-              ],
-            },
-          ],
-        },
-      ],
+      // script: [
+      //   {
+      //     type: 'application/ld+json',
+      //     json: [
+      //       {
+      //         '@context': 'https://schema.org',
+      //         '@type': 'BlogPosting',
+      //         headline: this.article.title,
+      //         image: [this.article.image],
+      //         datePublished: this.article.createdAt,
+      //         dateModified: this.article.updatedAt,
+      //         author: {
+      //           '@type': 'Person',
+      //           name: 'Benoît Abot',
+      //         },
+      //         publisher: {
+      //           '@type': 'Organization',
+      //           name: 'BeAbot',
+      //           url: 'https://beabot.fr',
+      //           logo: {
+      //             '@type': 'ImageObject',
+      //             url: 'https://beabot.fr/beabot.png',
+      //           },
+      //         },
+      //       },
+      //       {
+      //         '@context': 'https://schema.org',
+      //         '@type': 'BreadcrumbList',
+      //         itemListElement: [
+      //           {
+      //             '@type': 'ListItem',
+      //             position: 1,
+      //             name: 'BeAbot',
+      //             item: 'https://beabot.fr',
+      //           },
+      //           {
+      //             '@type': 'ListItem',
+      //             position: 2,
+      //             name: 'Eco-conception',
+      //             item: `https://beabot.fr/eco-conception/${this.$route.params.slug}`,
+      //           },
+      //           {
+      //             '@type': 'ListItem',
+      //             position: 3,
+      //             name: this.article.title,
+      //           },
+      //         ],
+      //       },
+      //     ],
+      //   },
+      // ],
     }
   },
-  // jsonld() {
-  //   const items = this.breadcrumbs.map((item, index) => ({
-  //     '@type': 'ListItem',
-  //     position: index + 1,
-  //     item: {
-  //       '@id': item.url,
-  //       name: item.text,
-  //     },
-  //   }))
-  //   return [
-  //     {
-  //       '@context': 'http://schema.org',
-  //       '@type': 'BreadcrumbList',
-  //       itemListElement: items,
-  //     },
-  //     {
-  //       '@context': 'https://schema.org',
-  //       '@type': 'BlogPosting',
-  //       mainEntityOfPage: {
-  //         /* article info */
+
+  // head() {
+  //   return {
+  //     title: this.article.title,
+  //     meta: [
+  //       ...this.meta,
+  //       {
+  //         property: 'article:published_time',
+  //         content: this.article.createdAt,
   //       },
-  //     },
-  //   ]
+  //       {
+  //         property: 'article:modified_time',
+  //         content: this.article.updatedAt,
+  //       },
+  //       {
+  //         property: 'article:tag',
+  //         content: this.article.tags ? this.article.tags.toString() : '',
+  //       },
+  //       { name: 'twitter:label1', content: 'Written by' },
+  //       { name: 'twitter:data1', content: 'Benoît Abot' },
+  //       { name: 'twitter:label2', content: 'Filed under' },
+  //       {
+  //         name: 'twitter:data2',
+  //         content: this.article.tags ? this.article.tags.toString() : '',
+  //       },
+  //     ],
+  //     link: [
+  //       {
+  //         hid: 'canonical',
+  //         rel: 'canonical',
+  //         href: `https://beabot.fr/eco-conception/${this.$route.params.slug}`,
+  //       },
+  //     ],
+  //     script: [
+  //       {
+  //         type: 'application/ld+json',
+  //         json: [
+  //           {
+  //             '@context': 'https://schema.org',
+  //             '@type': 'BlogPosting',
+  //             headline: this.article.title,
+  //             image: [this.article.image],
+  //             datePublished: this.article.createdAt,
+  //             dateModified: this.article.updatedAt,
+  //             author: {
+  //               '@type': 'Person',
+  //               name: 'Benoît Abot',
+  //             },
+  //             publisher: {
+  //               '@type': 'Organization',
+  //               name: 'BeAbot',
+  //               url: 'https://beabot.fr',
+  //               logo: {
+  //                 '@type': 'ImageObject',
+  //                 url: 'https://beabot.fr/beabot.png',
+  //               },
+  //             },
+  //           },
+  //           {
+  //             '@context': 'https://schema.org',
+  //             '@type': 'BreadcrumbList',
+  //             itemListElement: [
+  //               {
+  //                 '@type': 'ListItem',
+  //                 position: 1,
+  //                 name: 'BeAbot',
+  //                 item: 'https://beabot.fr',
+  //               },
+  //               {
+  //                 '@type': 'ListItem',
+  //                 position: 2,
+  //                 name: 'Eco-conception',
+  //                 item: `https://beabot.fr/eco-conception/${this.$route.params.slug}`,
+  //               },
+  //               {
+  //                 '@type': 'ListItem',
+  //                 position: 3,
+  //                 name: this.article.title,
+  //               },
+  //             ],
+  //           },
+  //         ],
+  //       },
+  //     ],
+  //   }
   // },
 }
 </script>

@@ -1,51 +1,94 @@
-import getRoutes from './utils/getRoutes'
-import getSiteMeta from './utils/getSiteMeta'
-const meta = getSiteMeta()
+// import getRoutes from './utils/getRoutes'
+// import getSiteMeta from './utils/getSiteMeta'
+// const meta = getSiteMeta()
+const createSitemapRoutes = async () => {
+  const routes = []
+  let posts = []
+  const { $content } = require('@nuxt/content')
+  if (posts === null || posts.length === 0)
+    posts = await $content('articles').fetch()
+  for (const post of posts) {
+    routes.push(`eco-conception/${post.slug}`)
+  }
+  return routes
+}
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
-  // head: {
-  //   title: 'beabot',
-  //   meta: [
-  //     { charset: 'utf-8' },
-  //     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-  //     { hid: 'description', name: 'description', content: '' },
-  //   ],
-  //   link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
-  // },
   head: {
     htmlAttrs: {
       lang: 'fr',
     },
-    title: 'BeAbot - éco-conception web',
+    titleTemplate: 'BeAbot - %s',
     meta: [
-      ...meta,
       { charset: 'utf-8' },
-      { name: 'HandheldFriendly', content: 'True' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { property: 'og:site_name', content: 'Beabot' },
       {
         hid: 'description',
         name: 'description',
         content:
           'L’éco-conception web, c’est concilier respect de l’environnement et technologies numériques de pointe pour un internet durable.',
       },
-      { property: 'og:image:width', content: '1112' },
-      { property: 'og:image:height', content: '337' },
-      { name: 'twitter:site', content: '@AbotBenoit' },
-      { name: 'twitter:card', content: 'summary_large_image' },
-    ],
-    link: [
-      { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+      // Open Graph
       {
-        hid: 'canonical',
-        rel: 'canonical',
-        href: process.env.BASE_URL,
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'BeAbot : éco-conception web',
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content:
+          'L’éco-conception web, c’est concilier respect de l’environnement et technologies numériques de pointe pour un internet durable.',
+      },
+      // Twitter Card
+      {
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: 'BeAbot : éco-conception web',
+      },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content:
+          'L’éco-conception web, c’est concilier respect de l’environnement et technologies numériques de pointe pour un internet durable.',
       },
     ],
+    link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
   },
+  // head: {
+  //   htmlAttrs: {
+  //     lang: 'fr',
+  //   },
+  //   title: 'BeAbot - éco-conception web',
+  //   meta: [
+  //     ...meta,
+  //     { charset: 'utf-8' },
+  //     { name: 'HandheldFriendly', content: 'True' },
+  //     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+  //     { property: 'og:site_name', content: 'Beabot' },
+  //     {
+  //       hid: 'description',
+  //       name: 'description',
+  //       content:
+  //         'L’éco-conception web, c’est concilier respect de l’environnement et technologies numériques de pointe pour un internet durable.',
+  //     },
+  //     { property: 'og:image:width', content: '1112' },
+  //     { property: 'og:image:height', content: '337' },
+  //     { name: 'twitter:site', content: '@AbotBenoit' },
+  //     { name: 'twitter:card', content: 'summary_large_image' },
+  //   ],
+  //   link: [
+  //     { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+  //     {
+  //       hid: 'canonical',
+  //       rel: 'canonical',
+  //       href: process.env.BASE_URL,
+  //     },
+  //   ],
+  // },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: ['~/assets/css/main'],
@@ -84,14 +127,14 @@ export default {
       },
     },
   },
-  generate: {
-    async routes() {
-      const { $content } = require('@nuxt/content')
-      const files = await $content().only(['path']).fetch()
+  // generate: {
+  //   async routes() {
+  //     const { $content } = require('@nuxt/content')
+  //     const files = await $content().only(['path']).fetch()
 
-      return files.map((file) => (file.path === '/index' ? '/' : file.path))
-    },
-  },
+  //     return files.map((file) => (file.path === '/index' ? '/' : file.path))
+  //   },
+  // },
   // webfontloader: {
   //   typekit: {
   //     id: 'akf4akv',
@@ -179,8 +222,6 @@ export default {
     hostname: 'https://beabot.fr',
     // process.env.BASE_URL,
     gzip: true,
-    routes() {
-      return getRoutes()
-    },
+    routes: createSitemapRoutes,
   },
 }

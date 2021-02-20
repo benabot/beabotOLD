@@ -107,6 +107,26 @@ export default {
       this.tout = false
     },
   },
+  head() {
+    return {
+      title: 'portfolio',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Différentes créations web dont certaines sont éco-conçues et toutes bâties à partir d’un wedesign soigné.',
+        },
+      ],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://beabot.fr/eco-conception/portfolio',
+        },
+      ],
+    }
+  },
 }
 </script>
 

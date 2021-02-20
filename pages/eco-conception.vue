@@ -8,8 +8,26 @@
 <script>
 export default {
   scrollToTop: true,
-  created() {
-    // this.$store.commit('page/sethome', false)
+
+  head() {
+    return {
+      title: 'éco-conception',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Blog de l’éco-conception numérique, produire un site web performant tout en réduisant son empreinte carbone c’est possible.',
+        },
+      ],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://beabot.fr/eco-conception/eco-conception',
+        },
+      ],
+    }
   },
 }
 </script>
