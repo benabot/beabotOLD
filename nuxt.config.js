@@ -68,7 +68,7 @@ export default {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
+    // '@nuxtjs/axios',
     // 'nuxt-webfontloader',
     '@nuxt/content',
     '@ax2/lozad-module',
@@ -121,8 +121,10 @@ export default {
   pageTransition: 'page',
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
-
+  // axios: {},
+  router: {
+    prefetchLinks: false,
+  },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
     extractCSS: true,

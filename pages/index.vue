@@ -14,11 +14,11 @@
         Vous avez sans doute entendu dire que le
         <span class="text-black"
           >numérique émettrait plus de CO2 que le transport aérien</span
-        ><span class="insec">&thinsp;</span>? C’est vrai. Peut-être pensez-vous
-        que les <span class="text-black">data centers</span> sont la source
-        principale de cette <span class="text-black">pollution</span
-        ><span class="insec">&thinsp;</span>? Pas tout à fait. Peut-être vous
-        a-t-on dit qu’un site éco-conçu c’était le modèle amish en noir et
+        ><span class="insec">&thinsp;</span>? C’est vrai. <br />Peut-être
+        pensez-vous que les <span class="text-black">data centers</span> sont la
+        source principale de cette <span class="text-black">pollution</span
+        ><span class="insec">&thinsp;</span>? Pas tout à fait. <br />Peut-être
+        vous a-t-on dit qu’un site éco-conçu c’était le modèle amish en noir et
         blanc<span class="insec">&thinsp;</span>?
         <span class="text-black"
           >Pas du tout<span class="insec">&thinsp;</span>!</span
@@ -115,7 +115,12 @@
       </div>
       <div class="boite-para">
         <div class="boite-para__para">
-          <Petittitre gris numero="1" titre="Durabilité" />
+          <!-- <Petittitre gris numero="1" titre="Durabilité" /> -->
+          <div class="pt-titre h3 text-black chiffre-onum text-gris2">
+            1<span class="text-vert">.</span>
+          </div>
+          <div class="ligne ligne__verte"></div>
+          <h3 class="pt-titre text-black text-gris2">Durabilité</h3>
           <p class="text-gris2">
             2/3 des impacts environnementaux du numérique proviennent de la
             fabrication des équipements. Un site éco-conçu les sollicitera
@@ -123,7 +128,12 @@
           </p>
         </div>
         <div class="boite-para__para mt-2">
-          <Petittitre gris numero="2" titre="Efficience" />
+          <!-- <Petittitre gris numero="2" titre="Efficience" /> -->
+          <div class="pt-titre h3 text-black chiffre-onum text-gris2">
+            2<span class="text-vert">.</span>
+          </div>
+          <div class="ligne ligne__verte"></div>
+          <h3 class="pt-titre text-black text-gris2">Efficience</h3>
           <p class="text-gris2">
             Utiliser le minimum de ressources pour obtenir un résultat similaire
             à un produit conçu de manière conventionnelle
@@ -136,29 +146,34 @@
         class="oeuf container-4__oeuf-1"
         width="30%"
         transform=""
-        fill="url(#Gradient2)"
+        fill="#0439d9"
       />
       <Oeuf
         class="oeuf container-4__oeuf-2"
         width="24%"
         transform="rotate(-45)"
-        fill="url(#Gradient4)"
+        fill="#04d94f"
       />
       <Oeuf
         class="oeuf container-4__oeuf-3"
         width="27%"
         transform="rotate(-85)"
-        fill="url(#Gradient1)"
+        fill="#04d94f"
       />
       <Oeuf
         class="oeuf container-4__oeuf-4"
         width="21%"
         transform="rotate(-95)"
-        fill="url(#Gradient3)"
+        fill="#f2a81d"
       />
       <div class="container-4__boite-para">
         <div class="container-4__boite-para--para">
-          <Petittitre couleur="white" numero="3" titre="Sobriété" />
+          <!-- <Petittitre couleur="white" numero="3" titre="Sobriété" /> -->
+          <div class="pt-titre h3 text-black chiffre-onum text-gris5">
+            3<span class="text-blanc">.</span>
+          </div>
+          <div class="ligne"></div>
+          <h3 class="pt-titre text-black text-gris5">Sobriété</h3>
           <p class="text-gris5">
             Proposer un service correspondant à un besoin avéré et aux
             fonctionnalités simples.
@@ -168,7 +183,12 @@
           </p>
         </div>
         <div class="container-4__boite-para--para">
-          <Petittitre couleur="white" numero="4" titre="Transversalité" />
+          <!-- <Petittitre couleur="white" numero="4" titre="Transversalité" /> -->
+          <div class="pt-titre h3 text-black chiffre-onum text-gris5">
+            4<span class="text-blanc">.</span>
+          </div>
+          <div class="ligne"></div>
+          <h3 class="pt-titre text-black text-gris5">Transversalité</h3>
           <p class="text-gris5">
             À chacune des étapes de la conception du site web et jusqu’à
             l’accompagnement des usagers la préoccupation environnementale est
@@ -391,6 +411,7 @@ section {
   p {
     width: 90vw;
     line-height: 1.618;
+    text-align: left;
     @media (min-width: $breakpoint-tablet) {
       width: 50vw;
     }
@@ -598,7 +619,7 @@ section {
   }
 }
 .container-5 {
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
   &__boite-titre {
     display: flex;
     width: 100%;

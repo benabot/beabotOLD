@@ -21,6 +21,7 @@
 .text-bleu1 { color: $bleu1;}
 .text-bleu2 { color: $bleu2;}
 .text-vert { color: $vert;}
+.text-blanc { color: white;}
 
 .text-fin { font-weight: $light;}
 .text-normal { font-weight: $normal;}
@@ -241,6 +242,22 @@ body {
       -ms-transform: translate3d(8px, 0, 0);
       -o-transform: translate3d(8px, 0, 0);
 }
+  }
+
+  .ligne {
+    width: 4em;
+    height: 0.1rem;
+    margin-top: 0.1rem;
+    border-top: 2px solid;
+    border-radius: 0.25rem;
+    color: white;
+    &__verte {
+      color: $vert;
+    }
+  }
+  .pt-titre {
+    text-align: left;
+    margin: 0 !important;
   }
 
   .page-enter-active,

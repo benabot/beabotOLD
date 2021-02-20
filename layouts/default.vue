@@ -11,17 +11,20 @@
       <transition name="slide-right">
         <ul v-if="showMobileMenu" class="menu-mobile">
           <li @click="showMobileMenu = !showMobileMenu">
-            <NuxtLink to="/" exact class="title title--menu h2"
+            <NuxtLink to="/" exact class="title title--menu h2" no-prefetch
               >Accueil</NuxtLink
             >
           </li>
           <li @click="showMobileMenu = !showMobileMenu">
-            <NuxtLink to="/eco-conception" class="title title--menu h2"
+            <NuxtLink
+              to="/eco-conception"
+              class="title title--menu h2"
+              no-prefetch
               >Éco-conception</NuxtLink
             >
           </li>
           <li @click="showMobileMenu = !showMobileMenu">
-            <NuxtLink to="/portfolio" class="title title--menu h2"
+            <NuxtLink to="/portfolio" class="title title--menu h2" no-prefetch
               >Portfolio</NuxtLink
             >
           </li>
@@ -32,7 +35,7 @@
       </transition>
     </nav>
     <nav role="navigation" class="nav-desktop nav-1">
-      <NuxtLink :class="couleurHaut" to="/">
+      <NuxtLink :class="couleurHaut" to="/" no-prefetch>
         <svg
           x="0"
           y="0"
@@ -114,12 +117,14 @@
       </NuxtLink>
     </nav>
     <nav role="navigation" class="nav-desktop nav-2 h4">
-      <NuxtLink to="/eco-conception" :class="couleurHaut" href=""
+      <NuxtLink to="/eco-conception" :class="couleurHaut" no-prefetch
         >Éco-conception</NuxtLink
       >
     </nav>
     <nav role="navigation" class="nav-desktop nav-3 h4">
-      <NuxtLink to="/portfolio" :class="couleurBas">Portfolio</NuxtLink>
+      <NuxtLink to="/portfolio" :class="couleurBas" no-prefetch
+        >Portfolio</NuxtLink
+      >
     </nav>
     <nav role="navigation" class="nav-desktop nav-4 h4">
       <a href="#footer" :class="couleurBas">Contact</a>

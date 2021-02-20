@@ -14,7 +14,7 @@
     xml:space="preserve"
     :transform="transform"
   >
-    <defs>
+    <!-- <defs>
       <linearGradient id="Gradient2">
         <stop offset="30%" class="stop-bleu2" />
         <stop offset="80%" class="stop-bleu1" />
@@ -33,7 +33,7 @@
         <stop offset="68%" stop-color="#18ea62" />
         <stop offset="90.89%" stop-color="#30ff79" />
       </linearGradient>
-    </defs>
+    </defs> -->
     <path
       id="oeuf-shape"
       class="st0"

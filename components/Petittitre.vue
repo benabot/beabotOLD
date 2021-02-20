@@ -1,8 +1,8 @@
 <template>
   <div class="petit-titre" :class="gris ? 'text-gris2' : 'text-gris5'">
-    <div v-if="numero" class="h3 text-black chiffre-onum">
+    <!-- <div v-if="numero" class="h3 text-black chiffre-onum">
       {{ numero }}<span :style="{ color: couleur }">.</span>
-    </div>
+    </div> -->
     <div v-if="stitre" class="h4 text-fin lettre-smcp">
       {{ stitre }}<span class="text-black" :style="{ color: couleur }">.</span>
     </div>
@@ -13,7 +13,7 @@
       >
     </div>
     <div
-      v-if="tags || numero || stitre"
+      v-if="tags || stitre"
       class="ligne text-black"
       :style="{ color: couleur }"
     ></div>
@@ -24,11 +24,11 @@
 export default {
   name: 'Petittitre',
   props: {
-    numero: {
-      type: String,
-      default: null, // green, green--outline, white
-      required: false,
-    },
+    // numero: {
+    //   type: String,
+    //   default: null, // green, green--outline, white
+    //   required: false,
+    // },
 
     titre: {
       type: String,

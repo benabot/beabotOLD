@@ -238,7 +238,10 @@ export default {
 </script>
 <style lang="scss" scoped>
 .h3 {
-  margin-bottom: 1.05rem;
+  // margin-bottom: 1.05rem;
+}
+h1 {
+  margin: 0.95em 0;
 }
 
 section {
@@ -256,9 +259,9 @@ section {
     position: relative;
     @media (min-width: $breakpoint-tablet) {
       width: 32.2%;
-
+      opacity: 0.78;
       order: 1;
-      margin-top: 2.5rem;
+      margin-top: 6.1rem;
       border-top: none;
       padding-top: 0;
     }
@@ -324,12 +327,13 @@ section {
     .chapitres {
       margin-top: 2rem;
       ul {
-        padding-left: 5px;
+        padding-left: 4px;
         li {
           list-style: none;
 
           a {
             padding-left: 5px;
+            display: inline-block;
             &:hover {
               text-decoration: underline;
             }
