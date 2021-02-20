@@ -3206,6 +3206,17 @@ compressible@~2.0.16:
   dependencies:
     mime-db ">= 1.43.0 < 2"
 
+compression-webpack-plugin@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/compression-webpack-plugin/-/compression-webpack-plugin-4.0.1.tgz#33eda97f1170dd38c5556771de10f34245aa0274"
+  integrity sha512-0mg6PgwTsUe5LEcUrOu3ob32vraDx2VdbMGAT1PARcOV+UJWDYZFdkSo6RbHoGQ061mmmkC7XpRKOlvwm/gzJQ==
+  dependencies:
+    cacache "^15.0.5"
+    find-cache-dir "^3.3.1"
+    schema-utils "^2.7.0"
+    serialize-javascript "^4.0.0"
+    webpack-sources "^1.4.3"
+
 compression-webpack-plugin@^6.1.0:
   version "6.1.1"
   resolved "https://registry.yarnpkg.com/compression-webpack-plugin/-/compression-webpack-plugin-6.1.1.tgz#ae8e4b2ffdb7396bb776e66918d751a20d8ccf0e"
@@ -3270,7 +3281,7 @@ consola@^2.10.0, consola@^2.11.3, consola@^2.4.0, consola@^2.6.0, consola@^2.9.0
   resolved "https://registry.yarnpkg.com/consola/-/consola-2.15.0.tgz"
   integrity sha512-vlcSGgdYS26mPf7qNi+dCisbhiyDnrN1zaRbw3CSuc2wGOMEGGPsp46PdRG5gqXwgtJfjxDkxRNAgRPr1B77vQ==
 
-consola@^2.12.1, consola@^2.13.0, consola@^2.15.0, consola@^2.15.3:
+consola@^2.12.1, consola@^2.13.0, consola@^2.15.0, consola@^2.15.3, consola@^2.3.2:
   version "2.15.3"
   resolved "https://registry.yarnpkg.com/consola/-/consola-2.15.3.tgz#2e11f98d6a4be71ff72e0bdf07bd23e12cb61550"
   integrity sha512-9vAdYbHj6x2fLKC4+oPH0kFzY/orMZyG2Aj+kNylHxKGJ/Ed4dpNyAQYwJOdqO4zdM7XpVHmyejQDcQHrnuXbw==
@@ -7010,6 +7021,14 @@ nuxt-font-loader@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/nuxt-font-loader/-/nuxt-font-loader-1.1.3.tgz#060c7f54fe154ff3dcbf472c443912749322208b"
   integrity sha512-3IoyWe/S1+YbLGoQ7GQ2pV5MerJH2yBJlTtXZPbKSk+XrchcRGTGrXvUecC/W1OKoZE+uLn+EMGb/eUr53o3eA==
+
+nuxt-precompress@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/nuxt-precompress/-/nuxt-precompress-0.5.2.tgz#d2e03e0b13b8c92717191562d6ca1d005380e03a"
+  integrity sha512-1OuoCyXALsS1Ct71z8xb81G8N61qgvnrKqorduUu6vKr7CR4xe/hPnSVd5+3GWyUDjZrRBjD6MU5jxxEQo+dVg==
+  dependencies:
+    compression-webpack-plugin "^4.0.1"
+    consola "^2.3.2"
 
 nuxt-purgecss@^1.0.0:
   version "1.0.0"
