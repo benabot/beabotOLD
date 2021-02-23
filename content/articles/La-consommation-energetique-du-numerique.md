@@ -4,6 +4,7 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id
 img: profilFreakOut.jpg
 alt: my first blog post
 tag: ['WebDesign', 'WordPress']
+author: Benoît Abot
 ---
 
 <!-- # My first blog post -->

@@ -116,6 +116,7 @@ export default {
     // '@nuxtjs/axios',
     // 'nuxt-webfontloader',
     '@nuxt/content',
+    '@nuxtjs/feed',
     '@ax2/lozad-module',
     '@nuxtjs/sitemap',
   ],
@@ -217,6 +218,62 @@ export default {
       threshold: 10240,
       minRatio: 0.8,
     },
+  },
+  hooks: {
+    'content:file:beforeInsert': (document) => {
+      if (document.extension === '.md') {
+        document.bodyPlainText = document.text
+      }
+    },
+  },
+  feed() {
+    const baseUrlArticles = 'https://wesh-mon-site.netlify.app/eco-conception'
+    const baseLinkFeedArticles = ''
+    const feedFormats = {
+      rss: { type: 'rss2', file: 'rss.xml' },
+      // atom: { type: 'atom1', file: 'atom.xml' },
+      json: { type: 'json1', file: 'feed.json' },
+    }
+    const { $content } = require('@nuxt/content')
+
+    const feedCreateArticles = async function (feed) {
+      feed.options = {
+        title: 'BeAbot : blog de l’éco-conception web',
+        description:
+          "J'écris à propos de l’éco-conception web et du numérique éco-responsable.",
+        link: baseUrlArticles,
+      }
+      const articles = await $content('articles').fetch()
+
+      articles.forEach((article) => {
+        const url = `${baseUrlArticles}/${article.slug}`
+
+        feed.addItem({
+          title: article.title,
+          id: url,
+          link: url,
+          date: new Date(article.updatedAt),
+          description: article.description,
+          content: article.bodyPlainText,
+          author: {
+            name: 'Benoît Abot',
+            email: 'hello@beabot.fr',
+            link: 'https://beabot.fr/',
+          },
+        })
+      })
+      // feed.addContributor({
+      //   name: 'Benoît Abot',
+      //   email: 'hello@beabot.fr',
+      //   link: 'https://beabot.fr/',
+      // })
+    }
+
+    return Object.values(feedFormats).map(({ file, type }) => ({
+      path: `${baseLinkFeedArticles}/${file}`,
+      type,
+      create: feedCreateArticles,
+    }))
   },
   sitemap: {
     hostname: 'https://beabot.fr',

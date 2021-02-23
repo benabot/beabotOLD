@@ -2,6 +2,7 @@
 title: Qu'est-ce que l'éco-conception web
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id fringilla nunc, vitae pellentesque diam. Quisque euismod, velit vel posuere porttitor, ex libero tristique augue, sit amet efficitur libero ligula sit amet nunc. Sed sit amet pretium turpis.
 tag: ['WebDesign', 'WordPress','Eco-conception']
+author: Benoît Abot
 ---
 
 ## L’éco-conception web, une démarche globale :

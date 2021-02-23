@@ -389,6 +389,36 @@ export default {
   created() {
     // this.$store.commit('page/sethome', true)
   },
+  head() {
+    return {
+      title: 'Accueil - éco-conception web',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'L’éco-conception web, c’est concilier respect de l’environnement et technologies numériques de pointe pour un internet durable.',
+        },
+      ],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://beabot.fr',
+        },
+      ],
+      // script: [
+      //   {
+      //     type: 'application/ld+json',
+      //     json: {
+      //       '@context': 'http://schema.org',
+      //       '@type': 'Organization',
+      //       name: 'NuxtJS',
+      //     },
+      //   },
+      // ],
+    }
+  },
 }
 </script>
 

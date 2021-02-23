@@ -2,6 +2,7 @@
 title: Rendre WordPress plus vert !
 description: Après avoir présenté les principes notables de l’éco-conception web, place à plus de détails. Voici les grandes lignes de mon approche pour éco-concevoir un site web avec WordPress à chaque étape d’un projet.
 tag: ['WebDesign', 'WordPress','Eco-conception']
+author: 'Benoît Abot'
 ---
 
 

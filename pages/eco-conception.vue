@@ -11,7 +11,7 @@ export default {
 
   head() {
     return {
-      title: 'éco-conception',
+      title: 'éco-conception web',
       meta: [
         {
           hid: 'description',

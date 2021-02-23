@@ -228,6 +228,57 @@ export default {
           href: `https://beabot.fr/eco-conception/${this.$route.params.slug}`,
         },
       ],
+      script: [
+        {
+          type: 'application/ld+json',
+          json: [
+            {
+              '@context': 'https://schema.org',
+              '@type': 'BlogPosting',
+              headline: this.article.title,
+              // image: [this.article.image],
+              datePublished: this.article.createdAt,
+              dateModified: this.article.updatedAt,
+              author: {
+                '@type': 'Person',
+                name: 'Benoît Abot',
+              },
+              publisher: {
+                '@type': 'Organization',
+                name: 'BeAbot',
+                url: 'https://beabot.fr',
+                logo: {
+                  '@type': 'ImageObject',
+                  url: 'https://beabot.fr/beabot.png',
+                },
+              },
+            },
+            {
+              '@context': 'https://schema.org',
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: 'BeAbot',
+                  item: 'https://beabot.fr',
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  name: 'Eco-conception',
+                  item: `https://beabot.fr/eco-conception/${this.$route.params.slug}`,
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 3,
+                  name: this.article.title,
+                },
+              ],
+            },
+          ],
+        },
+      ],
       // script: [
       //   {
       //     type: 'application/ld+json',

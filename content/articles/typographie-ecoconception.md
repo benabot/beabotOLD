@@ -2,6 +2,7 @@
 title: Typographie et éco-conception
 description: Dans ce billet j’aborde la question de la typographie dans le cadre d’une pratique d’éco-conception web. Étant le composant de base du graphisme, mais également un élément consommant beaucoup de ressources, la typographie est au doublement cœur d’un design web éco-responsable.
 tag: ['WebDesign', 'Typographie','Eco-conception']
+author: Benoît Abot
 ---
 
 Cette dernière décennie a vu l’émergence et la suprématie du recours aux polices web. En 2010, Google en mettant à disposition de chacun une multitude de polices gratuites a grandement contribué à un web graphiquement plus varié (relativisons : il y a 977 polices sur Google Fonts et la plupart des sites n’en utilisent que quelques-unes, la Roboto essentiellement). Cependant, ce service a un coût environnemental non négligeable. Chaque police nécessite une requête HTTP et pèse autant qu’une image optimisée (177 ko pour la Roboto non compressée). Certes, on pourra m’objecter que la plupart des sites sont réalisés avec les mêmes Google Fonts et que celles-ci sont en cache dans tous les navigateurs. Je préfère ne pas me reposer sur un élément qui ne dépend pas de moi. De plus, un cache de navigateur, peut-être (et doit être) vidé par l’internaute.  
