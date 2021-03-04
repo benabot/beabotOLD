@@ -104,12 +104,15 @@
       <!-- <hr /> -->
 
       <p class="text-gris1 text-normal">{{ article.description }}</p>
-      <p class="petit-text text-gris3">
+      <p class="petit-text text-gris3 infos">
         Publié le : {{ formatDate(article.createdAt) }}
         <span v-if="article.createdAt != article.updatedAt">
           - Modifié le : {{ formatDate(article.updatedAt) }}
         </span>
         - Par : Benoît Abot
+        <span v-if="article.temps">
+          - Temps de lecture : {{ article.temps }}mn</span
+        >
       </p>
       <hr />
       <!-- <img :src="require(`~/assets/img/${article.img}`)" :alt="article.alt" /> -->
@@ -561,6 +564,9 @@ section {
       max-width: 60ch;
       margin-bottom: 1.05rem;
     }
+    .infos {
+      max-width: 100%;
+    }
     svg {
       position: absolute;
       bottom: -7px;
@@ -578,6 +584,7 @@ section {
     ::v-deep .nuxt-content {
       p {
         max-width: 66ch;
+        margin-bottom: 0.45rem;
       }
       h2 {
         line-height: calc(2px + 2ex + 2px);
@@ -592,14 +599,42 @@ section {
         margin-top: 0.89em;
         font-size: min(max(1.192466rem, 4.587334vw), 1.7798rem);
       }
+      h4 {
+        font-weight: normal;
+        margin-bottom: 0.25rem;
+      }
       blockquote {
         background: $gris6;
         border-left: 10px solid $gris4;
         color: $gris1;
         margin: 1.5em 10px;
-        padding: 1em 10px 0.1em 10px;
+        padding: 1em 10px;
         border-radius: 0.5rem;
         quotes: '\201C''\201D''\2018''\2019';
+      }
+      .citation {
+        background: $gris6;
+        color: $gris1;
+        margin: 1.5em 10px;
+        padding: 1em 10px 1em 4rem;
+        border-radius: 0.5rem;
+        position: relative;
+
+        &::before {
+          content: '\201F';
+          font-size: 7rem;
+          position: absolute;
+          top: -18%;
+          left: 10px;
+          left: 0;
+          z-index: 1;
+          font-family: sans-serif, serif;
+          color: $vert;
+          opacity: 0.9;
+        }
+        .auteur {
+          font-size: 0.8rem;
+        }
       }
     }
   }
