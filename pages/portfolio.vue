@@ -33,6 +33,7 @@
       <transition name="fade">
         <LazyBoiteArticle
           v-if="tout || select === 'vjs' || select === 'webDesign'"
+          id="site1"
           titre="Guide RSE Banque Populaire"
           sous-titre="Carte interactive"
           background-url="guideBleu1.png"
@@ -42,6 +43,7 @@
       <transition name="fade">
         <LazyBoiteArticle
           v-if="tout || select === 'vjs' || select === 'webDesign'"
+          id="site2"
           titre="Guide RSE Banque Populaire"
           sous-titre="Interface de visualisation de données"
           background-url="guideBleu2.png"

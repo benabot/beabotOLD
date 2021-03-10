@@ -2,10 +2,10 @@
 title: Qu’est-ce que l’éco-conception web
 description: Sujet en vogue, l’éco-conception web, victime de son succès, est sujet d’une vague de greenwashing. Par delà les malentendus, tentons de clarifier le sujet.
 temps: 15
-tag: [« WebDesign », « WordPress », « Eco-conception »]
+tag: ['WebDesign', 'WordPress', 'Eco-conception']
 ---
 
-L’urgence climatique nous impose de penser notre modèle de développement. Le numérique en tant qu’émetteur de gaz à effet de serre tout autant que vecteur d’une transformation de nos modes de vie est au cœur des changements contemporains. S’interroger sur la finalité du numérique, ses enjeux et ses impacts sur l’environnement c’est aussi comprendre notre monde et se donner les moyens d’agir.
+L’urgence climatique nous impose de penser notre modèle de développement. Le numérique en tant qu’émetteur de gaz à effet de serre tout autant que vecteur d’une transformation de nos modes de vie est au cœur des changements contemporains. S’interroger sur la finalité du numérique, ses enjeux et ses <a  href="/eco-conception/La-consommation-energetique-du-numerique"  class="lien--vert">impacts sur l’environnement</a> c’est aussi comprendre notre monde et se donner les moyens d’agir.
 Plusieurs possibilités s’offrent à nous pour dépeindre l’éco-conception numérique, des plus techniques aux plus superficielles. J’ai choisi ici une approche ouverte et généraliste, accessible sans connaissance en programmation.
 Pour ceux qui veulent du code, rassurez-vous, des articles plus techniques émailleront ce blog au fil du temps. Néanmoins, théoriser nos pratiques, réfléchir à nos choix technologiques ne peut qu’élargir l’horizon des développeurs.
   
@@ -51,12 +51,12 @@ Plus concrètement, dans le cadre d’un site qui offrirait un service à l’in
 La question du design est primordiale pour l’éco-conception web, elle a pour cœur l’efficacité d’une communication qui accorderait sa finalité (ce qu’on veut dire) et les moyens mis en œuvre pour la restituer (comment le dit-on). 
 
 OBJECTIF : comment et pourquoi produit-on un service ?
-Se questionner sur l’intérêt et les moyens graphiques retenus pour créer un site
+Se questionner sur l’intérêt et les moyens graphiques retenus pour créer un site.
 
 
 ### Réutilisabilité
 
-<div class="citation">Quand je paye une dette, c’est un devoir que je remplis ; quand je fais un don, c’est un plaisir que je me donne. -
+<div class="citation">Quand je paye une dette, c’est un devoir que je remplis ; quand je fais un don, c’est un plaisir que je me donne -
 <span class="auteur">Jean-Jacques Rousseau</span></div>
 
 
@@ -90,7 +90,7 @@ Cependant, c’est la fabrication des différents équipements du réseau (serve
 
 Un site éco-conçu proposera un service qui pourra tourner sans problème sur de vieux appareils en limitant la taille et la complexité des ressources nécessaires à son affichage et en veillant à ne pas être trop gourmand en mémoire vive (c’est la quantité de mémoire vive qui fait défaut sur les vieux ordinateurs). Attention toutefois, prendre en compte la compatibilité avec le vieux matériel ne veut pas dire se soucier des logiciels dépréciés. Même en utilisant un ordinateur hors d’âge (dans une certaine limite, bien entendu) rien n’empêche de faire tourner un navigateur récent plus respectueux des standards du web et moins énergivore qu’Internet Explorer !
 
-**Limiter la consommation énergétique nécessaire pour utiliser le site**  est le deuxième levier de levier pour atteindre notre objectif. /
+**Limiter la consommation énergétique nécessaire pour utiliser le site**  est le deuxième levier de levier pour atteindre notre objectif. 
 Cette préoccupation concerne tant les serveurs, le réseau, que les terminaux.
 Si les choix graphiques sont faits en cohérence avec l’objet du site, qu’ils sont réalisés avec une recherche d’efficacité communicationnelle et une économie de moyen, cette partie, tout en étant d’un enjeu primordial, n’en est pas moins aisé à développer.
 Intervenons, d’une part, afin de limiter les charges réseau en taille et en nombre, et d’autre part, pour limiter l’exécution de scripts complexes qui sollicitent la carte graphique (CPU), grande consommatrice d’énergie. 

@@ -183,6 +183,13 @@ export default {
   build: {
     extractCSS: true,
   },
+  render: {
+  // Setting up cache for 'static' directory - a year in milliseconds
+  // https://web.dev/uses-long-cache-ttl
+    static: {
+      maxAge: 60 * 60 * 24 * 365 * 1000,
+    },
+  },
   nuxtPrecompress: {
     enabled: true, // Enable in production
     report: false, // set true to turn one console messages during module init
@@ -254,7 +261,7 @@ export default {
           link: url,
           date: new Date(article.updatedAt),
           description: article.description,
-          content: article.bodyPlainText,
+          // content: article.bodyPlainText,
           author: {
             name: 'Benoît Abot',
             email: 'hello@beabot.fr',

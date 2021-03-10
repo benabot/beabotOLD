@@ -37,16 +37,24 @@
     <section class="intro text-gris2">
       <div class="intro__img"></div>
       <p class="text-fin">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id
-        fringilla nunc, vitae pellentesque diam. Quisque euismod, velit vel
-        posuere porttitor, ex libero tristique augue, sit amet efficitur libero
-        ligula sit amet nunc. Sed sit amet pretium turpis.
+        Au travers de ce blog, je vous propose de découvrir mes réflexions
+        concernant les impacts environnementaux du numérique et comment les
+        réduire en éco-concevant des sites web. Ce blog a pour vocation d’être
+        généraliste et lisible par quiconque connaît, dans les grandes lignes,
+        le fonctionnement d’internet. Toutefois, afin de sensibiliser
+        concrètement les acteurs du web aux thématiques de la sobriété et de
+        l’efficience numérique, certains articles pourront nécessiter des
+        connaissances en développement web et aborderont des questions
+        techniques. Ils seront signalés en tant que tels.
       </p>
       <p class="text-fin">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id
-        fringilla nunc, vitae pellentesque diam. Quisque euismod, velit vel
-        posuere porttitor, ex libero tristique augue, sit amet efficitur libero
-        ligula sit amet nunc. Sed sit amet pretium turpis.
+        Webdesigner de formation, je suis convaincu du rôle central du design
+        d’interface et d’expérience utilisateur pour limiter l’empreinte
+        environnementale de nos sites. Il sera beaucoup question, ici, de
+        webdesign. Enfin, concernant les aspects plus techniques et les outils
+        de développement utilisés, j’ai choisi de traiter les plus répandus.
+        C’est, d’après moi, stratégiquement plus efficace d’agir sur la
+        multitude — toute perfectible qu’elle soit — plutôt qu’à la marge.
       </p>
     </section>
     <div class="border"></div>

@@ -29,9 +29,9 @@
           <span
             v-for="tag in article.tag"
             :key="tag"
-            class="petit-text"
+            class="petit-text lettre-smcp"
             @click="updateTag(tag)"
-            ><NuxtLink to="/eco-conception"
+            ><NuxtLink to="/eco-conception" exact
               ><span class="text-vert"> #</span>{{ tag }}</NuxtLink
             ></span
           >
@@ -122,7 +122,7 @@
         class="text-gris2 mt-2"
         :document="article"
       />
-      <svg viewBox="0 0 100 100" width="300px">
+      <svg viewBox="0 0 100 100" width="33%">
         <path
           fill="#04d94f"
           d="M75,97.8c3.7-1.1,7.4-1.6,11.1-2c1.9-0.2,3.7-0.3,5.6-0.4c0.5,0,0.9,0,1.4,0l1.3,0c0.3,0,0.5-0.1,0.6-0.3
@@ -424,9 +424,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.h3 {
-  // margin-bottom: 1.05rem;
-}
 h1 {
   margin: 0.95em 0;
 }
@@ -489,7 +486,7 @@ section {
     .breadcrumb {
       line-height: 1;
       hr {
-        margin-bottom: 0.3rem;
+        // margin-bottom: 0.3rem;
         margin-top: 0.2rem;
       }
       .selector {
@@ -546,6 +543,7 @@ section {
     width: 100%;
     order: 1;
     position: relative;
+    z-index: 3;
     @media (min-width: $breakpoint-tablet) {
       width: 71.8%;
       order: 2;
@@ -573,6 +571,7 @@ section {
       right: -3%;
       z-index: 2;
     }
+
     // .nuxt-content h2 {
     //   font-weight: bold;
     //   font-size: 28px;
@@ -582,9 +581,29 @@ section {
     //   font-size: 22px;
     // }
     ::v-deep .nuxt-content {
-      p {
+      &-container {
+        z-index: 3;
+      }
+      p,
+      ul {
         max-width: 66ch;
         margin-bottom: 0.45rem;
+      }
+      a {
+        background: linear-gradient($gris3, $gris3) right bottom / 100% 0.15em
+          no-repeat;
+        transition: background-size 0.4s;
+        &:hover {
+          background-size: 100% 0.26em;
+        }
+      }
+      .lien--vert {
+        background: linear-gradient($vert, $vert) right bottom / 100% 0.25em
+          no-repeat;
+        transition: background-size 0.4s;
+        &:hover {
+          background-size: 100% 0.56em;
+        }
       }
       h2 {
         line-height: calc(2px + 2ex + 2px);
@@ -626,7 +645,6 @@ section {
           position: absolute;
           top: -18%;
           left: 10px;
-          left: 0;
           z-index: 1;
           font-family: sans-serif, serif;
           color: $vert;
@@ -635,6 +653,14 @@ section {
         .auteur {
           font-size: 0.8rem;
         }
+      }
+      .footnote-ref {
+        font-variant-numeric: oldstyle-nums;
+        -moz-font-feature-settings: 'onum';
+        -webkit-font-feature-settings: 'onum';
+        font-feature-settings: 'onum';
+        font-size: 0.86em;
+        color: $gris1;
       }
     }
   }

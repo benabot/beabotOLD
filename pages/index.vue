@@ -38,12 +38,17 @@
         <div class="impact--col impact--col__1">
           <div class="impact--chiffre">
             <div class="bg-gris bg-gris__bleu">
-              texte texte 34 TEXT TEXT ukfou ufgougfofpuy gg iuoug
+              <p>
+                Des impacts sur l’émission de CO2, la consommation d’énergie et
+                de ressources…
+              </p>
             </div>
           </div>
           <div class="impact--chiffre">
             <div class="bg-gris bg-gris__vert">
-              texte texte 34 TEXT TEXT ukfou ufgougfofpuy gg iuoug
+              <p>
+                réparties entre les serveurs, le réseau et les utilisateurs…
+              </p>
             </div>
           </div>
         </div>
@@ -51,12 +56,14 @@
         <div class="impact--col impact--col__2">
           <div class="impact--chiffre">
             <div class="bg-gris bg-gris__jaune">
-              texte texte 34 TEXT TEXT ukfou ufgougfofpuy gg iuoug
+              <p>
+                les utilisateurs ont le plus fort impact sur l'environnement…
+              </p>
             </div>
           </div>
           <div class="impact--chiffre">
             <div class="bg-gris bg-gris__gris">
-              texte texte 34 TEXT TEXT ukfou ufgougfofpuy gg iuoug
+              <p>dés l’achat de leur appareil, avant même son utilisation.</p>
             </div>
           </div>
         </div>
@@ -82,6 +89,7 @@
         </div>
       </div>
     </section>
+
     <section class="container container-3">
       <div class="container-3__titre">
         <Oeuf
@@ -285,17 +293,22 @@
         <div class="boite-para__para a">
           <Petittitre
             gris
-            titre="La typo pour un webdesign sobre"
-            stitre="Typographie"
+            titre="Les impacts du numérique"
+            stitre="Éco-conception"
           />
           <p class="text-gris2">
-            Dans ce billet j’aborde la question de la typographie dans le cadre
-            d’une pratique d’éco-conception web. Étant le composant de base du
-            graphisme, mais également un élément consommant beaucoup de
-            ressources, la typographie est au doublement cœur d’un design web
-            éco-responsable.
+            On imagine le numérique virtuel, intangible et éthéré. Après tout,
+            nous dématérialisons nos documents et les rangeons dans le cloud… Il
+            est pourtant pleinement matériel. Ordinateurs, TV et téléphones d’un
+            côté, serveurs de l’autre reliés par des câbles, satellites,
+            antennes, etc. constituent l'écosystème du numérique. Tous ces
+            équipements doivent être produits puis alimentés en énergie pour
+            fonctionner. Cela génère des coûts pour l’environnement concrets et
+            mesurables.
           </p>
-          <Boutoncta to="/eco-conception/typographie-ecoconception" />
+          <Boutoncta
+            to="/eco-conception/La-consommation-energetique-du-numerique"
+          />
         </div>
         <div class="oeuf b">
           <NuxtLink to="/eco-conception"
@@ -316,16 +329,15 @@
         <div class="boite-para__para c">
           <Petittitre
             gris
-            titre="Rendre WordPress plus vert !"
-            stitre="WordPress"
+            titre="Qu’est-ce que l’éco-conception web?"
+            stitre="Éco-conception"
           />
           <p class="text-gris2">
-            Après avoir présenté les principes notables de l’éco-conception web,
-            place à plus de détails. Voici les grandes lignes de mon approche
-            pour éco-concevoir un site web avec WordPress à chaque étape d’un
-            projet.
+            Sujet en vogue, l’éco-conception web, victime de son succès, est
+            sujet d’une vague de greenwashing. Par delà les malentendus, tentons
+            de clarifier le sujet.
           </p>
-          <Boutoncta to="/eco-conception/ecoconception-wordpress" />
+          <Boutoncta to="/eco-conception/L-eco-conception-web" />
         </div>
       </div>
     </section>
@@ -348,7 +360,7 @@
             Carte interactive pour le guide RSE de la Banque populaire. Réalisée
             avec VueJs.
           </p>
-          <Boutoncta to="/portfolio" bleu>trala</Boutoncta>
+          <Boutoncta to="/portfolio#site1" bleu>découvrir</Boutoncta>
         </div>
         <div class="oeuf b">
           <NuxtLink to="/portfolio"
@@ -377,7 +389,7 @@
             Interface de visualisation de données pour les résultats de la RSE
             de la Banque Populaire. Faite avec VueJs.
           </p>
-          <Boutoncta to="/portfolio" bleu>présentation</Boutoncta>
+          <Boutoncta to="/portfolio#site2" bleu>présentation</Boutoncta>
         </div>
       </div>
     </section>
@@ -453,6 +465,7 @@ section {
   align-items: stretch;
   flex-direction: column;
   justify-content: space-evenly;
+  hyphens: none;
   @media (min-width: $breakpoint-tablet) {
     flex-direction: row;
   }
@@ -466,9 +479,11 @@ section {
       height: auto;
       &__1 {
         order: 1;
+        width: 35%;
       }
       &__2 {
         order: 3;
+        width: 35%;
       }
     }
 
@@ -487,9 +502,13 @@ section {
   }
   &--chiffre {
     border: 5px solid $gris1;
+    min-height: 31.8%;
     .bg-gris {
       background: $gris6;
       padding: 0.5rem 1rem;
+      height: 100%;
+      display: flex;
+      align-items: center;
 
       &__bleu {
         border-left: 9px solid $bleu2;
