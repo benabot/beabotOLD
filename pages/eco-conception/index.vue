@@ -54,7 +54,7 @@
         webdesign. Enfin, concernant les aspects plus techniques et les outils
         de développement utilisés, j’ai choisi de traiter les plus répandus.
         C’est, d’après moi, stratégiquement plus efficace d’agir sur la
-        multitude — toute perfectible qu’elle soit — plutôt qu’à la marge.
+        multitude — toute perfectible soit-elle — plutôt qu’à la marge.
       </p>
     </section>
     <div class="border"></div>
@@ -164,6 +164,7 @@ a {
     text-align: justify;
     // margin-left: 0;
     @media (min-width: $breakpoint-tablet) {
+      width: 50%;
       &:first-of-type {
         margin-right: 1em;
       }

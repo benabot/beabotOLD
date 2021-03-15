@@ -163,6 +163,11 @@ export default {
       'number',
       'unit',
       'pre[class*="language-"]',
+      'citation',
+      'footnote-ref',
+      'auteur',
+      'blockquote',
+      'lien--vert'
     ],
     // whitelistPatternsChildren: [/^token/, /^nuxt-content-highlight/],
     whitelistPatternsChildren: [/token$/, /pre$/],

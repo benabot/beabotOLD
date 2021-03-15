@@ -39,8 +39,8 @@
           <div class="impact--chiffre">
             <div class="bg-gris bg-gris__bleu">
               <p>
-                Des impacts sur l’émission de CO2, la consommation d’énergie et
-                de ressources…
+                Des impacts sur l’émission de CO<sub>2</sub>, la consommation
+                d’énergie et de ressources…
               </p>
             </div>
           </div>
@@ -503,10 +503,12 @@ section {
   &--chiffre {
     border: 5px solid $gris1;
     min-height: 31.8%;
+    display: flex;
+    align-items: stretch;
     .bg-gris {
       background: $gris6;
       padding: 0.5rem 1rem;
-      height: 100%;
+      // height: 100%;
       display: flex;
       align-items: center;
 
