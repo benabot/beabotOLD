@@ -95,34 +95,34 @@ export default {
     const articles = await $content('articles', params.slug)
       .only(['title', 'description', 'img', 'slug', 'tag'])
       .sortBy('createdAt', 'desc')
-      .fetch()
+      .fetch();
 
     return {
       articles,
       selectedTag: null,
-    }
+    };
   },
   computed: {
     name() {
-      return this.$store.state.tags.tag
+      return this.$store.state.tags.tag;
     },
     articlesFilters() {
       if (!this.name) {
-        return this.articles
+        return this.articles;
       } else {
-        return this.articles.filter((el) => el.tag.includes(this.name))
+        return this.articles.filter((el) => el.tag.includes(this.name));
       }
     },
   },
   methods: {
     updateTag(tag) {
-      this.$store.commit('tags/setTag', tag)
+      this.$store.commit('tags/setTag', tag);
     },
     // updateTag(tag) {
     //   this.selectedTag = tag
     // },
   },
-}
+};
 </script>
 <style lang="scss" scoped>
 h1 {

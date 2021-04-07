@@ -21,13 +21,13 @@ $black: 900;
 // Select a ratio to preview
 // Default is "perfectFourth"
 $type-ratios: (
-  "minorSecond": 1.067,
-  "majorSecond": 1.125,
-  "minorThird": 1.2,
-  "majorThird": 1.25,
-  "perfectFourth": 1.333,
-  "augmentedFourth": 1.414,
-  "perfectFifth": 1.5,
+  // "minorSecond": 1.067,
+  // "majorSecond": 1.125,
+  // "minorThird": 1.2,
+  // "majorThird": 1.25,
+  // "perfectFourth": 1.333,
+  // "augmentedFourth": 1.414,
+  // "perfectFifth": 1.5,
   "goldenRatio": 1.618
 );
 
@@ -36,7 +36,8 @@ $type-ratios: (
 }
 
 // Recommended
-$type-base-size: 1.1rem;
+  $type-base-size: 1.1rem;
+
 
 // Select by key of map, or use a custom value
 $type-size-ratio: type-ratio("goldenRatio");

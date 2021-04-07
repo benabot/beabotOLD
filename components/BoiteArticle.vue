@@ -59,9 +59,9 @@ export default {
     },
   },
   mounted() {
-    this.$lozad.observe()
+    this.$lozad.observe();
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -96,6 +96,8 @@ export default {
   h2 {
     margin-right: -4rem;
     margin-bottom: 0;
+    position: relative;
+    z-index: 111;
   }
   h3 {
     font-size: 1.18rem;
@@ -109,9 +111,10 @@ export default {
   position: relative;
   width: 100%;
   padding-top: 100%; /* 1:1 Aspect Ratio */
-  overflow: hidden;
+  // overflow: hidden;
   &:hover .boite-image__image {
-    transform: scale(1);
+    // transform: scale(1);
+    background-size: 190%;
   }
   &:hover .circle {
     background: radial-gradient(transparent 60%, rgb(167, 167, 167));
@@ -124,9 +127,9 @@ export default {
     height: 100%;
     // background-image: url('https://www.cdc.gov/healthypets/images/pets/cute-dog-headshot.jpg');
     background-position: center;
-    background-size: cover;
+    background-size: 220%;
     background-repeat: no-repeat;
-    transform: scale(1.2);
+    // transform: scale(1.2);
     transition: all 0.3s;
     z-index: 10;
     // filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.5));
@@ -136,10 +139,14 @@ export default {
   }
   &__calque {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 101%;
-    height: 101%;
+    // top: 0;
+    // left: 0;
+    // width: 101%;
+    // height: 101%;
+    top: -6px;
+    bottom: -6px;
+    left: -6px;
+    right: -6px;
     background: $fondClair;
     z-index: 30;
     clip-path: url(#myClip);

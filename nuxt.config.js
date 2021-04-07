@@ -2,16 +2,16 @@
 // import getSiteMeta from './utils/getSiteMeta'
 // const meta = getSiteMeta()
 const createSitemapRoutes = async () => {
-  const routes = []
-  let posts = []
-  const { $content } = require('@nuxt/content')
+  const routes = [];
+  let posts = [];
+  const { $content } = require('@nuxt/content');
   if (posts === null || posts.length === 0)
-    posts = await $content('articles').fetch()
+    posts = await $content('articles').fetch();
   for (const post of posts) {
-    routes.push(`eco-conception/${post.slug}`)
+    routes.push(`eco-conception/${post.slug}`);
   }
-  return routes
-}
+  return routes;
+};
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -43,6 +43,11 @@ export default {
         content:
           'L’éco-conception web, c’est concilier respect de l’environnement et technologies numériques de pointe pour un internet durable.',
       },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: '/beabot.png',
+      },
       // Twitter Card
       {
         hid: 'twitter:title',
@@ -54,6 +59,11 @@ export default {
         name: 'twitter:description',
         content:
           'L’éco-conception web, c’est concilier respect de l’environnement et technologies numériques de pointe pour un internet durable.',
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: '/beabot.png',
       },
     ],
     link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
@@ -167,7 +177,7 @@ export default {
       'footnote-ref',
       'auteur',
       'blockquote',
-      'lien--vert'
+      'lien--vert',
     ],
     // whitelistPatternsChildren: [/^token/, /^nuxt-content-highlight/],
     whitelistPatternsChildren: [/token$/, /pre$/],
@@ -189,8 +199,8 @@ export default {
     extractCSS: true,
   },
   render: {
-  // Setting up cache for 'static' directory - a year in milliseconds
-  // https://web.dev/uses-long-cache-ttl
+    // Setting up cache for 'static' directory - a year in milliseconds
+    // https://web.dev/uses-long-cache-ttl
     static: {
       maxAge: 60 * 60 * 24 * 365 * 1000,
     },
@@ -234,19 +244,19 @@ export default {
   hooks: {
     'content:file:beforeInsert': (document) => {
       if (document.extension === '.md') {
-        document.bodyPlainText = document.text
+        document.bodyPlainText = document.text;
       }
     },
   },
   feed() {
-    const baseUrlArticles = 'https://wesh-mon-site.netlify.app/eco-conception'
-    const baseLinkFeedArticles = ''
+    const baseUrlArticles = 'https://beabot.fr/eco-conception';
+    const baseLinkFeedArticles = '';
     const feedFormats = {
       rss: { type: 'rss2', file: 'rss.xml' },
       // atom: { type: 'atom1', file: 'atom.xml' },
       json: { type: 'json1', file: 'feed.json' },
-    }
-    const { $content } = require('@nuxt/content')
+    };
+    const { $content } = require('@nuxt/content');
 
     const feedCreateArticles = async function (feed) {
       feed.options = {
@@ -254,11 +264,11 @@ export default {
         description:
           "J'écris à propos de l’éco-conception web et du numérique éco-responsable.",
         link: baseUrlArticles,
-      }
-      const articles = await $content('articles').fetch()
+      };
+      const articles = await $content('articles').fetch();
 
       articles.forEach((article) => {
-        const url = `${baseUrlArticles}/${article.slug}`
+        const url = `${baseUrlArticles}/${article.slug}`;
 
         feed.addItem({
           title: article.title,
@@ -272,20 +282,20 @@ export default {
             email: 'hello@beabot.fr',
             link: 'https://beabot.fr/',
           },
-        })
-      })
+        });
+      });
       // feed.addContributor({
       //   name: 'Benoît Abot',
       //   email: 'hello@beabot.fr',
       //   link: 'https://beabot.fr/',
       // })
-    }
+    };
 
     return Object.values(feedFormats).map(({ file, type }) => ({
       path: `${baseLinkFeedArticles}/${file}`,
       type,
       create: feedCreateArticles,
-    }))
+    }));
   },
   sitemap: {
     hostname: 'https://beabot.fr',
@@ -293,4 +303,4 @@ export default {
     gzip: true,
     routes: createSitemapRoutes,
   },
-}
+};

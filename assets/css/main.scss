@@ -87,11 +87,17 @@ a {
 }
 
 
-
+:root {
+  --biggest-font-s: 2.5rem;
+  --default-font-s: 1.1rem;
+}
 body {
   // Ensure base applied as default for all other elements
   font-size: $type-base-size;
   line-height: 1.5;
+  @media (min-width: 1920px) {
+    font-size: $type-base-size * 1.28;
+  }
 
 }
   html {
@@ -106,6 +112,10 @@ body {
     box-sizing: border-box;
     background-color: $fondClair;
   }
+
+  // p {
+  //   font-size: clamp(var(--default-font-s), 4.5vw, var(--biggest-font-s)); 
+  // }
   
   // -------ESPACES--------
   .mt {

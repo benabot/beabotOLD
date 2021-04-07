@@ -138,19 +138,19 @@
 
 export default {
   async asyncData({ $content, params }) {
-    const article = await $content('articles', params.slug).fetch()
+    const article = await $content('articles', params.slug).fetch();
 
     const [prev, next] = await $content('articles')
       .only(['title', 'slug'])
       .sortBy('createdAt', 'asc')
       .surround(params.slug)
-      .fetch()
+      .fetch();
 
     return {
       article,
       prev,
       next,
-    }
+    };
   },
   data() {
     return {
@@ -160,36 +160,36 @@ export default {
         root: this.$refs.nuxtContent,
         threshold: 0,
       },
-    }
+    };
   },
 
   mounted() {
     this.observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        const id = entry.target.getAttribute('id')
+        const id = entry.target.getAttribute('id');
         if (entry.isIntersecting) {
-          this.currentlyActiveToc = id
+          this.currentlyActiveToc = id;
         }
-      })
-    }, this.observerOptions)
+      });
+    }, this.observerOptions);
 
     // Track all sections that have an `id` applied
     document
       .querySelectorAll('.nuxt-content h2[id], .nuxt-content h3[id]')
       .forEach((section) => {
-        this.observer.observe(section)
-      })
+        this.observer.observe(section);
+      });
   },
   beforeDestroy() {
-    this.observer.disconnect()
+    this.observer.disconnect();
   },
   methods: {
     formatDate(date) {
-      const options = { day: 'numeric', month: 'long', year: 'numeric' }
-      return new Date(date).toLocaleDateString('fr', options)
+      const options = { day: 'numeric', month: 'long', year: 'numeric' };
+      return new Date(date).toLocaleDateString('fr', options);
     },
     updateTag(tag) {
-      this.$store.commit('tags/setTag', tag)
+      this.$store.commit('tags/setTag', tag);
     },
   },
   head() {
@@ -333,7 +333,7 @@ export default {
       //     ],
       //   },
       // ],
-    }
+    };
   },
 
   // head() {
@@ -421,7 +421,7 @@ export default {
   //     ],
   //   }
   // },
-}
+};
 </script>
 <style lang="scss" scoped>
 h1 {
@@ -638,6 +638,7 @@ section {
         padding: 1em 10px 1em 4rem;
         border-radius: 0.5rem;
         position: relative;
+        max-width: 66ch;
 
         &::before {
           content: '\201F';

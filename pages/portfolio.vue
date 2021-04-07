@@ -24,7 +24,7 @@
       <li
         v-show="!tout"
         class="text-gris4"
-        @click=";(tout = true), (select = '')"
+        @click="(tout = true), (select = '')"
       >
         Tout voir
       </li>
@@ -98,15 +98,15 @@ export default {
     return {
       select: '',
       tout: true,
-    }
+    };
   },
   created() {
     // this.$store.commit('page/sethome', false)
   },
   methods: {
     change(valeur) {
-      this.select = valeur
-      this.tout = false
+      this.select = valeur;
+      this.tout = false;
     },
   },
   head() {
@@ -127,9 +127,9 @@ export default {
           href: 'https://beabot.fr/eco-conception/portfolio',
         },
       ],
-    }
+    };
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

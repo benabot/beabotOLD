@@ -149,17 +149,17 @@ export default {
       scrollPosition: null,
       degrad: 'url(#SVGID2)',
       showMobileMenu: false,
-    }
+    };
   },
   computed: {
     acc() {
-      return this.$nuxt.$route.path
+      return this.$nuxt.$route.path;
     },
     couleurHaut() {
-      let clr = 'couleur-gris'
+      let clr = 'couleur-gris';
       if (this.acc === '/') {
         if (this.scrollPosition < this.windowHeight) {
-          return (clr = 'couleur-none')
+          return (clr = 'couleur-none');
         }
         if (
           (this.scrollPosition > this.windowHeight &&
@@ -167,16 +167,16 @@ export default {
           (this.scrollPosition > this.windowHeight * 4 &&
             this.scrollPosition < this.windowHeight * 5)
         ) {
-          return (clr = 'couleur-blanc')
+          return (clr = 'couleur-blanc');
         }
       }
-      return clr
+      return clr;
     },
     couleurBas() {
-      let clr = 'couleur-gris'
+      let clr = 'couleur-gris';
       if (this.acc === '/') {
         if (this.scrollPosition < 66) {
-          return (clr = 'couleur-none')
+          return (clr = 'couleur-none');
         }
         if (
           (this.scrollPosition > 66 &&
@@ -184,17 +184,17 @@ export default {
           (this.scrollPosition > this.windowHeight * 3 &&
             this.scrollPosition < this.windowHeight * 4)
         ) {
-          return (clr = 'couleur-blanc')
+          return (clr = 'couleur-blanc');
         }
       }
 
-      return clr
+      return clr;
     },
   },
   mounted() {
-    window.addEventListener('scroll', this.updateScroll)
+    window.addEventListener('scroll', this.updateScroll);
     // window.addEventListener('scroll', this.onScroll)
-    this.windowHeight = window.innerHeight
+    this.windowHeight = window.innerHeight;
     // ScrollTrigger.defaults({
     //   toggleActions: 'restart pause resume pause',
     // })
@@ -227,10 +227,10 @@ export default {
 
   methods: {
     updateScroll() {
-      this.scrollPosition = window.scrollY
+      this.scrollPosition = window.scrollY;
     },
     handleScroll(e) {
-      this.scrollPos = e.target.scrollTop
+      this.scrollPos = e.target.scrollTop;
     },
     // onScroll() {
     //   const lastScrollPosition = window.scrollY
@@ -244,9 +244,9 @@ export default {
     // },
   },
   destroy() {
-    window.removeEventListener('scroll', this.updateScroll)
+    window.removeEventListener('scroll', this.updateScroll);
   },
-}
+};
 </script>
 <style lang="scss">
 a.nuxt-link-active {

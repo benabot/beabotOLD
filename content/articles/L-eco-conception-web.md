@@ -5,7 +5,7 @@ temps: 15
 tag: ['WebDesign', 'WordPress', 'Eco-conception']
 ---
 
-L’urgence climatique nous impose de penser notre modèle de développement. Le numérique en tant qu’émetteur de gaz à effet de serre tout autant que vecteur d’une transformation de nos modes de vie est au cœur des changements contemporains. S’interroger sur la finalité du numérique, ses enjeux et ses <a  href="/eco-conception/La-consommation-energetique-du-numerique"  class="lien--vert">impacts sur l’environnement</a> c’est aussi comprendre notre monde et se donner les moyens d’agir.
+L’urgence climatique nous impose de penser notre modèle de développement. Le numérique en tant qu’émetteur de gaz à effet de serre tout autant que vecteur d’une transformation de nos modes de vie est au cœur des changements contemporains. S’interroger sur la finalité du numérique, ses enjeux et ses <a  href="/eco-conception/La-consommation-energetique-du-numerique" class="lien--vert">impacts sur l’environnement</a> c’est aussi comprendre notre monde et se donner les moyens d’agir.
 Plusieurs possibilités s’offrent à nous pour dépeindre l’éco-conception numérique, des plus techniques aux plus superficielles. J’ai choisi ici une approche ouverte et généraliste, accessible sans connaissance en programmation.
 Pour ceux qui veulent du code, rassurez-vous, des articles plus techniques émailleront ce blog au fil du temps. Néanmoins, théoriser nos pratiques, réfléchir à nos choix technologiques ne peut qu’élargir l’horizon des développeurs.
   
@@ -25,11 +25,11 @@ L’éco-conception, ce n’est rien de tout cela en particulier, mais c’est l
 
 ## Objectifs
 
-Une définition large et abstraite de l’éco-conception d’un projet web pourrait être : intégrer la question du respect de l’environnement à chacune des étapes de l’élaboration du projet dès les premières esquisses du besoin. Cette question sera centrale au travers des éléments du projet et sur la durée de son cycle de vie. 
+Une définition large et abstraite de l’éco-conception d’un projet web pourrait être : intégrer la question du respect de l’environnement à chacune des étapes de l’élaboration du projet dès les premières esquisses du besoin. Cette question sera centrale au travers des éléments du projet et sur la durée de son cycle de vie. C'est l'esprit de la norme iso 14062:2002 : [Intégration des aspects environnementaux dans la conception et le développement de produit](https://www.iso.org/fr/standard/33020.html).
  
-C’est une définition complète, mais vague. 
+Définition complète, mais vague. 
 
-Nous savons concrètement quels sont les impacts du numérique sur l’environnement : consommation énergétique des infrastructures d’internet (les serveurs, les réseaux et les terminaux) et surtout la fabrication de ces différents équipements. Afin de limiter les impacts environnementaux d’internet, on peut se fixer l’objectif, plus concret, de restreindre les échanges (électriques) en nombre et en taille entre les différents composants du réseau. On limite ainsi leur consommation électrique durant leur phase d’usage et surtout leur usure prématurée et donc leur remplacement (3/4 du CO2 provient de la fabrication de ces équipements). 
+Nous savons concrètement quels sont les impacts du numérique sur l’environnement : consommation énergétique des infrastructures d’internet (les serveurs, les réseaux et les terminaux) et surtout la fabrication de ces différents équipements. Afin de limiter les impacts environnementaux d’internet, on peut se fixer l’objectif, plus concret, de restreindre les échanges (électriques) — en nombre et en taille — entre les différents composants du réseau et de limiter les traitements complexes qui vont sursolliciter nos machines. **On limite ainsi la consommation électrique de nos appareils durant leur phase d’usage et surtout leur usure et donc leur remplacement prématuré, car le principal levier pour limiter les impacts environnementaux du numérique c’est d’éviter l’obsolescence des appareils/équipements (3/4 des émissions de gaz à effet de serre en équivalent carbone provient de la fabrication des équipements)**.
 
 Je suis convaincu qu’internet demeure un formidable outil pour élaborer et promouvoir un modèle d’être au monde plus responsable. À l’évidence, communiquer par ce média consomme de l’énergie et génère une empreinte carbone, comme toute activité humaine. Cependant, échanger, s’informer et générer du commun à l’aide d’internet contribue, aussi, à la prise de conscience de l’urgence climatique. S’informer pour agir, c’est aussi ça le web.
  
@@ -38,7 +38,7 @@ Avançons méthodologiquement et tentons de nous appuyer sur ces éléments pour
 
 ### Web éthique
 
-<div class="citation">Un travelling est une affaire de morale - <span class="auteur">J. L. Godard</span></div>
+<div class="citation">Un travelling est une affaire de morale <br />- <span class="auteur">J. L. Godard</span></div>
 
 Designer, c’est faire des choix. Des choix qui auront toujours une incidence plus large que celle qu’on leur attribue de prime abord.
 Mettre en place un scroll infini, c’est réjouissant techniquement, mais c’est avant tout faire le choix de capter le plus longtemps possible l’attention du visiteur. Le plus souvent pour lui soumettre de la publicité.
@@ -47,16 +47,17 @@ Voici un exemple, parmi d’autres, ou l’éthique du design est centrale dans 
 Au-delà des aspects ergonomiques et de design, un projet éco-conçu c’est aussi un projet qui d’une manière ou d’une autre apporte une contribution bénéfique à la société ou à la protection des écosystèmes. Je me vois mal créer un site techniquement sobre en ressource pour vendre des 4x4 diesel…
 
 Plus concrètement, dans le cadre d’un site qui offrirait un service à l’intérêt environnemental avéré, il convient de s’interroger sur l’utilité des fonctionnalités proposées. A-t-on besoin d’un slider, d’une myriade d’animations, etc. pour énoncer clairement l’objet du site ? 
-À l’inverse, se priver de ressources graphiques et construire un site dépouillé à l’extrême risque de détourner le visiteur du message qu’on souhaite lui délivrer. 
+À l’inverse, se priver de ressources graphiques et construire un site dépouillé à l’extrême risque de détourner le visiteur du message qu’on souhaite lui délivrer.  La phase de webdesign est primordiale pour agir avec efficacité sur l’impact environnemental d’un site web : un design efficace et pertinent, c’est autant de solutions techniques coûteuses en moins pour remplir nos objectifs de bonne communication.
+
 La question du design est primordiale pour l’éco-conception web, elle a pour cœur l’efficacité d’une communication qui accorderait sa finalité (ce qu’on veut dire) et les moyens mis en œuvre pour la restituer (comment le dit-on). 
 
 OBJECTIF : comment et pourquoi produit-on un service ?
-Se questionner sur l’intérêt et les moyens graphiques retenus pour créer un site.
+Se questionner sur l’intérêt et les moyens graphiques retenus pour créer un site. La phase de web-design est primordial pour agir avec efficacité sur l'impact environnemental d'un site web : un design efficace et pertinent c'est autant de solutions techniques coûteuses en moins pour remplir nos objectifs de bonne communication.
 
 
 ### Réutilisabilité
 
-<div class="citation">Quand je paye une dette, c’est un devoir que je remplis ; quand je fais un don, c’est un plaisir que je me donne -
+<div class="citation">Quand je paye une dette, c’est un devoir que je remplis ; quand je fais un don, c’est un plaisir que je me donne <br />-
 <span class="auteur">Jean-Jacques Rousseau</span></div>
 
 
@@ -77,14 +78,14 @@ Le Webdesign à son tour participe à la réutilisabilité. Tout comme les techn
 Objectifs : Moins les dépendances technologiques sont nombreuses dans un projet et mieux c’est. Celui-ci sera plus modulable, évolutif et partageable.
 Préférer utiliser des outils technologiques et des composants graphiques qui ont fait leurs preuves. Réduire l’empreinte carbone d’un site tournant sous WordPress, c’est potentiellement être en mesure de réduire l’empreinte carbone de 40 % des sites…
 
-### Réduire l’empreinte CO2 
+### Réduire l’empreinte CO<sub>2</sub> 
 
-<div class="citation">Il y a très loin de la velléité à la volonté, de la volonté à la résolution, de la résolution au choix des moyens, du choix des moyens à l’application. - <span class="auteur">Cardinal de Retz</span></div>
+<div class="citation">Il y a très loin de la velléité à la volonté, de la volonté à la résolution, de la résolution au choix des moyens, du choix des moyens à l’application <br />- <span class="auteur">Cardinal de Retz</span></div>
 
 
 Le vif du sujet ! Réduire l’empreinte carbone du site web organiquement. En guise de rappel : internet est un réseau matériel constitué de serveurs qui vont stocker des données, d’un réseau en lui-même par lequel transitent les données et de terminaux/clients sur lesquels les données vont être utilisées.
-À chacune de ces étapes correspond une consommation électrique spécifique qui occasionne des émissions de CO2.
-Cependant, c’est la fabrication des différents équipements du réseau (serveurs, câbles et terminaux) qui génère le plus d’émissions de CO2 et de pollution.
+À chacune de ces étapes correspond une consommation électrique spécifique qui occasionne des émissions de CO<sub>2</sub>.
+Cependant, c’est la fabrication des différents équipements du réseau (serveurs, câbles et terminaux) qui génère le plus d’émissions de CO<sub>2</sub> et de pollution.
 
 **Limiter l’obsolescence des équipements** et donc, leur renouvellement prématuré est le principal levier pour réduire les impacts du numérique sur l’environnement. L’électricité endommage les composants de nos téléphones et ordinateurs. Mais, à l’exception des batteries, ces composants (processeurs, carte graphique) sont rarement en fin de vie lorsque nous renouvelons notre équipement. Ce qui motive leur remplacement, c’est qu’ils ne sont plus calibrés (notamment en mémoire vive) pour fonctionner correctement avec les dernières applications web ou desktops[^1]. En clair : notre vieux téléphone rame sur le site d’Apple, il est temps d’en changer !
 
@@ -116,7 +117,7 @@ Répondre aux objectifs que nous avons détaillés pour éco-concevoir un servic
 
 ### Transversalité
 
-Vous avez pu vous en rendre compte, l’éco-conception ce n’est pas juste du code magique, ou une éolienne reliée à un serveur, ou encore un site épuré et rapide. Présente à toutes les étapes d’un projet web, sans en négliger aucune, elle nécessite des qualités transversales chez ses acteurs. Le Webdesign occupe toutefois une place privilégiée. En ce sens qu’il doit être à l’écoute des besoins des clients pour leur offrir le service le plus approprié tout en ayant une connaissance pointue des couts énergétiques qu’engendreront ces choix graphiques, le Webdesign est quasiment la pierre angulaire de l’édifice. Empathie, sens graphique, sensibilité à l’expérience utilisateur, connaissance technique de la chaine du web — du serveur aux terminaux — et de ses impacts en CO2, conscience environnementale, pédagogie et volonté de transmettre, autant de qualités pour bâtir un site web respectueux de l’environnement.
+Vous avez pu vous en rendre compte, l’éco-conception ce n’est pas juste du code magique, ou une éolienne reliée à un serveur, ou encore un site épuré et rapide. Présente à toutes les étapes d’un projet web, sans en négliger aucune, elle nécessite des qualités transversales chez ses acteurs. Le Webdesign occupe toutefois une place privilégiée. En ce sens qu’il doit être à l’écoute des besoins des clients pour leur offrir le service le plus approprié tout en ayant une connaissance pointue des couts énergétiques qu’engendreront ces choix graphiques, le Webdesign est quasiment la pierre angulaire de l’édifice. Empathie, sens graphique, sensibilité à l’expérience utilisateur, connaissance technique de la chaine du web — du serveur aux terminaux — et de ses impacts en CO<sub>2</sub>, conscience environnementale, pédagogie et volonté de transmettre, autant de qualités pour bâtir un site web respectueux de l’environnement.
 
 Cette démarche doit se décliner à toutes les étapes du projet : de la définition du besoin avec le client à sa sensibilisation aux bonnes pratiques pour actualiser son site. **Plus la question de l’environnement intervient tôt dans un projet, plus celui-ci pourra ériger des leviers forts pour réduire son impact sur l’environnement**. 
 
@@ -164,7 +165,7 @@ D’autres outils, dédiés à la performance web et à la vitesse, peuvent nous
 
 ## Bénéfices
 
-La préservation des ressources naturelles et la limitation des émissions de CO2 sont en soi des objectifs de premier ordre. Les bonnes pratiques de l’éco-conception offrent, indirectement, d’autres bénéfices.
+La préservation des ressources naturelles et la limitation des émissions de CO<sub>2</sub> sont en soi des objectifs de premier ordre. Les bonnes pratiques de l’éco-conception offrent, indirectement, d’autres bénéfices.
 
 S’interroger sur les choix d’interfaces et de fonctionnalités pertinentes conduit à mener une réflexion poussée sur l’expérience utilisateur. Soucieux de l’environnement et de l’humain, un site éco-conçu apportera tout naturellement une expérience utilisateur de qualité.
 
@@ -172,7 +173,7 @@ L’UX est un des critères d’un bon positionnement dans les moteurs de recher
 
 Ces deux aspects permettent à un tel site d’augmenter son score SEO, sans travail spécifique.
 
-Bon pour la planète, bon pour les utilisateurs, bon pour le référencement.
+Bon pour la planète, bon pour les utilisateurs, bon pour le référencement, voici le cercle vertueux de l'éco-conception.
 
 
 ### Ressources

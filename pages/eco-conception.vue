@@ -27,9 +27,9 @@ export default {
           href: 'https://beabot.fr/eco-conception/eco-conception',
         },
       ],
-    }
+    };
   },
-}
+};
 </script>
 <style lang="scss" scoped>
 h3 {

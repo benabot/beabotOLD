@@ -4,7 +4,7 @@ description: On imagine le numérique virtuel, intangible et éthéré. Après t
 tag: ['WebDesign', 'WordPress']
 temps: 4
 ---
-Rapide tour d’horizon des retombés environnementales d’internet et du numérique, préalable à une <a  href="/eco-conception/L-eco-conception-web"  class="lien--vert">éco-conception de sites web</a> efficace, car agissant sur les principales sources d’impacts.
+Rapide tour d’horizon des retombés environnementales d’internet et du numérique, préalable à une <a  href="/eco-conception/L-eco-conception-web" class="lien--vert">éco-conception de sites web</a> efficace, car agissant sur les principales sources d’impacts.
 Les chiffres que j’utilise ici proviennent de [GreenIt.fr](https://www.greenit.fr/), c’est la communauté des acteurs du numérique responsable en France. 
 
 
@@ -17,9 +17,9 @@ Quels sont les impacts du secteur du numérique dans sa globalité (écrans, obj
 Au niveau mondial, le secteur du numérique consomme 4,2 % des énergies primaires (énergie nécessaire pour fabriquer l’énergie finale).
 Le numérique utilise 5,5 % de l’électricité mondiale.
 
-### Émission de CO2
+### Émission de CO<sub>2</sub>
 
-Le numérique est responsable à lui seul de 3,8 % des émissions de gaz à effet de serre. C’est plus que l’aviation civile mondiale…
+Le numérique est responsable à lui seul de 3,8 % des émissions de gaz à effet de serre ([en équivalent CO<sub>2</sub>](https://fr.wikipedia.org/wiki/%C3%89quivalent_CO2)). C’est plus que l’aviation civile mondiale…
 
 ### Consommation en eau
 

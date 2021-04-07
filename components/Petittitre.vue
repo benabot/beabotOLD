@@ -61,7 +61,7 @@ export default {
   //       isgris: this.gris,
   //     }
   //   },
-}
+};
 </script>
 <style lang="scss" scoped>
 .h3,

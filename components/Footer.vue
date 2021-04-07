@@ -47,7 +47,7 @@
 <script>
 export default {
   name: 'Footer',
-}
+};
 </script>
 <style lang="scss" scoped>
 $width: 100vw;
@@ -81,7 +81,7 @@ footer {
   }
   svg {
     position: absolute;
-    top: 0;
+    top: -3px;
     width: 100%;
     height: auto;
     max-height: 100%;

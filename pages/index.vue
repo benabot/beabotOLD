@@ -38,7 +38,7 @@
         <div class="impact--col impact--col__1">
           <div class="impact--chiffre">
             <div class="bg-gris bg-gris__bleu">
-              <p>
+              <p class="para-gros">
                 Des impacts sur l’émission de CO<sub>2</sub>, la consommation
                 d’énergie et de ressources…
               </p>
@@ -46,8 +46,8 @@
           </div>
           <div class="impact--chiffre">
             <div class="bg-gris bg-gris__vert">
-              <p>
-                réparties entre les serveurs, le réseau et les utilisateurs…
+              <p class="para-gros">
+                …réparties entre les serveurs, le réseau et les utilisateurs.
               </p>
             </div>
           </div>
@@ -56,14 +56,16 @@
         <div class="impact--col impact--col__2">
           <div class="impact--chiffre">
             <div class="bg-gris bg-gris__jaune">
-              <p>
-                les utilisateurs ont le plus fort impact sur l'environnement…
+              <p class="para-gros">
+                Les utilisateurs ont le plus fort impact sur l'environnement…
               </p>
             </div>
           </div>
           <div class="impact--chiffre">
             <div class="bg-gris bg-gris__gris">
-              <p>dés l’achat de leur appareil, avant même son utilisation.</p>
+              <p class="para-gros">
+                …dés l’achat de leur appareil, avant même son utilisation.
+              </p>
             </div>
           </div>
         </div>
@@ -311,7 +313,7 @@
           />
         </div>
         <div class="oeuf b">
-          <NuxtLink to="/eco-conception"
+          <NuxtLink to="/eco-conception" aria-label="voir le blog"
             ><svg class="lien" viewBox="0 0 24 24">
               <path
                 fill="currentColor"
@@ -363,7 +365,7 @@
           <Boutoncta to="/portfolio#site1" bleu>découvrir</Boutoncta>
         </div>
         <div class="oeuf b">
-          <NuxtLink to="/portfolio"
+          <NuxtLink to="/portfolio" aria-label="voir le portfolio"
             ><svg class="lien" viewBox="0 0 24 24">
               <path
                 fill="currentColor"
@@ -429,9 +431,9 @@ export default {
       //     },
       //   },
       // ],
-    }
+    };
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -513,17 +515,17 @@ section {
       align-items: center;
 
       &__bleu {
-        border-left: 9px solid $bleu2;
+        border-left: 15px solid $bleu2;
       }
       &__vert {
-        border-left: 9px solid $vert;
+        border-left: 15px solid $vert;
       }
       &__jaune {
-        border-right: 9px solid $jaune;
+        border-right: 15px solid $jaune;
       }
       &__gris {
-        border-right: 9px solid $gris2;
-        border-left: 9px solid $gris2;
+        // border-right: 15px solid $gris2;
+        border-left: 15px solid $gris2;
       }
     }
   }
@@ -981,6 +983,12 @@ section {
   padding-top: 15px;
   position: relative;
   z-index: 3;
+}
+
+.para-gros {
+  @media (min-width: 1920px) {
+    font-size: 1.68rem;
+  }
 }
 
 .mt-n10 {
