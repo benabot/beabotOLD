@@ -39,7 +39,7 @@
           <div class="impact--chiffre">
             <div class="bg-gris bg-gris__bleu">
               <p class="para-gros">
-                Des impacts sur l’émission de CO<sub>2</sub>, la consommation
+                1 Des impacts sur l’émission de CO<sub>2</sub>, la consommation
                 d’énergie et de ressources…
               </p>
             </div>
@@ -47,7 +47,7 @@
           <div class="impact--chiffre">
             <div class="bg-gris bg-gris__vert">
               <p class="para-gros">
-                …réparties entre les serveurs, le réseau et les utilisateurs.
+                2 …réparties entre les serveurs, le réseau et les utilisateurs.
               </p>
             </div>
           </div>
@@ -57,14 +57,14 @@
           <div class="impact--chiffre">
             <div class="bg-gris bg-gris__jaune">
               <p class="para-gros">
-                Les utilisateurs ont le plus fort impact sur l'environnement…
+                3 Les utilisateurs ont le plus fort impact sur l'environnement…
               </p>
             </div>
           </div>
           <div class="impact--chiffre">
             <div class="bg-gris bg-gris__gris">
               <p class="para-gros">
-                …dés l’achat de leur appareil, avant même son utilisation.
+                4 …dés l’achat de leur appareil, avant même son utilisation.
               </p>
             </div>
           </div>
@@ -146,7 +146,7 @@
           <h3 class="pt-titre text-black text-gris2">Efficience</h3>
           <p class="text-gris2">
             Utiliser le minimum de ressources pour obtenir un résultat similaire
-            à un produit conçu de manière conventionnelle
+            à un produit conçu de manière conventionnelle.
           </p>
         </div>
       </div>
@@ -751,7 +751,7 @@ section {
         right: -15%;
         bottom: 0;
         z-index: -1;
-        opacity: 0.7;
+        opacity: 0.6;
       }
     }
   }
@@ -986,6 +986,17 @@ section {
 }
 
 .para-gros {
+  &::first-letter {
+    font-weight: 900;
+    color: $gris1;
+    // margin-right: 100%;
+    line-height: 0;
+  }
+  @media (min-width: $breakpoint-tablet) {
+    &::first-letter {
+      font-size: 3rem;
+    }
+  }
   @media (min-width: 1920px) {
     font-size: 1.68rem;
   }

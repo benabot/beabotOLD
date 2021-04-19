@@ -57,6 +57,7 @@
           sous-titre="Application d'apprentissage à l'interface d'un ordinateur"
           background-url="appNoel.png"
           :chips="['WebDesign', 'VueJs']"
+          lien="https://app-noel.netlify.app"
       /></transition>
       <transition name="fade">
         <lazy-BoiteArticle

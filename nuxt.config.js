@@ -46,7 +46,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: '/beabot.png',
+        content: 'https://beabot.fr/beabot.png',
       },
       // Twitter Card
       {
@@ -63,10 +63,30 @@ export default {
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: '/beabot.png',
+        content: 'https://beabot.fr/beabot.png',
       },
     ],
-    link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+    link: [
+      { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '32x32',
+        href: '/favicon-32x32.png',
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '96x96',
+        href: '/favicon-96x96.png',
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '16x16',
+        href: '/favicon-16x16.png',
+      },
+    ],
   },
   // head: {
   //   htmlAttrs: {
